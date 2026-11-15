@@ -669,6 +669,75 @@
           </div>
         </div>
       </div>
+
+      <!-- INTERACTIVE PRESENT PERFECT GAMES & ACTIVITIES -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- GAME 1: SENTENCE BUILDER (WORD-TILE SCRAMBLE) -->
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] font-mono uppercase tracking-widest text-sage-700 font-semibold">Activity 1 • Word Order</span>
+              <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Present Perfect Sentence Builder</h3>
+            </div>
+            <span id="sb-progress" class="px-3 py-1 rounded-full bg-sage-100 text-sage-800 text-xs font-mono font-semibold">1 / 6</span>
+          </div>
+          <p id="sb-hint" class="text-xs sm:text-sm text-stone-600 italic"></p>
+          <div id="sb-answer-zone" class="min-h-[56px] p-3 rounded-2xl bg-parchment-50 border-2 border-dashed border-[#d8cbb0] flex flex-wrap gap-2 items-center"></div>
+          <div id="sb-bank-zone" class="flex flex-wrap gap-2 pt-1"></div>
+          <div id="sb-feedback" class="hidden text-xs sm:text-sm rounded-xl p-3"></div>
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-2">
+            <div class="flex gap-2">
+              <button onclick="sbReset()" class="px-3 py-1.5 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-xs font-semibold text-stone-700 transition">↺ Reset</button>
+              <button onclick="sbCheck()" class="px-4 py-1.5 rounded-xl bg-sage-700 hover:bg-sage-800 text-xs font-semibold text-white transition">✓ Check</button>
+              <button onclick="sbSpeak()" class="px-3 py-1.5 rounded-xl bg-sage-100 hover:bg-sage-200 text-xs font-semibold text-sage-800 transition">🔊 Listen</button>
+            </div>
+            <button onclick="sbNext()" class="px-3 py-1.5 rounded-xl bg-autumn-100 hover:bg-autumn-200 text-xs font-semibold text-autumn-800 transition">Next →</button>
+          </div>
+        </div>
+
+        <!-- GAME 2: TIME MARKERS & BEEN/GONE SPEED SORTER -->
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-semibold">Activity 2 • Precision Drill</span>
+              <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Been/Gone &amp; For/Since/Yet Challenge</h3>
+            </div>
+            <span id="ppd-score" class="px-3 py-1 rounded-full bg-autumn-100 text-autumn-800 text-xs font-mono font-semibold">0 / 8</span>
+          </div>
+          <div id="ppd-container" class="space-y-3 max-h-[380px] overflow-y-auto pr-1"></div>
+        </div>
+
+        <!-- GAME 3: SPOT & FIX THE TRAP -->
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-semibold">Activity 3 • Italian → English Trap Buster</span>
+              <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Spot &amp; Fix the Mistake</h3>
+            </div>
+            <span id="trap-score" class="px-3 py-1 rounded-full bg-sage-100 text-sage-800 text-xs font-mono font-semibold">0 / 6</span>
+          </div>
+          <div id="trap-container" class="space-y-3 max-h-[380px] overflow-y-auto pr-1"></div>
+        </div>
+
+        <!-- GAME 4: IRREGULAR PAST PARTICIPLE MATCH-UP -->
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <span class="text-[11px] font-mono uppercase tracking-widest text-sage-700 font-semibold">Activity 4 • Memory Match</span>
+              <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Irregular Past Participle Match-Up</h3>
+            </div>
+            <div class="flex items-center gap-2">
+              <span id="ipm-moves" class="px-3 py-1 rounded-full bg-parchment-100 text-stone-700 text-xs font-mono font-semibold">Moves: 0</span>
+              <button onclick="initIrregularMatch()" class="px-3 py-1 rounded-xl bg-sage-100 hover:bg-sage-200 text-xs font-semibold text-sage-800 transition">↻ Restart</button>
+            </div>
+          </div>
+          <p class="text-xs text-stone-600">Match each base verb (left/sage) with its Past Participle (right/amber).</p>
+          <div id="ipm-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-2.5"></div>
+          <p id="ipm-status" class="text-xs font-semibold text-sage-800"></p>
+        </div>
+
+      </div>
     </section>
 
   </main>
@@ -4419,6 +4488,195 @@
       requestAnimationFrame(animateLeaves);
     }
 
+    // --- PRESENT PERFECT INTERACTIVE GAMES ---
+    const SB_ITEMS = [
+      { target: "Have you ever been to London?", words: ["Have", "you", "ever", "been", "to", "London?"], it: "🇮🇹 Sei mai stato a Londra?" },
+      { target: "I have worked here since 2024.", words: ["I", "have", "worked", "here", "since", "2024."], it: "🇮🇹 Lavoro qui dal 2024." },
+      { target: "Amy has been to London.", words: ["Amy", "has", "been", "to", "London."], it: "🇮🇹 Amy è stata a Londra (ed è già tornata)." },
+      { target: "I have been to France four times.", words: ["I", "have", "been", "to", "France", "four", "times."], it: "🇮🇹 Sono stato in Francia quattro volte." },
+      { target: "Has it stopped raining yet?", words: ["Has", "it", "stopped", "raining", "yet?"], it: "🇮🇹 Ha già smesso di piovere?" },
+      { target: "I have eaten sushi once.", words: ["I", "have", "eaten", "sushi", "once."], it: "🇮🇹 Ho mangiato sushi una volta." }
+    ];
+    let sbIdx = 0, sbChosen = [], sbPool = [];
+    function sbShuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
+    function sbLoad() {
+      const item = SB_ITEMS[sbIdx];
+      sbChosen = [];
+      sbPool = sbShuffle(item.words.map((w, i) => ({ w, id: i })));
+      document.getElementById('sb-progress').textContent = `${sbIdx + 1} / ${SB_ITEMS.length}`;
+      document.getElementById('sb-hint').textContent = item.it;
+      const fb = document.getElementById('sb-feedback');
+      fb.classList.add('hidden'); fb.textContent = '';
+      sbRender();
+    }
+    function sbRender() {
+      const ans = document.getElementById('sb-answer-zone');
+      const bank = document.getElementById('sb-bank-zone');
+      ans.innerHTML = sbChosen.length === 0
+        ? '<span class="text-xs text-stone-400">Click the words below in order...</span>'
+        : sbChosen.map((obj, idx) => `<button onclick="sbRemove(${idx})" class="px-3 py-1.5 rounded-xl bg-sage-700 text-white text-xs sm:text-sm font-semibold shadow-sm hover:bg-sage-800 transition">${obj.w}</button>`).join('');
+      bank.innerHTML = sbPool.map((obj, idx) => `<button onclick="sbPick(${idx})" class="px-3 py-1.5 rounded-xl bg-parchment-100 hover:bg-autumn-100 border border-[#dfd0b5] text-xs sm:text-sm font-semibold text-slatewarm-900 transition">${obj.w}</button>`).join('');
+    }
+    function sbPick(idx) { sbChosen.push(sbPool.splice(idx, 1)[0]); sbRender(); }
+    function sbRemove(idx) { sbPool.push(sbChosen.splice(idx, 1)[0]); sbRender(); }
+    function sbReset() { sbLoad(); }
+    function sbSpeak() { speakText(SB_ITEMS[sbIdx].target); }
+    function sbNext() { sbIdx = (sbIdx + 1) % SB_ITEMS.length; sbLoad(); }
+    function sbCheck() {
+      const built = sbChosen.map(o => o.w).join(' ');
+      const target = SB_ITEMS[sbIdx].target;
+      const fb = document.getElementById('sb-feedback');
+      fb.classList.remove('hidden');
+      if (built === target) {
+        fb.className = 'text-xs sm:text-sm rounded-xl p-3 bg-sage-100 text-sage-900 border border-sage-300 font-semibold';
+        fb.textContent = `✅ Perfetto! "${target}"`;
+        if (typeof confetti === 'function') confetti({ particleCount: 35, spread: 50, origin: { y: 0.7 } });
+      } else {
+        fb.className = 'text-xs sm:text-sm rounded-xl p-3 bg-autumn-50 text-autumn-900 border border-autumn-200';
+        fb.textContent = `💡 Almost! Check the word order (Subject + have/has + past participle).`;
+      }
+    }
+
+    const PPD_ITEMS = [
+      { q: "1. She has been sick _____ last Monday.", opts: ["since", "for", "yet"], ans: 0, exp: "Use 'since' with a specific starting point (last Monday)." },
+      { q: "2. She has driven _____ five hours.", opts: ["for", "since", "already"], ans: 0, exp: "Use 'for' with a duration of time (five hours)." },
+      { q: "3. Amy _____ to London. She loved it and she's home now.", opts: ["has been", "has gone", "has went"], ans: 0, exp: "'Has been to' = visited and returned. 'Has gone to' = still there." },
+      { q: "4. James _____ to London. He'll be back next week.", opts: ["has gone", "has been", "went"], ans: 0, exp: "He is still in London, so use 'has gone to'." },
+      { q: "5. He has _____ taken the test. You don't need to remind him.", opts: ["already", "yet", "since"], ans: 0, exp: "'Already' goes before the past participle in positive sentences." },
+      { q: "6. I haven't visited America _____.", opts: ["yet", "already", "ever"], ans: 0, exp: "'Yet' goes at the end of negative sentences and questions." },
+      { q: "7. The dog has _____ away from home.", opts: ["run", "ran", "running"], ans: 0, exp: "Irregular past participle: run → ran → run." },
+      { q: "8. I have been to Rome three _____.", opts: ["times", "for times", "twice"], ans: 0, exp: "Say 'once', 'twice', or 'three times' directly (no 'for')." }
+    ];
+    let ppdSolved = new Set();
+    function renderPpd() {
+      const c = document.getElementById('ppd-container');
+      c.innerHTML = PPD_ITEMS.map((item, i) => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2">
+          <p class="text-xs sm:text-sm font-semibold text-slatewarm-900">${item.q}</p>
+          <div class="flex flex-wrap gap-1.5">
+            ${item.opts.map((o, oi) => `<button onclick="checkPpd(${i}, ${oi}, this)" class="ppd-opt-${i} px-3 py-1 rounded-lg bg-parchment-100 hover:bg-sage-100 border border-[#dfd0b5] text-xs font-semibold text-stone-800 transition">${o}</button>`).join('')}
+          </div>
+          <p id="ppd-exp-${i}" class="hidden text-xs pt-1"></p>
+        </div>
+      `).join('');
+    }
+    function checkPpd(qi, oi, btn) {
+      const item = PPD_ITEMS[qi];
+      const exp = document.getElementById(`ppd-exp-${qi}`);
+      exp.classList.remove('hidden');
+      if (oi === item.ans) {
+        btn.className = `ppd-opt-${qi} px-3 py-1 rounded-lg bg-sage-700 text-white text-xs font-semibold`;
+        exp.className = 'text-xs pt-1 text-sage-800 font-medium';
+        exp.textContent = `✅ ${item.exp}`;
+        if (!ppdSolved.has(qi)) {
+          ppdSolved.add(qi);
+          document.getElementById('ppd-score').textContent = `${ppdSolved.size} / ${PPD_ITEMS.length}`;
+          if (ppdSolved.size === PPD_ITEMS.length && typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+        }
+      } else {
+        btn.className = `ppd-opt-${qi} px-3 py-1 rounded-lg bg-autumn-100 text-autumn-900 border border-autumn-300 text-xs font-semibold`;
+        exp.className = 'text-xs pt-1 text-autumn-800';
+        exp.textContent = `💡 Try again!`;
+      }
+    }
+
+    const TRAP_ITEMS = [
+      { wrong: "I have visited Greece last summer.", opts: ["I visited Greece last summer.", "I have visit Greece last summer."], ans: 0, exp: "Finished time ('last summer') → Past Simple ('visited')." },
+      { wrong: "I have been to Greece for one time.", opts: ["I have been to Greece once.", "I have been to Greece for once."], ans: 0, exp: "Drop 'for' before 'once', 'twice', or 'three times'." },
+      { wrong: "Amy has went to London.", opts: ["Amy has been to London.", "Amy has goed to London."], ans: 0, exp: "Never use 'has went' — use 'has been' or 'has gone'." },
+      { wrong: "I work in this industry since 2024.", opts: ["I have worked in this industry since 2024.", "I am work in this industry since 2024."], ans: 0, exp: "Ongoing action from the past until now → Present Perfect ('have worked')." },
+      { wrong: "I didn't go to America yet.", opts: ["I haven't been to America yet.", "I didn't been to America yet."], ans: 0, exp: "With 'yet' for life experience, use Present Perfect ('haven't been')." },
+      { wrong: "I make the structural calculation for the rider.", opts: ["I do the structural calculations for the ride.", "I make the structural calculation for the ride."], ans: 0, exp: "We 'do calculations' for 'the ride' (roller coaster)." }
+    ];
+    let trapSolved = new Set();
+    function renderTraps() {
+      const c = document.getElementById('trap-container');
+      c.innerHTML = TRAP_ITEMS.map((item, i) => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2">
+          <p class="text-xs text-autumn-800 font-medium">❌ <s>${item.wrong}</s></p>
+          <div class="flex flex-col gap-1.5">
+            ${item.opts.map((o, oi) => `<button onclick="checkTrap(${i}, ${oi}, this)" class="text-left px-3 py-1.5 rounded-lg bg-parchment-100 hover:bg-sage-100 border border-[#dfd0b5] text-xs font-semibold text-slatewarm-900 transition">${o}</button>`).join('')}
+          </div>
+          <p id="trap-exp-${i}" class="hidden text-xs pt-1"></p>
+        </div>
+      `).join('');
+    }
+    function checkTrap(qi, oi, btn) {
+      const item = TRAP_ITEMS[qi];
+      const exp = document.getElementById(`trap-exp-${qi}`);
+      exp.classList.remove('hidden');
+      if (oi === item.ans) {
+        btn.className = 'text-left px-3 py-1.5 rounded-lg bg-sage-700 text-white text-xs font-semibold';
+        exp.className = 'text-xs pt-1 text-sage-800 font-medium';
+        exp.textContent = `✅ ${item.exp}`;
+        if (!trapSolved.has(qi)) {
+          trapSolved.add(qi);
+          document.getElementById('trap-score').textContent = `${trapSolved.size} / ${TRAP_ITEMS.length}`;
+          if (trapSolved.size === TRAP_ITEMS.length && typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
+        }
+      } else {
+        btn.className = 'text-left px-3 py-1.5 rounded-lg bg-autumn-100 text-autumn-900 border border-autumn-300 text-xs font-semibold';
+        exp.className = 'text-xs pt-1 text-autumn-800';
+        exp.textContent = `💡 Not quite—try the other option!`;
+      }
+    }
+
+    const IPM_PAIRS = [
+      { base: "go", pp: "gone / been" },
+      { base: "drive", pp: "driven" },
+      { base: "run", pp: "run" },
+      { base: "make", pp: "made" },
+      { base: "take", pp: "taken" },
+      { base: "eat", pp: "eaten" },
+      { base: "see", pp: "seen" },
+      { base: "write", pp: "written" }
+    ];
+    let ipmSelected = null, ipmMoves = 0, ipmMatched = new Set();
+    function initIrregularMatch() {
+      ipmSelected = null; ipmMoves = 0; ipmMatched = new Set();
+      document.getElementById('ipm-moves').textContent = 'Moves: 0';
+      document.getElementById('ipm-status').textContent = '';
+      const cards = [];
+      IPM_PAIRS.forEach((p, idx) => {
+        cards.push({ id: idx, type: 'base', label: p.base });
+        cards.push({ id: idx, type: 'pp', label: p.pp });
+      });
+      const shuffled = sbShuffle(cards);
+      document.getElementById('ipm-grid').innerHTML = shuffled.map((card, cIdx) => `
+        <button id="ipm-card-${cIdx}" onclick="pickIpm(${cIdx}, ${card.id}, '${card.type}', '${card.label.replace(/'/g, "\\'")}')"
+          class="p-3 rounded-xl border text-xs sm:text-sm font-semibold transition text-center ${card.type === 'base' ? 'bg-sage-50 border-sage-200 text-sage-900' : 'bg-autumn-50 border-autumn-200 text-autumn-900'} hover:shadow-sm">
+          ${card.label}
+        </button>
+      `).join('');
+    }
+    function pickIpm(cIdx, pairId, type, label) {
+      if (ipmMatched.has(pairId)) return;
+      const btn = document.getElementById(`ipm-card-${cIdx}`);
+      if (!ipmSelected) {
+        ipmSelected = { cIdx, pairId, type, btn };
+        btn.classList.add('ring-2', 'ring-sage-700');
+        return;
+      }
+      if (ipmSelected.cIdx === cIdx) return;
+      ipmMoves++;
+      document.getElementById('ipm-moves').textContent = `Moves: ${ipmMoves}`;
+      if (ipmSelected.pairId === pairId && ipmSelected.type !== type) {
+        ipmMatched.add(pairId);
+        ipmSelected.btn.className = 'p-3 rounded-xl border text-xs sm:text-sm font-semibold text-center bg-sage-700 text-white border-sage-700 opacity-80 cursor-default';
+        btn.className = 'p-3 rounded-xl border text-xs sm:text-sm font-semibold text-center bg-sage-700 text-white border-sage-700 opacity-80 cursor-default';
+        speakText(label.replace(' / ', ' or '));
+        ipmSelected = null;
+        if (ipmMatched.size === IPM_PAIRS.length) {
+          document.getElementById('ipm-status').textContent = `🎉 All ${IPM_PAIRS.length} irregular past participles matched in ${ipmMoves} moves!`;
+          if (typeof confetti === 'function') confetti({ particleCount: 60, spread: 65, origin: { y: 0.7 } });
+        }
+      } else {
+        const prevBtn = ipmSelected.btn;
+        prevBtn.classList.remove('ring-2', 'ring-sage-700');
+        ipmSelected = null;
+      }
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
       initHeaderAndHero();
       renderTranscript();
@@ -4426,6 +4684,10 @@
       renderFixesAndPlaces();
       renderFlashcard();
       renderQuiz();
+      sbLoad();
+      renderPpd();
+      renderTraps();
+      initIrregularMatch();
       if (LESSON_CONFIG.defaultSpotlightKey) inspectVocab(LESSON_CONFIG.defaultSpotlightKey);
       rebuildLeaves();
       animateLeaves();
