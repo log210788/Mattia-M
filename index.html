@@ -738,6 +738,40 @@
         </div>
 
       </div>
+
+      <!-- SEND RESULTS TO LOUIE VIA PREPLY -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4 border-t-4 border-t-sage-600">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <span class="text-[11px] font-mono uppercase tracking-widest text-sage-700 font-semibold">Homework Submission</span>
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Send Your Results to Louie via Preply</h3>
+            <p class="text-xs sm:text-sm text-stone-600 mt-0.5">
+              When you finish practicing, click below to copy your score report and open Preply Messages—just paste (<kbd class="px-1.5 py-0.5 rounded bg-parchment-100 border border-[#dfd0b5] text-[10px]">Ctrl+V</kbd>) and send!
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2 shrink-0">
+            <button onclick="copyAndOpenPreply()" class="px-4 py-2.5 rounded-xl bg-sage-700 hover:bg-sage-800 text-xs sm:text-sm font-semibold text-white shadow-sm transition flex items-center gap-2">
+              <span>📋 Copy Report &amp; Open Preply</span>
+            </button>
+            <button onclick="downloadPreplyReport()" class="px-3 py-2.5 rounded-xl bg-parchment-100 hover:bg-parchment-200 border border-[#dfd0b5] text-xs font-semibold text-stone-800 transition">
+              ⬇️ Download .txt
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-start">
+          <div class="lg:col-span-4 space-y-2">
+            <label for="preply-student-note" class="block text-xs font-semibold text-stone-700">Optional note for Louie (questions or comments):</label>
+            <textarea id="preply-student-note" rows="4" oninput="refreshPreplyPreview()" placeholder="e.g. Ciao Louie, I practiced Present Perfect! Can we review 'been vs gone' next lesson?" class="w-full rounded-xl bg-white border border-[#dfd0b5] p-3 text-xs text-stone-800 focus:outline-none"></textarea>
+          </div>
+          <div class="lg:col-span-8 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold text-stone-700">Preply Report Preview:</span>
+              <span id="preply-toast" class="text-xs font-semibold text-sage-800"></span>
+            </div>
+            <textarea id="preply-report-preview" rows="6" readonly class="w-full rounded-xl bg-parchment-50 border border-[#e6decb] p-3 font-mono text-[11px] text-stone-700 focus:outline-none"></textarea>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
@@ -747,7 +781,7 @@
       studentName: "Mattia",
       lessonNumber: "Trial Lesson (Lesson 01)",
       lessonDate: "November 15, 2026",
-      lessonSubtitle: "Present Perfect Grammar \u0026 Trial Onboarding • 54 Min • 24 Key Vocabulary Items",
+      lessonSubtitle: "Present Perfect Grammar \u0026 Trial Onboarding • 54 Min • 47 Key Vocabulary Items",
       l1FlagAndLabel: "🇮🇹 In italiano:",
       heroHeadingHtml: `Welcome, Mattia — Your <span class="text-autumn-700 italic font-semibold">Peaceful Sanctuary</span> for English Reflection`,
       heroIntroText: "Welcome to your personal English Sanctuary, Mattia! Here is your cleaned trial lesson transcript from November 15, 2026, complete with Italian vocabulary translations, gentle phrasing polishes, and a full Present Perfect grammar structure guide with examples.",
@@ -764,6 +798,7 @@
                     "def":  "Continuing to exist or develop; still happening right now.",
                     "quote":  "Mattia (01:50): \"Because the action started last Monday and now it is ongoing.\"",
                     "es":  "in corso / continuo",
+                    "l1":  "🇮🇹 in corso / continuo",
                     "turnId":  "turn-31",
                     "time":  "01:50"
                 },
@@ -776,6 +811,7 @@
                       "def":  "Not following the standard \u0027-ed\u0027 pattern in the past tense or past participle.",
                       "quote":  "Louie (02:41): \"Good, very good. Yeah, exactly, it\u0027s irregular, right?\"",
                       "es":  "irregolare",
+                      "l1":  "🇮🇹 irregolare",
                       "turnId":  "turn-36",
                       "time":  "02:41"
                   },
@@ -788,6 +824,7 @@
                         "def":  "A local family that welcomes a visiting student or traveler to stay in their home.",
                         "quote":  "Louie (04:25): \"So you stayed with a host family. And then you visited London as well.\"",
                         "es":  "famiglia ospitante",
+                        "l1":  "🇮🇹 famiglia ospitante",
                         "turnId":  "turn-44",
                         "time":  "04:25"
                     },
@@ -800,6 +837,7 @@
                        "def":  "To travel easily from place to place within a city or area.",
                        "quote":  "Louie (05:25): \"We say it\u0027s easy to get around.\"",
                        "es":  "spostarsi / muoversi (in città)",
+                       "l1":  "🇮🇹 spostarsi / muoversi (in città)",
                        "turnId":  "turn-48",
                        "time":  "05:25"
                    },
@@ -812,6 +850,7 @@
                        "def":  "To turn spoken words into a written text record.",
                        "quote":  "Louie (06:22): \"I transcribe. Okay, I transcribe, so it\u0027s transcribing now.\"",
                        "es":  "trascrivere",
+                       "l1":  "🇮🇹 trascrivere",
                        "turnId":  "turn-54",
                        "time":  "06:22"
                    },
@@ -824,6 +863,7 @@
                    "def":  "To make someone remember something they need to do or already know.",
                    "quote":  "Louie (10:25): \"He has already taken the test. You don\u0027t need to remind him.\"",
                    "es":  "ricordare (a qualcuno)",
+                   "l1":  "🇮🇹 ricordare (a qualcuno)",
                    "turnId":  "turn-80",
                    "time":  "10:25"
                },
@@ -836,6 +876,7 @@
                      "def":  "Came or went back to a place after being away.",
                      "quote":  "Louie (11:59): \"So if it\u0027s \u0027been\u0027, okay, she has returned from London.\"",
                      "es":  "tornato / rientrato",
+                     "l1":  "🇮🇹 tornato / rientrato",
                      "turnId":  "turn-90",
                      "time":  "11:59"
                  },
@@ -848,6 +889,7 @@
                         "def":  "Used to ask roughly which part of a country, region, or city someone is from.",
                         "quote":  "Louie (14:16): \"Yeah, whereabouts in Italy are you from?\"",
                         "es":  "in che zona / dove esattamente",
+                        "l1":  "🇮🇹 in che zona / dove esattamente",
                         "turnId":  "turn-106",
                         "time":  "14:16"
                     },
@@ -860,6 +902,7 @@
                     "def":  "The sport or activity of riding a bicycle.",
                     "quote":  "Louie (17:21): \"You go cycling. Okay... Very good, nice.\"",
                     "es":  "andare in bicicletta / ciclismo",
+                    "l1":  "🇮🇹 andare in bicicletta / ciclismo",
                     "turnId":  "turn-122",
                     "time":  "17:21"
                 },
@@ -872,6 +915,7 @@
                    "def":  "A distinct part or industry within an economy or area of business.",
                    "quote":  "Louie (18:18): \"If you write in English, what sector do you work in?\"",
                    "es":  "settore",
+                   "l1":  "🇮🇹 settore",
                    "turnId":  "turn-124",
                    "time":  "18:18"
                },
@@ -884,6 +928,7 @@
                            "def":  "A thrilling amusement park ride on a steep, twisting track.",
                            "quote":  "Mattia (18:24): \"I work for an industry that designs and builds amusement rides like a roller coaster.\"",
                            "es":  "montagne russe",
+                           "l1":  "🇮🇹 montagne russe",
                            "turnId":  "turn-125",
                            "time":  "18:24"
                        },
@@ -896,6 +941,7 @@
                        "def":  "Relating to the physical framework, strength, and load-bearing design of a building or ride.",
                        "quote":  "Mattia (18:50): \"I work in a structural analysis department. I do the structural calculations for the ride.\"",
                        "es":  "strutturale",
+                       "l1":  "🇮🇹 strutturale",
                        "turnId":  "turn-127",
                        "time":  "18:50"
                    },
@@ -908,6 +954,7 @@
                        "def":  "A careful, official check to verify safety, quality, or compliance.",
                        "quote":  "Mattia (19:12): \"After we finish our calculation, we write a report for the inspection.\"",
                        "es":  "ispezione / collaudo",
+                       "l1":  "🇮🇹 ispezione / collaudo",
                        "turnId":  "turn-131",
                        "time":  "19:12"
                    },
@@ -920,6 +967,7 @@
                         "def":  "Large entertainment parks where rides, shows, and areas follow specific themes.",
                         "quote":  "Louie (20:57): \"Theme parks—amusement parks where the roller coasters are, like Disneyland.\"",
                         "es":  "parchi tematici",
+                        "l1":  "🇮🇹 parchi tematici",
                         "turnId":  "turn-138",
                         "time":  "20:42"
                     },
@@ -932,6 +980,7 @@
                      "def":  "To make a sentence, explanation, or text shorter while keeping the core meaning.",
                      "quote":  "Louie (30:43): \"Because we can condense it, we can shorten it down, okay?\"",
                      "es":  "condensare / abbreviare",
+                     "l1":  "🇮🇹 condensare / abbreviare",
                      "turnId":  "turn-204",
                      "time":  "30:43"
                  },
@@ -944,6 +993,7 @@
                        "def":  "Missing a necessary piece of information (such as \u0027when\u0027 in a Past Simple sentence).",
                        "quote":  "Louie (32:00): \"\u0027I visited Paris\u0027 is asking for more information. It\u0027s an incomplete sentence.\"",
                        "es":  "incompleto",
+                       "l1":  "🇮🇹 incompleto",
                        "turnId":  "turn-206",
                        "time":  "30:53"
                    },
@@ -956,6 +1006,7 @@
                  "def":  "One single time (used directly after a life-experience clause without \u0027for\u0027).",
                  "quote":  "Louie (38:07): \"I\u0027ve been to Greece once.\"",
                  "es":  "una volta",
+                 "l1":  "🇮🇹 una volta",
                  "turnId":  "turn-244",
                  "time":  "38:07"
              },
@@ -968,6 +1019,7 @@
                   "def":  "Two times (used directly without saying \u0027two times\u0027 or \u0027for\u0027).",
                   "quote":  "Louie (38:26): \"Twice and three times.\"",
                   "es":  "due volte",
+                  "l1":  "🇮🇹 due volte",
                   "turnId":  "turn-246",
                   "time":  "38:26"
               },
@@ -980,6 +1032,7 @@
                      "def":  "Important in history or preserved from a past era.",
                      "quote":  "Louie (43:50): \"My business was historic restoration. I rebuilt old historic buildings.\"",
                      "es":  "storico",
+                     "l1":  "🇮🇹 storico",
                      "turnId":  "turn-280",
                      "time":  "43:50"
                  },
@@ -992,6 +1045,7 @@
                         "def":  "The process of repairing and returning an old building or object to its original condition.",
                         "quote":  "Louie (43:50): \"I had my own company, and I do historic restoration.\"",
                         "es":  "restauro",
+                        "l1":  "🇮🇹 restauro",
                         "turnId":  "turn-280",
                         "time":  "43:50"
                     },
@@ -1004,6 +1058,7 @@
                     "def":  "Taxes or duties charged by a government on imported or exported goods.",
                     "quote":  "Louie (44:29): \"So I deal with the tariffs and stuff like that, the taxes.\"",
                     "es":  "dazi doganali / tariffe",
+                    "l1":  "🇮🇹 dazi doganali / tariffe",
                     "turnId":  "turn-282",
                     "time":  "44:29"
                 },
@@ -1016,6 +1071,7 @@
                                 "def":  "The exchange of goods and services across national borders.",
                                 "quote":  "Louie (45:30): \"Yeah, to learn Vietnamese, to do trade, to do international trade.\"",
                                 "es":  "commercio internazionale",
+                                "l1":  "🇮🇹 commercio internazionale",
                                 "turnId":  "turn-282",
                                 "time":  "44:29"
                             },
@@ -1028,6 +1084,7 @@
                             "def":  "Certainly; with complete certainty.",
                             "quote":  "Louie (46:15): \"Yes, for sure, Italian food is the best food, without a doubt.\"",
                             "es":  "senza dubbio",
+                            "l1":  "🇮🇹 senza dubbio",
                             "turnId":  "turn-284",
                             "time":  "46:15"
                         },
@@ -1040,9 +1097,309 @@
                         "def":  "A friendly way to say \u0027that makes sense\u0027 or \u0027I accept your answer\u0027.",
                         "quote":  "Louie (48:07): \"No, okay, fair enough.\"",
                         "es":  "giusto / ci sta / va bene",
+                        "l1":  "🇮🇹 giusto / ci sta / va bene",
                         "turnId":  "turn-294",
                         "time":  "48:07"
-                    }
+                    },
+    "why-are-we-here-today":  {
+                                  "word":  "why are we here today",
+                                  "ipa":  "/waɪ ɑː wi hɪə təˈdeɪ/",
+                                  "pos":  "question",
+                                  "level":  "B1",
+                                  "cat":  "idioms",
+                                  "def":  "A warm opening question asking what you want to achieve in today\u0027s lesson.",
+                                  "quote":  "Louie (00:20): \"Mattia, in your own words, why are we here today?\"",
+                                  "es":  "perché siamo qui oggi / qual è il nostro obiettivo oggi",
+                                  "l1":  "🇮🇹 perché siamo qui oggi / qual è il nostro obiettivo oggi",
+                                  "turnId":  "turn-3",
+                                  "time":  "00:20"
+                              },
+    "in-your-own-words":  {
+                              "word":  "in your own words",
+                              "ipa":  "/ɪn jɔːr əʊn wɜːdz/",
+                              "pos":  "idiom",
+                              "level":  "B2",
+                              "cat":  "idioms",
+                              "def":  "Explaining something naturally in your own way, not memorized.",
+                              "quote":  "Louie (00:20): \"Mattia, in your own words, why are we here today?\"",
+                              "es":  "con parole tue",
+                              "l1":  "🇮🇹 con parole tue",
+                              "turnId":  "turn-3",
+                              "time":  "00:20"
+                          },
+    "goals":  {
+                  "word":  "goals",
+                  "ipa":  "/ɡəʊlz/",
+                  "pos":  "noun (plural)",
+                  "level":  "B1",
+                  "cat":  "abstract",
+                  "def":  "The specific results or targets you want to achieve.",
+                  "quote":  "Louie (01:01): \"What are your goals?\"",
+                  "es":  "obiettivi / traguardi",
+                  "l1":  "🇮🇹 obiettivi / traguardi",
+                  "turnId":  "turn-5",
+                  "time":  "01:01"
+              },
+    "method":  {
+                   "word":  "method",
+                   "ipa":  "/ˈmeθ.əd/",
+                   "pos":  "noun",
+                   "level":  "B2",
+                   "cat":  "abstract",
+                   "def":  "A structured way or system of teaching or doing something.",
+                   "quote":  "Mattia (00:33): \"Know your lesson method...\"",
+                   "es":  "metodo",
+                   "l1":  "🇮🇹 metodo",
+                   "turnId":  "turn-4",
+                   "time":  "00:33"
+               },
+    "grammar-rules":  {
+                          "word":  "grammar rules",
+                          "ipa":  "/ˈɡræm.ə ruːlz/",
+                          "pos":  "noun phrase",
+                          "level":  "B1",
+                          "cat":  "abstract",
+                          "def":  "The structural patterns that govern how sentences are formed in a language.",
+                          "quote":  "Mattia (09:34): \"In the future, can we make a general recap of grammar rules?\"",
+                          "es":  "regole grammaticali",
+                          "l1":  "🇮🇹 regole grammaticali",
+                          "turnId":  "turn-12",
+                          "time":  "01:19"
+                      },
+    "vocabulary":  {
+                       "word":  "vocabulary",
+                       "ipa":  "/vəˈkæb.jə.lər.i/",
+                       "pos":  "noun",
+                       "level":  "B1",
+                       "cat":  "abstract",
+                       "def":  "All the words you know and use in a language.",
+                       "quote":  "Mattia (02:30): \"Vocabulary, with the Italian translation...\"",
+                       "es":  "vocabolario / lessico",
+                       "l1":  "🇮🇹 vocabolario / lessico",
+                       "turnId":  "turn-12",
+                       "time":  "01:19"
+                   },
+    "yet":  {
+                "word":  "yet",
+                "ipa":  "/jet/",
+                "pos":  "adverb",
+                "level":  "B1",
+                "cat":  "rhythm",
+                "def":  "Until now — used at the end of Present Perfect questions and negative sentences.",
+                "quote":  "Louie (01:29): \"Yet is used in questions, very good.\"",
+                "es":  "già (nelle domande) / ancora (nelle negative)",
+                "l1":  "🇮🇹 già (nelle domande) / ancora (nelle negative)",
+                "turnId":  "turn-21",
+                "time":  "00:40"
+            },
+    "already":  {
+                    "word":  "already",
+                    "ipa":  "/ɔːlˈred.i/",
+                    "pos":  "adverb",
+                    "level":  "B1",
+                    "cat":  "rhythm",
+                    "def":  "Before now or sooner than expected — used in positive Present Perfect sentences.",
+                    "quote":  "Louie (10:25): \"He has already taken the test.\"",
+                    "es":  "già (nelle frasi affermative)",
+                    "l1":  "🇮🇹 già (nelle frasi affermative)",
+                    "turnId":  "turn-80",
+                    "time":  "10:25"
+                },
+    "since":  {
+                  "word":  "since",
+                  "ipa":  "/sɪns/",
+                  "pos":  "preposition",
+                  "level":  "B1",
+                  "cat":  "rhythm",
+                  "def":  "From a specific starting point in the past until now (e.g., since 2024, since Monday).",
+                  "quote":  "Louie (02:04): \"Yeah, since a specific time, very good.\"",
+                  "es":  "da (un momento preciso nel passato)",
+                  "l1":  "🇮🇹 da (un momento preciso nel passato)",
+                  "turnId":  "turn-29",
+                  "time":  "01:35"
+              },
+    "participle":  {
+                       "word":  "participle",
+                       "ipa":  "/ˈpɑː.tɪ.sɪ.pəl/",
+                       "pos":  "noun",
+                       "level":  "B2",
+                       "cat":  "abstract",
+                       "def":  "The 3rd form of a verb (e.g., been, gone, driven, eaten) used after have/has.",
+                       "quote":  "Louie (15:45): \"We use it for the past participle.\"",
+                       "es":  "participio (passato)",
+                       "l1":  "🇮🇹 participio (passato)",
+                       "turnId":  "turn-35",
+                       "time":  "02:36"
+                   },
+    "amusement-parks":  {
+                            "word":  "amusement parks",
+                            "ipa":  "/əˈmjuːz.mənt pɑːks/",
+                            "pos":  "noun (plural)",
+                            "level":  "B2",
+                            "cat":  "travel",
+                            "def":  "Parks with rides, roller coasters, and games for entertainment.",
+                            "quote":  "Louie (20:57): \"Theme parks—amusement parks where the roller coasters are.\"",
+                            "es":  "parchi divertimenti",
+                            "l1":  "🇮🇹 parchi divertimenti",
+                            "turnId":  "turn-142",
+                            "time":  "20:57"
+                        },
+    "loads":  {
+                  "word":  "loads",
+                  "ipa":  "/ləʊdz/",
+                  "pos":  "noun (plural)",
+                  "level":  "C1",
+                  "cat":  "abstract",
+                  "def":  "The forces, weights, or pressures that a structure must safely support.",
+                  "quote":  "Louie (19:05): \"You calculate the loads and the stresses, is that right?\"",
+                  "es":  "carichi (strutturali)",
+                  "l1":  "🇮🇹 carichi (strutturali)",
+                  "turnId":  "turn-128",
+                  "time":  "19:05"
+              },
+    "stresses":  {
+                     "word":  "stresses",
+                     "ipa":  "/ˈstres.ɪz/",
+                     "pos":  "noun (plural)",
+                     "level":  "C1",
+                     "cat":  "abstract",
+                     "def":  "Internal forces acting within a material or structure under load.",
+                     "quote":  "Louie (19:05): \"You calculate the loads and the stresses, is that right?\"",
+                     "es":  "sollecitazioni / tensioni (meccaniche)",
+                     "l1":  "🇮🇹 sollecitazioni / tensioni (meccaniche)",
+                     "turnId":  "turn-128",
+                     "time":  "19:05"
+                 },
+    "acceleration":  {
+                         "word":  "acceleration",
+                         "ipa":  "/əkˌsel.əˈreɪ.ʃən/",
+                         "pos":  "noun",
+                         "level":  "B2",
+                         "cat":  "abstract",
+                         "def":  "The rate at which speed increases, tested on roller coaster rides.",
+                         "quote":  "Mattia (21:32): \"I went to France in July for an acceleration test.\"",
+                         "es":  "accelerazione",
+                         "l1":  "🇮🇹 accelerazione",
+                         "turnId":  "turn-149",
+                         "time":  "21:32"
+                     },
+    "implementation":  {
+                           "word":  "implementation",
+                           "ipa":  "/ˌɪm.plɪ.menˈteɪ.ʃən/",
+                           "pos":  "noun",
+                           "level":  "C1",
+                           "cat":  "abstract",
+                           "def":  "The process of putting a design or plan into real-world construction.",
+                           "quote":  "Louie (19:35): \"So for the implementation, for the construction.\"",
+                           "es":  "realizzazione / attuazione",
+                           "l1":  "🇮🇹 realizzazione / attuazione",
+                           "turnId":  "turn-132",
+                           "time":  "19:35"
+                       },
+    "three-times":  {
+                        "word":  "three times",
+                        "ipa":  "/θriː taɪmz/",
+                        "pos":  "adverbial",
+                        "level":  "B1",
+                        "cat":  "rhythm",
+                        "def":  "On three occasions (used directly after a life experience without for).",
+                        "quote":  "Louie (38:26): \"Twice and three times.\"",
+                        "es":  "tre volte",
+                        "l1":  "🇮🇹 tre volte",
+                        "turnId":  "turn-246",
+                        "time":  "38:26"
+                    },
+    "thrice":  {
+                   "word":  "thrice",
+                   "ipa":  "/θraɪs/",
+                   "pos":  "adverb",
+                   "level":  "C2",
+                   "cat":  "rhythm",
+                   "def":  "Old-fashioned or formal word meaning three times (rarely used in modern speech).",
+                   "quote":  "Louie (38:42): \"Thrice. It\u0027s okay, we don\u0027t really use it.\"",
+                   "es":  "tre volte (arcaico/formale)",
+                   "l1":  "🇮🇹 tre volte (arcaico/formale)",
+                   "turnId":  "turn-248",
+                   "time":  "38:42"
+               },
+    "pronouns":  {
+                     "word":  "pronouns",
+                     "ipa":  "/ˈprəʊ.naʊnz/",
+                     "pos":  "noun (plural)",
+                     "level":  "B1",
+                     "cat":  "abstract",
+                     "def":  "Words like I, you, he, she, it, we, they that replace a noun.",
+                     "quote":  "Louie (34:00): \"Depends on the subject... pronouns.\"",
+                     "es":  "pronomi",
+                     "l1":  "🇮🇹 pronomi",
+                     "turnId":  "turn-208",
+                     "time":  "32:30"
+                 },
+    "subject":  {
+                    "word":  "subject",
+                    "ipa":  "/ˈsʌb.dʒekt/",
+                    "pos":  "noun",
+                    "level":  "B1",
+                    "cat":  "abstract",
+                    "def":  "The person or thing doing the action in a sentence (determines have vs. has).",
+                    "quote":  "Louie (34:00): \"Depends on the subject.\"",
+                    "es":  "soggetto",
+                    "l1":  "🇮🇹 soggetto",
+                    "turnId":  "turn-208",
+                    "time":  "32:30"
+                },
+    "for-sure":  {
+                     "word":  "for sure",
+                     "ipa":  "/fɔː ʃʊər/",
+                     "pos":  "idiom",
+                     "level":  "B2",
+                     "cat":  "idioms",
+                     "def":  "Definitely; without any question.",
+                     "quote":  "Louie (46:15): \"Yes, for sure, Italian food is the best food.\"",
+                     "es":  "di sicuro / sicuramente",
+                     "l1":  "🇮🇹 di sicuro / sicuramente",
+                     "turnId":  "turn-168",
+                     "time":  "24:58"
+                 },
+    "obviously":  {
+                      "word":  "obviously",
+                      "ipa":  "/ˈɒb.vi.əs.li/",
+                      "pos":  "adverb",
+                      "level":  "B2",
+                      "cat":  "abstract",
+                      "def":  "In a way that is easy to see or understand.",
+                      "quote":  "Louie (14:25): \"I\u0027ve only been to Lucca, Pisa, obviously, Rome.\"",
+                      "es":  "ovviamente",
+                      "l1":  "🇮🇹 ovviamente",
+                      "turnId":  "turn-52",
+                      "time":  "05:34"
+                  },
+    "absolutely":  {
+                       "word":  "absolutely",
+                       "ipa":  "/ˌæb.səˈluːt.li/",
+                       "pos":  "adverb",
+                       "level":  "B2",
+                       "cat":  "emotions",
+                       "def":  "Completely and without any doubt.",
+                       "quote":  "Louie (09:47): \"Yeah, absolutely.\"",
+                       "es":  "assolutamente",
+                       "l1":  "🇮🇹 assolutamente",
+                       "turnId":  "turn-68",
+                       "time":  "09:47"
+                   },
+    "championship":  {
+                         "word":  "championship",
+                         "ipa":  "/ˈtʃæm.pi.ən.ʃɪp/",
+                         "pos":  "noun",
+                         "level":  "B2",
+                         "cat":  "travel",
+                         "def":  "A major competition to decide the best team or player.",
+                         "quote":  "Louie (16:28): \"Have they ever played in a championship?\"",
+                         "es":  "campionato",
+                         "l1":  "🇮🇹 campionato",
+                         "turnId":  "turn-116",
+                         "time":  "16:10"
+                     }
 };
     const TRANSCRIPT_TURNS = [
     {
@@ -1069,7 +1426,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "00:20",
-        "html":  "Okay, very good. Yes, very good. Thank you very much. Thank you. I just would like to know... Mattia \u003cspan class=\"asr-fix-pill\" title=\"Corrected spelling of your name from the automated note-taker.\"\u003e✨ Fixed: \"Mattia\" (note-taker: \"Matthia\")\u003c/span\u003e, in your own words, why are we here today?",
+        "html":  "Okay, very good. Yes, very good. Thank you very much. Thank you. I just would like to know... Mattia \u003cspan class=\"asr-fix-pill\" title=\"Corrected spelling of your name from the automated note-taker.\"\u003e✨ Fixed: \"Mattia\" (note-taker: \"Matthia\")\u003c/span\u003e, \u003cspan class=\"vocab-mark\" data-vkey=\"in-your-own-words\" onclick=\"inspectVocab(\u0027in-your-own-words\u0027)\"\u003ein your own words\u003c/span\u003e, \u003cspan class=\"vocab-mark\" data-vkey=\"why-are-we-here-today\" onclick=\"inspectVocab(\u0027why-are-we-here-today\u0027)\"\u003ewhy are we here today\u003c/span\u003e?",
         "it":  "Ok, molto bene. Sì, molto bene. Grazie mille. Grazie. Vorrei solo sapere... Mattia, con parole tue, perché siamo qui oggi?"
     },
     {
@@ -1078,7 +1435,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "00:33",
-        "html":  "Why I\u0027m here today for the... No, your lesson method and... For the speaker with you about what I want to learn in English with periodic lessons.",
+        "html":  "Why I\u0027m here today for the... No, your lesson \u003cspan class=\"vocab-mark\" data-vkey=\"method\" onclick=\"inspectVocab(\u0027method\u0027)\"\u003emethod\u003c/span\u003e and... For the speaker with you about what I want to learn in English with periodic lessons.",
         "it":  "Perché sono qui oggi per... No, il tuo metodo di lezione e... Per il relatore con te su ciò che voglio imparare in inglese con lezioni periodiche."
     },
     {
@@ -1087,7 +1444,7 @@
         "chapterTitle":  "Chapter II • Present Perfect Diagnostic \u0026 Exercises (00:40)",
         "speaker":  "Louie",
         "time":  "01:01",
-        "html":  "What are the goals? What are your goals?",
+        "html":  "What are the \u003cspan class=\"vocab-mark\" data-vkey=\"goals\" onclick=\"inspectVocab(\u0027goals\u0027)\"\u003egoals\u003c/span\u003e? What are your \u003cspan class=\"vocab-mark\" data-vkey=\"goals\" onclick=\"inspectVocab(\u0027goals\u0027)\"\u003egoals\u003c/span\u003e?",
         "it":  "Quali sono gli obiettivi? Quali sono i tuoi obiettivi?"
     },
     {
@@ -1105,7 +1462,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "01:09",
-        "html":  "What are your goals?",
+        "html":  "What are your \u003cspan class=\"vocab-mark\" data-vkey=\"goals\" onclick=\"inspectVocab(\u0027goals\u0027)\"\u003egoals\u003c/span\u003e?",
         "it":  "Quali sono i tuoi obiettivi?"
     },
     {
@@ -1150,7 +1507,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "01:19",
-        "html":  "For the beginning of the lesson, we need for the first second third dimension. I want to have a re a grammar recap. The VE the different between present perfect present continuous the if closes the future a general recap of a grammar rules \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027grammar rules\u0027 as \u0027grandma Rosa\u0027!\"\u003e✨ Fixed: \"grammar rules\" (note-taker: \"grandma Rosa\")\u003c/span\u003e and after. I want to improve my confidence with the dialogue \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027dialogue\u0027.\"\u003e✨ Fixed: \"dialogue\" (note-taker: \"yaog\")\u003c/span\u003e and, I want to improve the new leger Jap. I want, to increase the vocabulary. E to vocabulary \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027vocabulary\u0027.\"\u003e✨ Fixed: \"vocabulary\" (note-taker: \"CBLEARY\")\u003c/span\u003e.",
+        "html":  "For the beginning of the lesson, we need for the first second third dimension. I want to have a re a grammar recap. The VE the different between present perfect present continuous the if closes the future a general recap of a \u003cspan class=\"vocab-mark\" data-vkey=\"grammar-rules\" onclick=\"inspectVocab(\u0027grammar-rules\u0027)\"\u003egrammar rules\u003c/span\u003e \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027grammar rules\u0027 as \u0027grandma Rosa\u0027!\"\u003e✨ Fixed: \"grammar rules\" (note-taker: \"grandma Rosa\")\u003c/span\u003e and after. I want to improve my confidence with the dialogue \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027dialogue\u0027.\"\u003e✨ Fixed: \"dialogue\" (note-taker: \"yaog\")\u003c/span\u003e and, I want to improve the new leger Jap. I want, to increase the \u003cspan class=\"vocab-mark\" data-vkey=\"vocabulary\" onclick=\"inspectVocab(\u0027vocabulary\u0027)\"\u003evocabulary\u003c/span\u003e. E to \u003cspan class=\"vocab-mark\" data-vkey=\"vocabulary\" onclick=\"inspectVocab(\u0027vocabulary\u0027)\"\u003evocabulary\u003c/span\u003e \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027vocabulary\u0027.\"\u003e✨ Fixed: \"vocabulary\" (note-taker: \"CBLEARY\")\u003c/span\u003e.",
         "it":  "Per l\u0027inizio della lezione abbiamo bisogno della prima seconda terza dimensione. Voglio fare un riepilogo grammaticale. Il VE la differenza tra presente perfetto presente continuo il se chiude il futuro un riepilogo generale delle regole grammaticali e dopo. Voglio migliorare la mia confidenza con il dialogo e voglio migliorare il nuovo leger Jap. Voglio aumentare il vocabolario. E al vocabolario."
     },
     {
@@ -1159,7 +1516,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "02:17",
-        "html":  "Okay, no problem at all. No problem at all. So you would like some structure and then construct, some conversation practice and then vocabulary.",
+        "html":  "Okay, no problem at all. No problem at all. So you would like some structure and then construct, some conversation practice and then \u003cspan class=\"vocab-mark\" data-vkey=\"vocabulary\" onclick=\"inspectVocab(\u0027vocabulary\u0027)\"\u003evocabulary\u003c/span\u003e.",
         "it":  "Ok, nessun problema. Nessun problema. Quindi vorresti un po\u0027 di struttura e poi di costruzione, un po\u0027 di pratica di conversazione e poi di vocabolario."
     },
     {
@@ -1204,7 +1561,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "02:30",
-        "html":  "Vocabulary, with, for the first time, I got with the Italian translation so I can, understand the water. The water. The vocabulary means.",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"vocabulary\" onclick=\"inspectVocab(\u0027vocabulary\u0027)\"\u003eVocabulary\u003c/span\u003e, with, for the first time, I got with the Italian translation so I can, understand the water. The water. The \u003cspan class=\"vocab-mark\" data-vkey=\"vocabulary\" onclick=\"inspectVocab(\u0027vocabulary\u0027)\"\u003evocabulary\u003c/span\u003e means.",
         "it":  "Vocabolario che, per la prima volta, ho acquisito con la traduzione italiana, così posso capire l\u0027acqua. L\u0027acqua. Il vocabolario significa."
     },
     {
@@ -1231,7 +1588,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "00:40",
-        "html":  "Yes, has it stopped raining yet?",
+        "html":  "Yes, has it stopped raining \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e?",
         "it":  "Sì, ha già smesso di piovere?"
     },
     {
@@ -1240,7 +1597,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "00:55",
-        "html":  "Is it yet? Why is it yet...?",
+        "html":  "Is it \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e? Why is it \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e...?",
         "it":  "Lo è ancora? Perché è ancora...?"
     },
     {
@@ -1249,7 +1606,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "01:05",
-        "html":  "Because, yet, when, you use yet, it, in the f in the end of the sentence.",
+        "html":  "Because, \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e, when, you use \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e, it, in the f in the end of the sentence.",
         "it":  "Perché, yet, quando usi yet, it, nella f alla fine della frase."
     },
     {
@@ -1276,7 +1633,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "01:23",
-        "html":  "Yeah, because it\u0027s a question, yet it is used in questions, okay...",
+        "html":  "Yeah, because it\u0027s a question, \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e it is used in questions, okay...",
         "it":  "Sì, perché è una domanda, eppure si usa nelle domande, okay..."
     },
     {
@@ -1294,7 +1651,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "01:29",
-        "html":  "Yet is used in questions very good. Okay, next. She has been sick.",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eYet\u003c/span\u003e is used in questions very good. Okay, next. She has been sick.",
         "it":  "Eppure è usato molto bene nelle domande. Ok, il prossimo. È stata malata."
     },
     {
@@ -1303,7 +1660,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "01:35",
-        "html":  "He has been sick since last Monday.",
+        "html":  "He has been sick \u003cspan class=\"vocab-mark\" data-vkey=\"since\" onclick=\"inspectVocab(\u0027since\u0027)\"\u003esince\u003c/span\u003e last Monday.",
         "it":  "È malato da lunedì scorso."
     },
     {
@@ -1330,7 +1687,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "02:04",
-        "html":  "Very good. Yeah, since a specific time, very good. And next one, she has driven for five hours.",
+        "html":  "Very good. Yeah, \u003cspan class=\"vocab-mark\" data-vkey=\"since\" onclick=\"inspectVocab(\u0027since\u0027)\"\u003esince\u003c/span\u003e a specific time, very good. And next one, she has driven for five hours.",
         "it":  "Molto bene. Sì, da un momento specifico, molto bene. E quella successiva, ha guidato per cinque ore."
     },
     {
@@ -1357,7 +1714,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "02:36",
-        "html":  "Driven because it\u0027s the participle \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027past participle\u0027 as \u0027party ship\u0027.\"\u003e✨ Fixed: \"participle\" (note-taker: \"party ship\")\u003c/span\u003e.",
+        "html":  "Driven because it\u0027s the \u003cspan class=\"vocab-mark\" data-vkey=\"participle\" onclick=\"inspectVocab(\u0027participle\u0027)\"\u003eparticiple\u003c/span\u003e \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027past participle\u0027 as \u0027party ship\u0027.\"\u003e✨ Fixed: \"participle\" (note-taker: \"party ship\")\u003c/span\u003e.",
         "it":  "Guidato perché è il participio."
     },
     {
@@ -1492,7 +1849,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "05:29",
-        "html":  "Easy to get around. I...",
+        "html":  "Easy to \u003cspan class=\"vocab-mark\" data-vkey=\"get-around\" onclick=\"inspectVocab(\u0027get-around\u0027)\"\u003eget around\u003c/span\u003e. I...",
         "it":  "Facile andare in giro. IO..."
     },
     {
@@ -1510,7 +1867,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "05:34",
-        "html":  "Should show you one thing. I normally start at the beginning, but just so you know how notes are done. Okay, so I\u0027m going to show you how notes are done, so one second, I\u0027ll grab a quick one. Last part, but that\u0027ll be very quick. Students. Okay, so just so we can concentrate on the lesson, we can work a lot. I do the notes for you. Obviously, you can do notes. So how do I do notes? I do not record the lesson, okay? I do not record the lesson. There\u0027s no audio file, there\u0027s no video, but...",
+        "html":  "Should show you one thing. I normally start at the beginning, but just so you know how notes are done. Okay, so I\u0027m going to show you how notes are done, so one second, I\u0027ll grab a quick one. Last part, but that\u0027ll be very quick. Students. Okay, so just so we can concentrate on the lesson, we can work a lot. I do the notes for you. \u003cspan class=\"vocab-mark\" data-vkey=\"obviously\" onclick=\"inspectVocab(\u0027obviously\u0027)\"\u003eObviously\u003c/span\u003e, you can do notes. So how do I do notes? I do not record the lesson, okay? I do not record the lesson. There\u0027s no audio file, there\u0027s no video, but...",
         "it":  "Dovrebbe mostrarti una cosa. Normalmente inizio dall\u0027inizio, ma solo perché tu sappia come sono fatte le note. Ok, ti ​​mostrerò come si prendono gli appunti, quindi un secondo ne prendo uno veloce. Ultima parte, ma sarà molto veloce. Studenti. Ok, quindi solo per poterci concentrare sulla lezione, possiamo lavorare molto. Prendo gli appunti per te. Ovviamente puoi prendere appunti. Allora come faccio a prendere appunti? Non registro la lezione, ok? Non registro la lezione. Non c\u0027è nessun file audio, non c\u0027è video, ma..."
     },
     {
@@ -1645,7 +2002,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "09:34",
-        "html":  "But in the future, can we make a general recap of grammar rules?",
+        "html":  "But in the future, can we make a general recap of \u003cspan class=\"vocab-mark\" data-vkey=\"grammar-rules\" onclick=\"inspectVocab(\u0027grammar-rules\u0027)\"\u003egrammar rules\u003c/span\u003e?",
         "it":  "Ma in futuro possiamo fare un riassunto generale delle regole grammaticali?"
     },
     {
@@ -1654,7 +2011,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "09:47",
-        "html":  "Yeah, absolutely.",
+        "html":  "Yeah, \u003cspan class=\"vocab-mark\" data-vkey=\"absolutely\" onclick=\"inspectVocab(\u0027absolutely\u0027)\"\u003eabsolutely\u003c/span\u003e.",
         "it":  "Sì, assolutamente."
     },
     {
@@ -1762,7 +2119,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "10:25",
-        "html":  "He has already taken the test. You don\u0027t need to \u003cspan class=\"vocab-mark\" data-vkey=\"remind\" onclick=\"inspectVocab(\u0027remind\u0027)\"\u003eremind\u003c/span\u003e...",
+        "html":  "He has \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003ealready\u003c/span\u003e taken the test. You don\u0027t need to \u003cspan class=\"vocab-mark\" data-vkey=\"remind\" onclick=\"inspectVocab(\u0027remind\u0027)\"\u003eremind\u003c/span\u003e...",
         "it":  "Ha già fatto il test. Non è necessario ricordarlo..."
     },
     {
@@ -1771,7 +2128,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "10:28",
-        "html":  "Already then...",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003eAlready\u003c/span\u003e then...",
         "it":  "Già allora..."
     },
     {
@@ -1780,7 +2137,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "10:28",
-        "html":  "Him. Very good. Yeah, very good. Why is it already...?",
+        "html":  "Him. Very good. Yeah, very good. Why is it \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003ealready\u003c/span\u003e...?",
         "it":  "Lui. Molto bene. Sì, molto bene. Perché è già...?"
     },
     {
@@ -1789,7 +2146,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "10:37",
-        "html":  "Because it\u0027s an action that it\u0027s already done. Is it the action that started in the past and they finished in the past? We need... Already for this motivation...",
+        "html":  "Because it\u0027s an action that it\u0027s \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003ealready\u003c/span\u003e done. Is it the action that started in the past and they finished in the past? We need... \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003eAlready\u003c/span\u003e for this motivation...",
         "it":  "Perché è un\u0027azione già compiuta. È l\u0027azione che è iniziata nel passato e si è conclusa nel passato? Abbiamo bisogno... Già per questa motivazione..."
     },
     {
@@ -1798,7 +2155,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "11:00",
-        "html":  "Okay, good. Yeah, it\u0027s already happened. Yeah, very good. Next one, Amy has something to London. She loved it and she\u0027s home now.",
+        "html":  "Okay, good. Yeah, it\u0027s \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003ealready\u003c/span\u003e happened. Yeah, very good. Next one, Amy has something to London. She loved it and she\u0027s home now.",
         "it":  "Ok, bene. Sì, è già successo. Sì, molto bene. Il prossimo, Amy ha qualcosa per Londra. Le è piaciuto molto e ora è a casa."
     },
     {
@@ -1834,7 +2191,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "11:40",
-        "html":  "Has been, yeah, because it\u0027s done. Okay? If she. If it was gone. If it was gone, she would already. She would still be there. She would still be there if it was going.",
+        "html":  "Has been, yeah, because it\u0027s done. Okay? If she. If it was gone. If it was gone, she would \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003ealready\u003c/span\u003e. She would still be there. She would still be there if it was going.",
         "it":  "Lo è stato, sì, perché è fatto. Va bene? Se lei. Se fosse sparito. Se fosse sparito, lo avrebbe già fatto. Sarebbe ancora lì. Sarebbe ancora lì se dovesse succedere."
     },
     {
@@ -1870,7 +2227,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "12:26",
-        "html":  "She has not been yet. She has to go. She hasn\u0027t... She hasn\u0027t left. Okay, she hasn\u0027t left to go. She hasn\u0027t gone to London yet. Okay...",
+        "html":  "She has not been \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e. She has to go. She hasn\u0027t... She hasn\u0027t left. Okay, she hasn\u0027t left to go. She hasn\u0027t gone to London \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e. Okay...",
         "it":  "Non lo è ancora stata. Deve andare. Lei non... non se n\u0027è andata. Ok, non è andata via. Non è ancora andata a Londra. Va bene..."
     },
     {
@@ -1879,7 +2236,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "12:39",
-        "html":  "If I choose going... Organ means that she hasn\u0027t returned from London.",
+        "html":  "If I choose going... Organ means that she hasn\u0027t \u003cspan class=\"vocab-mark\" data-vkey=\"returned\" onclick=\"inspectVocab(\u0027returned\u0027)\"\u003ereturned\u003c/span\u003e from London.",
         "it":  "Se scelgo di andare... Organo significa che non è tornata da Londra."
     },
     {
@@ -1888,7 +2245,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "12:52",
-        "html":  "Gone is she has not returned. Okay, she has not...",
+        "html":  "Gone is she has not \u003cspan class=\"vocab-mark\" data-vkey=\"returned\" onclick=\"inspectVocab(\u0027returned\u0027)\"\u003ereturned\u003c/span\u003e. Okay, she has not...",
         "it":  "Se n\u0027è andata e non è tornata. Ok, lei non ha..."
     },
     {
@@ -1906,7 +2263,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "12:59",
-        "html":  "Returned yeah, very good, yeah, and it has and Amy has went to London is bad grammar bad very... Bad grammar very bad. Okay, we do not say, ay has went to London so am so and we would say Amy is going to London, not has. Okay, Amy is going to London. She has not been yet she wants to go. She wants to go. Okay, good. Next, I have something visited Tower Bridge...",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"returned\" onclick=\"inspectVocab(\u0027returned\u0027)\"\u003eReturned\u003c/span\u003e yeah, very good, yeah, and it has and Amy has went to London is bad grammar bad very... Bad grammar very bad. Okay, we do not say, ay has went to London so am so and we would say Amy is going to London, not has. Okay, Amy is going to London. She has not been \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e she wants to go. She wants to go. Okay, good. Next, I have something visited Tower Bridge...",
         "it":  "Restituito sì, molto bene, sì, e così è stato e Amy è andata a Londra, la grammatica è pessima, pessima... Grammatica pessima, molto pessima. Ok, non diciamo, sì, è andata a Londra, quindi anch\u0027io così e diremmo che Amy andrà a Londra, non è andata. Ok, Amy andrà a Londra. Non è ancora stata, vuole andare. Vuole andare. Ok, bene. Successivamente, ho qualcosa che ha visitato il Tower Bridge..."
     },
     {
@@ -1933,7 +2290,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "13:43",
-        "html":  "Yes, I have already visited the Tower Bridge. It was amazing.",
+        "html":  "Yes, I have \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003ealready\u003c/span\u003e visited the Tower Bridge. It was amazing.",
         "it":  "Sì, ho già visitato il Tower Bridge. È stato fantastico."
     },
     {
@@ -1942,7 +2299,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "13:58",
-        "html":  "Yes, I\u0027ve already visited...",
+        "html":  "Yes, I\u0027ve \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003ealready\u003c/span\u003e visited...",
         "it":  "Sì, ho già visitato..."
     },
     {
@@ -2014,7 +2371,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "14:25",
-        "html":  "Yes, I\u0027ve never been. I\u0027ve only been to Lucca, Pisa, obviously. Rome, yeah, exactly, and I can never say this last one, I\u0027m very sorry, I can never say Reggi near Sicily, opposite Sicily, Reggi... Regbara or something. I can\u0027t remember the name. Near Sicily, opposite Sicily. You know, the island opposite Sicily, but that\u0027s it. That\u0027s the only places I\u0027ve been. Yes. Okay, the next one, James has...",
+        "html":  "Yes, I\u0027ve never been. I\u0027ve only been to Lucca, Pisa, \u003cspan class=\"vocab-mark\" data-vkey=\"obviously\" onclick=\"inspectVocab(\u0027obviously\u0027)\"\u003eobviously\u003c/span\u003e. Rome, yeah, exactly, and I can never say this last one, I\u0027m very sorry, I can never say Reggi near Sicily, opposite Sicily, Reggi... Regbara or something. I can\u0027t remember the name. Near Sicily, opposite Sicily. You know, the island opposite Sicily, but that\u0027s it. That\u0027s the only places I\u0027ve been. Yes. Okay, the next one, James has...",
         "it":  "Sì, non ci sono mai stato. Sono stato solo a Lucca, Pisa, ovviamente. Roma, sì, esatto, e quest\u0027ultima non potrò mai dirla, mi dispiace moltissimo, non potrò mai dire Reggi vicino alla Sicilia, di fronte alla Sicilia, Reggi... Regbara o qualcosa del genere. Non riesco a ricordare il nome. Vicino alla Sicilia, di fronte alla Sicilia. Sapete, l\u0027isola di fronte alla Sicilia, ma questo è tutto. Sono gli unici posti in cui sono stato. SÌ. Ok, il prossimo, James ha..."
     },
     {
@@ -2086,7 +2443,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "16:10",
-        "html":  "Next, he has studied English for three years. He has studied English. Good, very good. I would do one more if they had something played in a championship.",
+        "html":  "Next, he has studied English for three years. He has studied English. Good, very good. I would do one more if they had something played in a \u003cspan class=\"vocab-mark\" data-vkey=\"championship\" onclick=\"inspectVocab(\u0027championship\u0027)\"\u003echampionship\u003c/span\u003e.",
         "it":  "Successivamente, ha studiato inglese per tre anni. Ha studiato inglese. Bene, molto bene. Ne farei uno in più se avessero giocato qualcosa in un campionato."
     },
     {
@@ -2095,7 +2452,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "16:28",
-        "html":  "Have a day. Have a day. And have they ever played in championship...",
+        "html":  "Have a day. Have a day. And have they ever played in \u003cspan class=\"vocab-mark\" data-vkey=\"championship\" onclick=\"inspectVocab(\u0027championship\u0027)\"\u003echampionship\u003c/span\u003e...",
         "it":  "Buona giornata. Buona giornata. E hanno mai giocato in un campionato..."
     },
     {
@@ -2104,7 +2461,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "16:45",
-        "html":  "Have they ever played in a championship? Very good, and have you ever played in a... Do you play football? What kind of sports do you play? Do you play any sports?",
+        "html":  "Have they ever played in a \u003cspan class=\"vocab-mark\" data-vkey=\"championship\" onclick=\"inspectVocab(\u0027championship\u0027)\"\u003echampionship\u003c/span\u003e? Very good, and have you ever played in a... Do you play football? What kind of sports do you play? Do you play any sports?",
         "it":  "Hanno mai giocato in un campionato? Molto bene, e hai mai giocato in un... Giochi a calcio? Che tipo di sport pratichi? Pratichi qualche sport?"
     },
     {
@@ -2167,7 +2524,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "18:24",
-        "html":  "I, the sector. I work, for, an industry that, m project e that Designer and the realizer amusement writer like a \u003cspan class=\"vocab-mark\" data-vkey=\"roller-coaster\" onclick=\"inspectVocab(\u0027roller-coaster\u0027)\"\u003eroller coaster\u003c/span\u003e. Okay?",
+        "html":  "I, the \u003cspan class=\"vocab-mark\" data-vkey=\"sector\" onclick=\"inspectVocab(\u0027sector\u0027)\"\u003esector\u003c/span\u003e. I work, for, an industry that, m project e that Designer and the realizer amusement writer like a \u003cspan class=\"vocab-mark\" data-vkey=\"roller-coaster\" onclick=\"inspectVocab(\u0027roller-coaster\u0027)\"\u003eroller coaster\u003c/span\u003e. Okay?",
         "it":  "Io, il settore. Lavoro, per, un settore che, m progetto e quel Designer e il realizzatore scrittore di divertimenti come montagne russe. Va bene?"
     },
     {
@@ -2194,7 +2551,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "19:05",
-        "html":  "Wow. So if I\u0027m hearing you right, you calculate the loads and the stresses, is that right?",
+        "html":  "Wow. So if I\u0027m hearing you right, you calculate the \u003cspan class=\"vocab-mark\" data-vkey=\"loads\" onclick=\"inspectVocab(\u0027loads\u0027)\"\u003eloads\u003c/span\u003e and the \u003cspan class=\"vocab-mark\" data-vkey=\"stresses\" onclick=\"inspectVocab(\u0027stresses\u0027)\"\u003estresses\u003c/span\u003e, is that right?",
         "it":  "Oh. Quindi, se ho capito bene, calcoli i carichi e le sollecitazioni, giusto?"
     },
     {
@@ -2230,7 +2587,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "19:35",
-        "html":  "So for the implementation, for... The construction. Okay, nice. And how long have you worked there? How long have you worked? At...",
+        "html":  "So for the \u003cspan class=\"vocab-mark\" data-vkey=\"implementation\" onclick=\"inspectVocab(\u0027implementation\u0027)\"\u003eimplementation\u003c/span\u003e, for... The construction. Okay, nice. And how long have you worked there? How long have you worked? At...",
         "it":  "Quindi per l\u0027implementazione, per... La costruzione. Ok, carino. E da quanto tempo lavori lì? Quanto tempo hai lavorato? A..."
     },
     {
@@ -2239,7 +2596,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "19:45",
-        "html":  "I work in this. Industry e for since the 2024 un for three years.",
+        "html":  "I work in this. Industry e for \u003cspan class=\"vocab-mark\" data-vkey=\"since\" onclick=\"inspectVocab(\u0027since\u0027)\"\u003esince\u003c/span\u003e the 2024 un for three years.",
         "it":  "Lavoro in questo. Industria e per dall\u0027ONU del 2024 per tre anni."
     },
     {
@@ -2302,7 +2659,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "20:50",
-        "html":  "Theme but yeah, have you been to many theme parks?",
+        "html":  "Theme but yeah, have you been to many \u003cspan class=\"vocab-mark\" data-vkey=\"theme-parks\" onclick=\"inspectVocab(\u0027theme-parks\u0027)\"\u003etheme parks\u003c/span\u003e?",
         "it":  "Tema ma sì, sei stato in molti parchi a tema?"
     },
     {
@@ -2320,7 +2677,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "20:57",
-        "html":  "Theme parks. So theme parks. Have you been to many theme parks\u0027s? Amusement parks where the roller coasters are like Disneyland or.",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"theme-parks\" onclick=\"inspectVocab(\u0027theme-parks\u0027)\"\u003eTheme parks\u003c/span\u003e. So \u003cspan class=\"vocab-mark\" data-vkey=\"theme-parks\" onclick=\"inspectVocab(\u0027theme-parks\u0027)\"\u003etheme parks\u003c/span\u003e. Have you been to many \u003cspan class=\"vocab-mark\" data-vkey=\"theme-parks\" onclick=\"inspectVocab(\u0027theme-parks\u0027)\"\u003etheme parks\u003c/span\u003e\u0027s? \u003cspan class=\"vocab-mark\" data-vkey=\"amusement-parks\" onclick=\"inspectVocab(\u0027amusement-parks\u0027)\"\u003eAmusement parks\u003c/span\u003e where the roller coasters are like Disneyland or.",
         "it":  "Parchi a tema. Quindi parchi a tema. Sei stato in molti parchi a tema? Parchi di divertimento dove le montagne russe sono come Disneyland o."
     },
     {
@@ -2383,7 +2740,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "21:32",
-        "html":  "It\u0027s the most famous park in Italy. The biggest park in Italy, and it\u0027s nearer Garda Lake for... Okay, but for a worker, I sometimes visit a park for working in the park. And, I went to France in July and in April for a test for acceleration. Test? In one rider. The next week I will go to Paris for auration testing. Another rider in one park. Not Disneyland \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027Disneyland\u0027.\"\u003e✨ Fixed: \"Disneyland\" (note-taker: \"East Nelander\")\u003c/span\u003e, but another park in the Paris park. After issue...",
+        "html":  "It\u0027s the most famous park in Italy. The biggest park in Italy, and it\u0027s nearer Garda Lake for... Okay, but for a worker, I sometimes visit a park for working in the park. And, I went to France in July and in April for a test for \u003cspan class=\"vocab-mark\" data-vkey=\"acceleration\" onclick=\"inspectVocab(\u0027acceleration\u0027)\"\u003eacceleration\u003c/span\u003e. Test? In one rider. The next week I will go to Paris for auration testing. Another rider in one park. Not Disneyland \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027Disneyland\u0027.\"\u003e✨ Fixed: \"Disneyland\" (note-taker: \"East Nelander\")\u003c/span\u003e, but another park in the Paris park. After issue...",
         "it":  "È il parco più famoso d\u0027Italia. Il parco più grande d\u0027Italia, ed è più vicino al Lago di Garda per... Ok, ma come lavoratore, a volte visito un parco per lavorare nel parco. Inoltre sono andato in Francia a luglio e ad aprile per un test di accelerazione. Test? In un cavaliere. La prossima settimana andrò a Parigi per i test di aurazione. Un altro ciclista in un parco. Non Disneyland, ma un altro parco nel parco di Parigi. Dopo l\u0027emissione..."
     },
     {
@@ -2410,7 +2767,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "22:38",
-        "html":  "Yes, I\u0027m aware of it. I\u0027ve never been I\u0027ve only been to theme parks in England, in Florida and in Japan, that\u0027s it. I\u0027ve already been to d. I\u0027ve been. Well, not only I\u0027ve been to Disney World in...",
+        "html":  "Yes, I\u0027m aware of it. I\u0027ve never been I\u0027ve only been to \u003cspan class=\"vocab-mark\" data-vkey=\"theme-parks\" onclick=\"inspectVocab(\u0027theme-parks\u0027)\"\u003etheme parks\u003c/span\u003e in England, in Florida and in Japan, that\u0027s it. I\u0027ve \u003cspan class=\"vocab-mark\" data-vkey=\"already\" onclick=\"inspectVocab(\u0027already\u0027)\"\u003ealready\u003c/span\u003e been to d. I\u0027ve been. Well, not only I\u0027ve been to Disney World in...",
         "it":  "Sì, ne sono consapevole. Non ci sono mai stato, sono stato solo nei parchi tematici in Inghilterra, in Florida e in Giappone, tutto qui. Sono già stato al d. Lo sono stato. Beh, non solo sono stato a Disney World in..."
     },
     {
@@ -2554,7 +2911,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "24:58",
-        "html":  "Well, that\u0027s pretty good. I wasn\u0027t too sure because I don\u0027t know obviously what\u0027s happening there, but very interesting. Yeah, I think my family will go there a lot. I think they will go there a lot. For sure. Okay. So I think it\u0027s a good time to move on to some structure for the present perfect, just to go over the rules. Okay, so we have the positive okay for when you have done something. Okay, so for example, the way it works is we do subjects have or has okay o troy oil and plus, the verb. Okay, plus the verb. So I have visited Paris, she has finished work so could...",
+        "html":  "Well, that\u0027s pretty good. I wasn\u0027t too sure because I don\u0027t know \u003cspan class=\"vocab-mark\" data-vkey=\"obviously\" onclick=\"inspectVocab(\u0027obviously\u0027)\"\u003eobviously\u003c/span\u003e what\u0027s happening there, but very interesting. Yeah, I think my family will go there a lot. I think they will go there a lot. \u003cspan class=\"vocab-mark\" data-vkey=\"for-sure\" onclick=\"inspectVocab(\u0027for-sure\u0027)\"\u003eFor sure\u003c/span\u003e. Okay. So I think it\u0027s a good time to move on to some structure for the present perfect, just to go over the rules. Okay, so we have the positive okay for when you have done something. Okay, so for example, the way it works is we do subjects have or has okay o troy oil and plus, the verb. Okay, plus the verb. So I have visited Paris, she has finished work so could...",
         "it":  "Beh, va abbastanza bene. Non ne ero troppo sicuro perché ovviamente non so cosa stia succedendo lì, ma è molto interessante. Sì, penso che la mia famiglia ci andrà spesso. Penso che ci andranno spesso. Di sicuro. Va bene. Quindi penso che sia un buon momento per passare a una struttura per il Present Perfect, giusto per ripassare le regole. Ok, quindi abbiamo l\u0027ok positivo per quando hai fatto qualcosa. Ok, quindi per esempio, il modo in cui funziona è che i soggetti hanno o hanno okay o troy oil e in più, il verbo. Ok, più il verbo. Allora, ho visitato Parigi, lei ha finito il lavoro, quindi potrebbe..."
     },
     {
@@ -2770,7 +3127,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "28:30",
-        "html":  "Sure I haven\u0027t, okay, I haven\u0027t, bosh, I have my fingers are very stupid. Sorry, I haven\u0027t visited Greece before. I haven\u0027t visited Greece yet. I haven\u0027t visited Greece yet. Okay. We can say. I haven\u0027t been to Greece. Okay? I haven\u0027t been to Greece. I haven\u0027t been...",
+        "html":  "Sure I haven\u0027t, okay, I haven\u0027t, bosh, I have my fingers are very stupid. Sorry, I haven\u0027t visited Greece before. I haven\u0027t visited Greece \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e. I haven\u0027t visited Greece \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e. Okay. We can say. I haven\u0027t been to Greece. Okay? I haven\u0027t been to Greece. I haven\u0027t been...",
         "it":  "Certo che non l\u0027ho fatto, okay, non l\u0027ho fatto, cavolo, le mie dita sono molto stupide. Mi dispiace, non ho mai visitato la Grecia prima. Non ho ancora visitato la Grecia. Non ho ancora visitato la Grecia. Va bene. Possiamo dire. Non sono stato in Grecia. Va bene? Non sono stato in Grecia. Non sono stato..."
     },
     {
@@ -2896,7 +3253,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "30:53",
-        "html":  "It\u0027s equal, yeah, because you had done exactly the same, so it\u0027s just that sometimes we condense it, okay? I visited Paris last year. I visited... Paris last year. I have been to Paris. Okay, but I visited Paris when we condense it, we add when okay, last year. Okay, let me put this separately, here we go. Let me just put this separately so it doesn\u0027t get confusing, so I\u0027ll put it here. Okay, so I visited. Okay, Paris. It gets the time last year. Last year last introy last November okay. We must put when okay. When we lose the have I have visited Paris I have visited in Paris, okay? We don\u0027t need to put when but when we removed the have I visited Paris last year. Okay, it sounds wrong when we when that\u0027s why we use have to just generally say it. But I visited Paris is asking for more information. It\u0027s an \u003cspan class=\"vocab-mark\" data-vkey=\"incomplete\" onclick=\"inspectVocab(\u0027incomplete\u0027)\"\u003eincomplete\u003c/span\u003e sentence. So you always...",
+        "html":  "It\u0027s equal, yeah, because you had done exactly the same, so it\u0027s just that sometimes we \u003cspan class=\"vocab-mark\" data-vkey=\"condense\" onclick=\"inspectVocab(\u0027condense\u0027)\"\u003econdense\u003c/span\u003e it, okay? I visited Paris last year. I visited... Paris last year. I have been to Paris. Okay, but I visited Paris when we \u003cspan class=\"vocab-mark\" data-vkey=\"condense\" onclick=\"inspectVocab(\u0027condense\u0027)\"\u003econdense\u003c/span\u003e it, we add when okay, last year. Okay, let me put this separately, here we go. Let me just put this separately so it doesn\u0027t get confusing, so I\u0027ll put it here. Okay, so I visited. Okay, Paris. It gets the time last year. Last year last introy last November okay. We must put when okay. When we lose the have I have visited Paris I have visited in Paris, okay? We don\u0027t need to put when but when we removed the have I visited Paris last year. Okay, it sounds wrong when we when that\u0027s why we use have to just generally say it. But I visited Paris is asking for more information. It\u0027s an \u003cspan class=\"vocab-mark\" data-vkey=\"incomplete\" onclick=\"inspectVocab(\u0027incomplete\u0027)\"\u003eincomplete\u003c/span\u003e sentence. So you always...",
         "it":  "È uguale, sì, perché tu avevi fatto esattamente la stessa cosa, quindi è solo che a volte lo condensiamo, ok? Ho visitato Parigi l\u0027anno scorso. Ho visitato Parigi l\u0027anno scorso. Sono stato a Parigi. Ok, ma ho visitato Parigi, per condensarlo, aggiungiamo quando va bene, l\u0027anno scorso. Ok, lasciami mettere questo separatamente, eccoci qui. Lasciami metterlo separatamente in modo da non creare confusione, quindi lo inserirò qui. Ok, quindi ho visitato. Ok, Parigi. Arriva il momento l\u0027anno scorso. L\u0027anno scorso l\u0027ultima introduzione lo scorso novembre, ok. Dobbiamo mettere quando va bene. Quando perdiamo il ho visitato Parigi ho visitato Parigi, ok? Non c\u0027è bisogno di mettere quando ma quando l\u0027abbiamo tolto ho visitato Parigi l\u0027anno scorso. Ok, sembra sbagliato quando dobbiamo dirlo in generale, per questo motivo. Ma ho visitato Parigi e chiedo maggiori informazioni. E\u0027 una frase incompleta. Quindi tu sempre..."
     },
     {
@@ -2914,7 +3271,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "32:30",
-        "html":  "Visited Paris?\" We need to know when, okay? The person\u0027s going to say, \"When did you do it?\" But we never say \"did\" or \"didn\u0027t.\" Okay, \"did\" and \"didn\u0027t\" because it\u0027s with \"I did\" or \"I didn\u0027t have anything with \"have\" or \"haven\u0027t,\" right? We don\u0027t use \"did\" or \"didn\u0027t.\" Okay... Want to put \"when?\" So that\u0027s why we use \"have I visited Paris?\" We need to know when, okay? The person\u0027s going to say, \"When did you do it?\" But we never say \"did\" or \"didn\u0027t.\" Question structure so haven\u0027t always... Missing one more thing and hasn\u0027t... Okay, so I should give you the example of \"has\". So when you\u0027re doing... Hasn\u0027t happened yet. He hasn\u0027t called yet, but I haven\u0027t called yet. I haven\u0027t visited. Okay, so we use \"has\" for it. She, he, okay, and \"haven\u0027t\" for they. I haven\u0027t been to Disneyland before. They haven\u0027t been to Disneyland before. Okay, so that\u0027s how we use each one of these. Okay, depends on the pronoun. Okay, depends on the subject. Sorry, on the subject I may say pronoun more than usual because I don\u0027t know if you know I\u0027m in Vietnam. Here, pronouns are crazy in Vietnam. Yeah. So you might hear me say pronouns too much. Which is not the case. Which I mean is subject the subject... Okay, next is \"Have you ever been to Asia?\"",
+        "html":  "Visited Paris?\" We need to know when, okay? The person\u0027s going to say, \"When did you do it?\" But we never say \"did\" or \"didn\u0027t.\" Okay, \"did\" and \"didn\u0027t\" because it\u0027s with \"I did\" or \"I didn\u0027t have anything with \"have\" or \"haven\u0027t,\" right? We don\u0027t use \"did\" or \"didn\u0027t.\" Okay... Want to put \"when?\" So that\u0027s why we use \"have I visited Paris?\" We need to know when, okay? The person\u0027s going to say, \"When did you do it?\" But we never say \"did\" or \"didn\u0027t.\" Question structure so haven\u0027t always... Missing one more thing and hasn\u0027t... Okay, so I should give you the example of \"has\". So when you\u0027re doing... Hasn\u0027t happened \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e. He hasn\u0027t called \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e, but I haven\u0027t called \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e. I haven\u0027t visited. Okay, so we use \"has\" for it. She, he, okay, and \"haven\u0027t\" for they. I haven\u0027t been to Disneyland before. They haven\u0027t been to Disneyland before. Okay, so that\u0027s how we use each one of these. Okay, depends on the pronoun. Okay, depends on the \u003cspan class=\"vocab-mark\" data-vkey=\"subject\" onclick=\"inspectVocab(\u0027subject\u0027)\"\u003esubject\u003c/span\u003e. Sorry, on the \u003cspan class=\"vocab-mark\" data-vkey=\"subject\" onclick=\"inspectVocab(\u0027subject\u0027)\"\u003esubject\u003c/span\u003e I may say pronoun more than usual because I don\u0027t know if you know I\u0027m in Vietnam. Here, \u003cspan class=\"vocab-mark\" data-vkey=\"pronouns\" onclick=\"inspectVocab(\u0027pronouns\u0027)\"\u003epronouns\u003c/span\u003e are crazy in Vietnam. Yeah. So you might hear me say \u003cspan class=\"vocab-mark\" data-vkey=\"pronouns\" onclick=\"inspectVocab(\u0027pronouns\u0027)\"\u003epronouns\u003c/span\u003e too much. Which is not the case. Which I mean is \u003cspan class=\"vocab-mark\" data-vkey=\"subject\" onclick=\"inspectVocab(\u0027subject\u0027)\"\u003esubject\u003c/span\u003e the \u003cspan class=\"vocab-mark\" data-vkey=\"subject\" onclick=\"inspectVocab(\u0027subject\u0027)\"\u003esubject\u003c/span\u003e... Okay, next is \"Have you ever been to Asia?\"",
         "it":  "Hai visitato Parigi?\" Dobbiamo sapere quando, ok? La persona dirà: \"Quando l\u0027hai fatto?\" Ma non diciamo mai \"fatto\" o \"non fatto\". Okay, \"fatto\" e \"non fatto\" perché sta con \"ho fatto\" o \"non avevo niente con \"ho\" o \"non ho\", giusto? Non usiamo \"did\" o \"didnot\". Ok... vuoi mettere \"quando?\" Ecco perché usiamo \"ho visitato Parigi?\" Dobbiamo sapere quando, ok? La persona dirà: \"Quando l\u0027hai fatto?\" Ma non diciamo mai \"fatto\" o \"non fatto\". Struttura della domanda quindi non sempre... Manca un\u0027altra cosa e non ha... Ok, quindi dovrei darti l\u0027esempio di \"ha\". Quindi quando lo fai... Non è ancora successo. Non ha ancora chiamato, ma io non ho ancora chiamato. Non ho visitato. Ok, quindi usiamo \"has\" per questo. Lei, lui, okay, e \"non l\u0027ho fatto\" per loro. Non sono mai stato a Disneyland prima. Non sono mai stati a Disneyland prima. Ok, è così che usiamo ognuno di questi. Ok, dipende dal pronome. Ok, dipende dall\u0027argomento. Scusa, a questo proposito forse dico più pronome del solito perché non so se sai che sono in Vietnam. Ecco, i pronomi sono pazzi in Vietnam. Sì. Quindi potresti sentirmi dire troppi pronomi. Ma non è così. Voglio dire, l\u0027argomento è l\u0027argomento... Ok, il prossimo è \"Sei mai stato in Asia?\""
     },
     {
@@ -2950,7 +3307,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "34:44",
-        "html":  "It\u0027s great, it\u0027s really okay, so how do we ask this a question? Subject plus about 3k 2 do to do. Okay, so for example, how do we ask if someone\u0027s visited Paris? How do we ask if someone\u0027s visited Paris?",
+        "html":  "It\u0027s great, it\u0027s really okay, so how do we ask this a question? \u003cspan class=\"vocab-mark\" data-vkey=\"subject\" onclick=\"inspectVocab(\u0027subject\u0027)\"\u003eSubject\u003c/span\u003e plus about 3k 2 do to do. Okay, so for example, how do we ask if someone\u0027s visited Paris? How do we ask if someone\u0027s visited Paris?",
         "it":  "È fantastico, va davvero bene, quindi come facciamo a porre questa domanda? Soggetto più circa 3k 2 da fare. Ok, quindi, ad esempio, come chiediamo se qualcuno ha visitato Parigi? Come chiediamo se qualcuno ha visitato Parigi?"
     },
     {
@@ -2995,7 +3352,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "35:32",
-        "html":  "I haven\u0027t visited the American yet.",
+        "html":  "I haven\u0027t visited the American \u003cspan class=\"vocab-mark\" data-vkey=\"yet\" onclick=\"inspectVocab(\u0027yet\u0027)\"\u003eyet\u003c/span\u003e.",
         "it":  "Non ho ancora visitato l\u0027americano."
     },
     {
@@ -3256,7 +3613,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "38:26",
-        "html":  "No... \u003cspan class=\"vocab-mark\" data-vkey=\"twice\" onclick=\"inspectVocab(\u0027twice\u0027)\"\u003eTwice\u003c/span\u003e and three times...",
+        "html":  "No... \u003cspan class=\"vocab-mark\" data-vkey=\"twice\" onclick=\"inspectVocab(\u0027twice\u0027)\"\u003eTwice\u003c/span\u003e and \u003cspan class=\"vocab-mark\" data-vkey=\"three-times\" onclick=\"inspectVocab(\u0027three-times\u0027)\"\u003ethree times\u003c/span\u003e...",
         "it":  "No... Due e tre volte..."
     },
     {
@@ -3265,7 +3622,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "38:36",
-        "html":  "Three times is, two times.",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"three-times\" onclick=\"inspectVocab(\u0027three-times\u0027)\"\u003eThree times\u003c/span\u003e is, two times.",
         "it":  "Tre volte è due volte."
     },
     {
@@ -3274,7 +3631,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "38:42",
-        "html":  "Thrice. It\u0027s okay, we don\u0027t really use it, we don\u0027t use it\u0027s okay, once...",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"thrice\" onclick=\"inspectVocab(\u0027thrice\u0027)\"\u003eThrice\u003c/span\u003e. It\u0027s okay, we don\u0027t really use it, we don\u0027t use it\u0027s okay, \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e...",
         "it":  "Tre volte. Va bene, non lo usiamo davvero, non lo usiamo, va bene, una volta..."
     },
     {
@@ -3292,7 +3649,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "38:46",
-        "html":  "Twice, it\u0027s fine. Okay, and how many times...? I don\u0027t know. Really, how many times have you been to Rome? How many times have you been to Rome...?",
+        "html":  "\u003cspan class=\"vocab-mark\" data-vkey=\"twice\" onclick=\"inspectVocab(\u0027twice\u0027)\"\u003eTwice\u003c/span\u003e, it\u0027s fine. Okay, and how many times...? I don\u0027t know. Really, how many times have you been to Rome? How many times have you been to Rome...?",
         "it":  "Due volte, va bene. Ok, e quante volte...? Non lo so. Davvero, quante volte sei stato a Roma? Quante volte sei stato a Roma...?"
     },
     {
@@ -3301,7 +3658,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "39:03",
-        "html":  "I haven\u0027t been to Roma. I have been to RNDA to Roma three times.",
+        "html":  "I haven\u0027t been to Roma. I have been to RNDA to Roma \u003cspan class=\"vocab-mark\" data-vkey=\"three-times\" onclick=\"inspectVocab(\u0027three-times\u0027)\"\u003ethree times\u003c/span\u003e.",
         "it":  "Non sono stato a Roma. Sono stato all\u0027RNDA di Roma tre volte."
     },
     {
@@ -3319,7 +3676,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "39:24",
-        "html":  "I have eaten sushi for a, once.",
+        "html":  "I have eaten sushi for a, \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e.",
         "it":  "Ho mangiato sushi per una volta."
     },
     {
@@ -3337,7 +3694,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "39:35",
-        "html":  "I have eaten sushi once.",
+        "html":  "I have eaten sushi \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e.",
         "it":  "Ho mangiato sushi una volta."
     },
     {
@@ -3346,7 +3703,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "39:37",
-        "html":  "Okay, good. Yeah, so when we\u0027re talking about life expectancy, the main part to remember, which you\u0027re slightly making a mistake on, is after the item. Okay, then we put just once. Okay, the number, so not four or two or anything connecting is absolutely fine. Do you have any brothers and sisters?",
+        "html":  "Okay, good. Yeah, so when we\u0027re talking about life expectancy, the main part to remember, which you\u0027re slightly making a mistake on, is after the item. Okay, then we put just \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e. Okay, the number, so not four or two or anything connecting is \u003cspan class=\"vocab-mark\" data-vkey=\"absolutely\" onclick=\"inspectVocab(\u0027absolutely\u0027)\"\u003eabsolutely\u003c/span\u003e fine. Do you have any brothers and sisters?",
         "it":  "Ok, bene. Sì, quindi quando parliamo di aspettativa di vita, la parte principale da ricordare, su cui stai leggermente sbagliando, è dopo l\u0027oggetto. Ok, allora mettiamo solo una volta. Ok, il numero, quindi non quattro o due o qualcosa del genere, va assolutamente bene. Hai fratelli e sorelle?"
     },
     {
@@ -3391,7 +3748,7 @@
         "chapterTitle":  "",
         "speaker":  "Mattia",
         "time":  "40:22",
-        "html":  "She has been to England once.",
+        "html":  "She has been to England \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e.",
         "it":  "È stata in Inghilterra una volta."
     },
     {
@@ -3400,7 +3757,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "40:29",
-        "html":  "Okay, she\u0027s been to England once. Very good with you. Did she go with you...",
+        "html":  "Okay, she\u0027s been to England \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e. Very good with you. Did she go with you...",
         "it":  "Ok, è stata in Inghilterra una volta. Molto bene con te. È venuta con te..."
     },
     {
@@ -3562,7 +3919,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "43:50",
-        "html":  "The long question answer is in England before COVID, I had my own company, and I do \u003cspan class=\"vocab-mark\" data-vkey=\"historic\" onclick=\"inspectVocab(\u0027historic\u0027)\"\u003ehistoric\u003c/span\u003e \u003cspan class=\"vocab-mark\" data-vkey=\"restoration\" onclick=\"inspectVocab(\u0027restoration\u0027)\"\u003erestoration\u003c/span\u003e. So my business was historic \u003cspan class=\"vocab-mark\" data-vkey=\"restoration\" onclick=\"inspectVocab(\u0027restoration\u0027)\"\u003erestoration\u003c/span\u003e. I rebuilt old historic buildings in Oxford, London, and the south of England. But as you can imagine, COVID was crazy, absolutely crazy. So I moved to the Caribbean. So I actually live here. All. I live in",
+        "html":  "The long question answer is in England before COVID, I had my own company, and I do \u003cspan class=\"vocab-mark\" data-vkey=\"historic\" onclick=\"inspectVocab(\u0027historic\u0027)\"\u003ehistoric\u003c/span\u003e \u003cspan class=\"vocab-mark\" data-vkey=\"restoration\" onclick=\"inspectVocab(\u0027restoration\u0027)\"\u003erestoration\u003c/span\u003e. So my business was \u003cspan class=\"vocab-mark\" data-vkey=\"historic\" onclick=\"inspectVocab(\u0027historic\u0027)\"\u003ehistoric\u003c/span\u003e \u003cspan class=\"vocab-mark\" data-vkey=\"restoration\" onclick=\"inspectVocab(\u0027restoration\u0027)\"\u003erestoration\u003c/span\u003e. I rebuilt old \u003cspan class=\"vocab-mark\" data-vkey=\"historic\" onclick=\"inspectVocab(\u0027historic\u0027)\"\u003ehistoric\u003c/span\u003e buildings in Oxford, London, and the south of England. But as you can imagine, COVID was crazy, \u003cspan class=\"vocab-mark\" data-vkey=\"absolutely\" onclick=\"inspectVocab(\u0027absolutely\u0027)\"\u003eabsolutely\u003c/span\u003e crazy. So I moved to the Caribbean. So I actually live here. All. I live in",
         "it":  "La lunga risposta alla domanda è che ero in Inghilterra prima del COVID, avevo la mia azienda e mi occupavo di restauro storico. Quindi la mia attività era il restauro storico. Ho ricostruito vecchi edifici storici a Oxford, Londra e nel sud dell\u0027Inghilterra. Ma come puoi immaginare, il COVID è stato pazzesco, assolutamente pazzesco. Quindi mi sono trasferito ai Caraibi. Quindi in realtà vivo qui. Tutto. Vivo a"
     },
     {
@@ -3598,7 +3955,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "46:15",
-        "html":  "Yes, for sure, Italian food is the best food, \u003cspan class=\"vocab-mark\" data-vkey=\"without-a-doubt\" onclick=\"inspectVocab(\u0027without-a-doubt\u0027)\"\u003ewithout a doubt\u003c/span\u003e.",
+        "html":  "Yes, \u003cspan class=\"vocab-mark\" data-vkey=\"for-sure\" onclick=\"inspectVocab(\u0027for-sure\u0027)\"\u003efor sure\u003c/span\u003e, Italian food is the best food, \u003cspan class=\"vocab-mark\" data-vkey=\"without-a-doubt\" onclick=\"inspectVocab(\u0027without-a-doubt\u0027)\"\u003ewithout a doubt\u003c/span\u003e.",
         "it":  "Sì, certo, il cibo italiano è il miglior cibo, senza dubbio."
     },
     {
@@ -3652,7 +4009,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "47:18",
-        "html":  "Nice, but what a place to live, what a place to live. Okay, yeah, so, things to think about. So we have the notes. I will get them sent over to you with today\u0027s structure. Now we know what your requirements are. We can. Now, if you like to go forward, we can now, go about grammar for the next four five lessons and make sure they\u0027re in do lots of practice and at the same time do conversation, but mostly structure and grammar. And we will. I will add vocabulary. Every lesson. Okay, just a few words every lesson because you see how the notes are, it\u0027s...",
+        "html":  "Nice, but what a place to live, what a place to live. Okay, yeah, so, things to think about. So we have the notes. I will get them sent over to you with today\u0027s structure. Now we know what your requirements are. We can. Now, if you like to go forward, we can now, go about grammar for the next four five lessons and make sure they\u0027re in do lots of practice and at the same time do conversation, but mostly structure and grammar. And we will. I will add \u003cspan class=\"vocab-mark\" data-vkey=\"vocabulary\" onclick=\"inspectVocab(\u0027vocabulary\u0027)\"\u003evocabulary\u003c/span\u003e. Every lesson. Okay, just a few words every lesson because you see how the notes are, it\u0027s...",
         "it":  "Bello, ma che posto in cui vivere, che posto in cui vivere. Ok, sì, allora, cose a cui pensare. Quindi abbiamo le note. Te li invierò con la struttura di oggi. Ora sappiamo quali sono le tue esigenze. Possiamo. Ora, se vuoi andare avanti, ora possiamo occuparci della grammatica per le prossime quattro cinque lezioni e assicurarci che facciano molta pratica e allo stesso tempo conversano, ma soprattutto struttura e grammatica. E lo faremo. Aggiungerò il vocabolario. Ogni lezione. Ok, solo poche parole ad ogni lezione perché vedi come sono gli appunti, è..."
     },
     {
@@ -3670,7 +4027,7 @@
         "chapterTitle":  "",
         "speaker":  "Louie",
         "time":  "47:59",
-        "html":  "Easy to learn, go over the vocabulary. Okay, do you have any questions at all?",
+        "html":  "Easy to learn, go over the \u003cspan class=\"vocab-mark\" data-vkey=\"vocabulary\" onclick=\"inspectVocab(\u0027vocabulary\u0027)\"\u003evocabulary\u003c/span\u003e. Okay, do you have any questions at all?",
         "it":  "Facile da imparare, ripassa il vocabolario. Ok, hai qualche domanda?"
     },
     {
@@ -4079,7 +4436,7 @@
               </div>
               <p class="text-xs text-stone-700 leading-snug">${item.def}</p>
               <div class="flex items-center justify-between pt-1 text-[11px] border-t border-parchment-200">
-                <span class="text-sage-800 font-semibold">${item.l1 || ''}</span>
+                <span class="text-sage-800 font-semibold">${item.l1 || (item.es ? '🇮🇹 ' + item.es : '')}</span>
                 <button onclick="speakWord('${item.word.replace(/'/g, "\\'")}')" class="px-2 py-0.5 rounded bg-sage-700 text-white text-[10px] font-semibold">🔊 Listen</button>
               </div>
             </div>
@@ -4111,7 +4468,7 @@
       const entries = Object.entries(VOCAB_DB).filter(([key, item]) => {
         if (levelFilter !== 'all' && item.level !== levelFilter) return false;
         if (search) {
-          const hay = `${item.word} ${item.def} ${item.l1 || ''} ${item.time}`.toLowerCase();
+          const hay = `${item.word} ${item.def} ${item.l1 || (item.es ? '🇮🇹 ' + item.es : '')} ${item.time}`.toLowerCase();
           if (!hay.includes(search)) return false;
         }
         return true;
@@ -4142,7 +4499,7 @@
             <p class="text-xs italic text-stone-500 bg-parchment-50 p-2.5 rounded-xl border border-parchment-200">${item.quote}</p>
           </div>
           <div class="pt-2 border-t border-parchment-200 flex items-center justify-between text-xs">
-            <span class="text-sage-800 font-medium">${item.l1 || ''}</span>
+            <span class="text-sage-800 font-medium">${item.l1 || (item.es ? '🇮🇹 ' + item.es : '')}</span>
             <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="text-autumn-700 hover:underline font-semibold text-[11px]">See in Transcript →</button>
           </div>
         </div>
@@ -4497,7 +4854,7 @@
       { target: "Has it stopped raining yet?", words: ["Has", "it", "stopped", "raining", "yet?"], it: "🇮🇹 Ha già smesso di piovere?" },
       { target: "I have eaten sushi once.", words: ["I", "have", "eaten", "sushi", "once."], it: "🇮🇹 Ho mangiato sushi una volta." }
     ];
-    let sbIdx = 0, sbChosen = [], sbPool = [];
+    let sbIdx = 0, sbChosen = [], sbPool = [], sbSolved = new Set();
     function sbShuffle(arr) { return [...arr].sort(() => Math.random() - 0.5); }
     function sbLoad() {
       const item = SB_ITEMS[sbIdx];
@@ -4528,6 +4885,8 @@
       const fb = document.getElementById('sb-feedback');
       fb.classList.remove('hidden');
       if (built === target) {
+        sbSolved.add(sbIdx);
+        refreshPreplyPreview();
         fb.className = 'text-xs sm:text-sm rounded-xl p-3 bg-sage-100 text-sage-900 border border-sage-300 font-semibold';
         fb.textContent = `✅ Perfetto! "${target}"`;
         if (typeof confetti === 'function') confetti({ particleCount: 35, spread: 50, origin: { y: 0.7 } });
@@ -4571,6 +4930,7 @@
         if (!ppdSolved.has(qi)) {
           ppdSolved.add(qi);
           document.getElementById('ppd-score').textContent = `${ppdSolved.size} / ${PPD_ITEMS.length}`;
+          refreshPreplyPreview();
           if (ppdSolved.size === PPD_ITEMS.length && typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
         }
       } else {
@@ -4612,6 +4972,7 @@
         if (!trapSolved.has(qi)) {
           trapSolved.add(qi);
           document.getElementById('trap-score').textContent = `${trapSolved.size} / ${TRAP_ITEMS.length}`;
+          refreshPreplyPreview();
           if (trapSolved.size === TRAP_ITEMS.length && typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
         }
       } else {
@@ -4677,6 +5038,63 @@
       }
     }
 
+    function buildPreplyReport() {
+      const now = new Date().toLocaleString();
+      const note = (document.getElementById('preply-student-note')?.value || '').trim();
+      const lines = [
+        '🍂 MATTIA M. — PRESENT PERFECT PRACTICE REPORT (Preply)',
+        '======================================================',
+        `👤 Student: ${LESSON_CONFIG.studentName}`,
+        `📅 Completed: ${now}`,
+        `📘 Lesson: ${LESSON_CONFIG.lessonNumber} (${LESSON_CONFIG.lessonDate})`,
+        '',
+        '📊 Activity Scores:',
+        `• Activity 1 (Sentence Builder): ${sbSolved.size} / ${SB_ITEMS.length}`,
+        `• Activity 2 (Been/Gone & For/Since/Yet): ${ppdSolved.size} / ${PPD_ITEMS.length}`,
+        `• Activity 3 (Spot & Fix the Trap): ${trapSolved.size} / ${TRAP_ITEMS.length}`,
+        `• Activity 4 (Irregular Participles Match): ${ipmMatched.size} / ${IPM_PAIRS.length} (Moves: ${ipmMoves})`,
+        `• Tab 5 (Lesson Quiz): ${quizAnswered.size} / ${QUIZ_QUESTIONS.length}`
+      ];
+      if (note) {
+        lines.push('', `💬 Note for Louie: ${note}`);
+      }
+      return lines.join('\n');
+    }
+
+    function refreshPreplyPreview() {
+      const ta = document.getElementById('preply-report-preview');
+      if (ta) ta.value = buildPreplyReport();
+    }
+
+    async function copyAndOpenPreply() {
+      refreshPreplyPreview();
+      const text = buildPreplyReport();
+      const toast = document.getElementById('preply-toast');
+      try {
+        await navigator.clipboard.writeText(text);
+        if (toast) toast.textContent = '✅ Copied! Paste in Preply chat (Ctrl+V).';
+      } catch (e) {
+        const ta = document.getElementById('preply-report-preview');
+        if (ta) { ta.select(); document.execCommand('copy'); }
+        if (toast) toast.textContent = '✅ Report selected & copied! Paste in Preply.';
+      }
+      window.open('https://preply.com/en/messages', '_blank', 'noopener');
+    }
+
+    function downloadPreplyReport() {
+      refreshPreplyPreview();
+      const text = buildPreplyReport();
+      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Mattia_Present_Perfect_Report.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
       initHeaderAndHero();
       renderTranscript();
@@ -4688,6 +5106,7 @@
       renderPpd();
       renderTraps();
       initIrregularMatch();
+      refreshPreplyPreview();
       if (LESSON_CONFIG.defaultSpotlightKey) inspectVocab(LESSON_CONFIG.defaultSpotlightKey);
       rebuildLeaves();
       animateLeaves();
