@@ -1,0 +1,4125 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Mattia's Peaceful English Sanctuary | Trial Lesson (Lesson 01) Transcript & Vocabulary</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Literary Serif), Plus Jakarta Sans (Soft Modern UI), JetBrains Mono (Timestamps & IPA) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            parchment: {
+              50: '#fbf9f5',
+              100: '#f6f1e7',
+              200: '#ede3d1',
+              300: '#dfd0b5',
+              400: '#cbb38e',
+              500: '#b6966b',
+            },
+            autumn: {
+              50: '#fcf6f0',
+              100: '#f7e9db',
+              200: '#eed0b5',
+              300: '#e2b086',
+              400: '#d38c57',
+              500: '#be6f38',
+              600: '#a3582b',
+              700: '#854524',
+              800: '#6c3921',
+            },
+            sage: {
+              50: '#f4f7f5',
+              100: '#e4ece7',
+              200: '#cadad1',
+              300: '#a5bfb1',
+              400: '#7b9f8d',
+              500: '#5b826f',
+              600: '#476858',
+              700: '#3a5448',
+              800: '#30443b',
+            },
+            slatewarm: {
+              700: '#3d4441',
+              800: '#2b312e',
+              900: '#1e2321',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP for Gentle Animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Popper & Tippy.js for Interactive Vocabulary Explanations -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+
+  <!-- Canvas Confetti for Gentle Practice Encouragement -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <style>
+    :root {
+      --bg-base: #f9f6f0;
+      --bg-card: rgba(255, 253, 249, 0.90);
+      --bg-subcard: rgba(255, 255, 255, 0.94);
+      --border-soft: #e6decb;
+      --border-accent: #d9c8b0;
+      --text-main: #2b312e;
+      --text-muted: #5c6660;
+      --grad-1: rgba(238, 208, 181, 0.42);
+      --grad-2: rgba(202, 218, 209, 0.48);
+      --grad-3: rgba(246, 241, 231, 0.70);
+    }
+
+    body[data-theme="winchester"] {
+      --bg-base: #f3f6f5;
+      --bg-card: rgba(252, 254, 253, 0.91);
+      --bg-subcard: rgba(255, 255, 255, 0.95);
+      --border-soft: #d7e2dc;
+      --border-accent: #b8ccc2;
+      --text-main: #26312d;
+      --text-muted: #52635c;
+      --grad-1: rgba(202, 218, 209, 0.50);
+      --grad-2: rgba(219, 228, 238, 0.48);
+      --grad-3: rgba(244, 240, 230, 0.55);
+    }
+
+    body[data-theme="twilight"] {
+      --bg-base: #f5efe6;
+      --bg-card: rgba(253, 249, 242, 0.92);
+      --bg-subcard: rgba(255, 252, 247, 0.96);
+      --border-soft: #e2d2be;
+      --border-accent: #cfaea0;
+      --text-main: #2d2622;
+      --text-muted: #665850;
+      --grad-1: rgba(226, 176, 134, 0.36);
+      --grad-2: rgba(214, 196, 176, 0.42);
+      --grad-3: rgba(235, 220, 202, 0.55);
+    }
+
+    body {
+      background-color: var(--bg-base);
+      background-image:
+        radial-gradient(at 8% 5%, var(--grad-1) 0px, transparent 52%),
+        radial-gradient(at 92% 18%, var(--grad-2) 0px, transparent 52%),
+        radial-gradient(at 50% 88%, var(--grad-3) 0px, transparent 58%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      transition: background-color 0.5s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    .sanctuary-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 12px 36px -10px rgba(91, 130, 111, 0.08), 0 4px 14px -3px rgba(43, 49, 46, 0.04);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .sanctuary-subcard {
+      background: var(--bg-subcard);
+      border: 1px solid var(--border-soft);
+      box-shadow: 0 4px 14px -4px rgba(43, 49, 46, 0.04);
+      transition: all 0.25s ease;
+    }
+
+    /* Inline Vocabulary Highlight in Transcript */
+    .vocab-mark {
+      display: inline-block;
+      background: linear-gradient(120deg, rgba(226, 176, 134, 0.25) 0%, rgba(165, 191, 177, 0.28) 100%);
+      border-bottom: 2px dashed #a3582b;
+      color: #5b3216;
+      font-weight: 600;
+      padding: 0px 5px;
+      margin: 0 1px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .vocab-mark:hover, .vocab-mark.active-vocab {
+      background: linear-gradient(120deg, rgba(190, 111, 56, 0.25) 0%, rgba(91, 130, 111, 0.32) 100%);
+      border-bottom-style: solid;
+      border-bottom-color: #476858;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(163, 88, 43, 0.14);
+    }
+
+    body.hide-vocab-highlights .vocab-mark {
+      background: transparent !important;
+      border-bottom: none !important;
+      color: inherit !important;
+      font-weight: inherit !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Note-taker fix badge */
+    .asr-fix-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.72rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f4f7f5;
+      color: #476858;
+      border: 1px solid #cadad1;
+      padding: 1px 7px;
+      border-radius: 999px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    body.hide-asr-fixes .asr-fix-pill {
+      display: none !important;
+    }
+
+    /* Custom Tippy Tooltip Theme: Peaceful Autumn */
+    .tippy-box[data-theme~='autumn-sanctuary'] {
+      background-color: #fffdf9;
+      color: #2b312e;
+      border: 1px solid #dfd0b5;
+      border-radius: 1rem;
+      box-shadow: 0 20px 38px -8px rgba(61, 68, 65, 0.16), 0 6px 16px -4px rgba(163, 88, 43, 0.08);
+      padding: 0.35rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='top'] > .tippy-arrow::before {
+      border-top-color: #dfd0b5;
+    }
+    .tippy-box[data-theme~='autumn-sanctuary'][data-placement^='bottom'] > .tippy-arrow::before {
+      border-bottom-color: #dfd0b5;
+    }
+
+    /* Highlight pulse when jumping to a transcript line */
+    @keyframes gentleGlow {
+      0% { background-color: rgba(226, 176, 134, 0.45); transform: scale(1.005); }
+      50% { background-color: rgba(165, 191, 177, 0.38); }
+      100% { background-color: transparent; transform: scale(1); }
+    }
+    .turn-highlight-flash {
+      animation: gentleGlow 2.8s ease-out;
+    }
+
+    @media print {
+      .no-print, #autumn-breeze-canvas { display: none !important; }
+      body { background: #fff !important; }
+      .sanctuary-card, .sanctuary-subcard { box-shadow: none !important; border: 1px solid #ccc !important; }
+    }
+  </style>
+</head>
+<body data-theme="kensington" class="font-sans antialiased min-h-screen selection:bg-autumn-200 selection:text-slatewarm-900 relative">
+
+  <!-- CALMING AUTUMN BREEZE CANVAS OVERLAY -->
+  <canvas id="autumn-breeze-canvas" class="fixed inset-0 pointer-events-none z-20 opacity-80"></canvas>
+
+  <!-- STICKY PEACEFUL NAVIGATION & ATMOSPHERE BAR -->
+  <header class="sticky top-0 z-40 border-b border-[#e6decb]/90 bg-[#fbf9f5]/85 backdrop-blur-md no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div id="brand-initial" class="w-10 h-10 rounded-2xl bg-gradient-to-br from-sage-600 via-sage-500 to-autumn-500 flex items-center justify-center text-white font-serif text-xl font-bold shadow-sm">
+          D
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span id="brand-title" class="font-serif font-bold text-lg sm:text-xl tracking-tight text-slatewarm-900">Diego's Peaceful English Sanctuary</span>
+            <span id="brand-badge" class="hidden sm:inline-flex items-center gap-1 px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-sage-100 text-sage-800 border border-sage-200">
+              Lesson 02 • The 16-Second Pitch, Economic Debate, Two Truths and a Lie & Game of Life
+            </span>
+          </div>
+          <p id="brand-subtitle" class="text-[11px] text-stone-500 hidden md:block">A calm, tidy space with your corrected lesson transcript, timestamps, and flagged vocabulary</p>
+        </div>
+      </div>
+
+      <!-- Calming Atmosphere Controls -->
+      <div class="flex flex-wrap items-center gap-2">
+        <div class="flex items-center gap-1.5 bg-white/90 border border-[#dfd0b5] rounded-xl px-2.5 py-1 shadow-sm">
+          <button id="soundscape-btn" onclick="toggleSoundscape()" class="flex items-center gap-1.5 text-xs font-semibold text-sage-700 hover:text-sage-900 transition px-1.5 py-0.5 rounded-lg">
+            <i data-lucide="wind" class="w-3.5 h-3.5 text-autumn-600"></i>
+            <span id="soundscape-label">London Breeze Audio: Off</span>
+          </button>
+          <select id="soundscape-preset" onchange="changeSoundscapePreset(this.value)" class="text-[11px] bg-parchment-50 border border-parchment-200 rounded-lg px-1.5 py-0.5 text-stone-700 focus:outline-none">
+            <option value="breeze">🍂 Kensington Breeze</option>
+            <option value="rain">🌧️ Soft London Rain</option>
+            <option value="study">🕯️ Warm Study Hearth</option>
+          </select>
+          <input id="soundscape-volume" type="range" min="0.05" max="0.6" step="0.05" value="0.22" oninput="updateSoundscapeVolume(this.value)" class="w-14 accent-sage-600 cursor-pointer hidden sm:block" />
+        </div>
+
+        <button id="leaves-toggle-btn" onclick="cycleLeafBreeze()" class="px-2.5 py-1.5 rounded-xl bg-white/90 hover:bg-autumn-50 border border-[#dfd0b5] text-xs font-medium text-stone-700 flex items-center gap-1.5 shadow-sm transition">
+          <i data-lucide="leaf" class="w-3.5 h-3.5 text-autumn-600"></i>
+          <span id="leaves-label" class="hidden sm:inline">Leaves: Gentle</span>
+        </button>
+
+        <div class="flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl px-2 py-1 shadow-sm text-xs">
+          <i data-lucide="volume-2" class="w-3.5 h-3.5 text-sage-600"></i>
+          <button onclick="setVoiceRate(0.85)" id="rate-slow" class="px-1.5 py-0.5 rounded-md text-[11px] text-stone-600 hover:bg-parchment-100 transition">0.85×</button>
+          <button onclick="setVoiceRate(1.0)" id="rate-normal" class="px-1.5 py-0.5 rounded-md text-[11px] bg-sage-600 text-white font-semibold transition">UK 1×</button>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-1 bg-white/90 border border-[#dfd0b5] rounded-xl p-1 text-[11px] shadow-sm">
+          <button onclick="setThemeMood('kensington')" id="theme-kensington" class="px-2 py-0.5 rounded-lg bg-autumn-100 text-autumn-800 font-semibold transition">Bath Stone</button>
+          <button onclick="setThemeMood('winchester')" id="theme-winchester" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Winchester Mist</button>
+          <button onclick="setThemeMood('twilight')" id="theme-twilight" class="px-2 py-0.5 rounded-lg text-stone-600 hover:text-stone-900 transition">Warm Study</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-7 space-y-7 relative z-10">
+
+    <!-- HERO BANNER -->
+    <section class="sanctuary-card rounded-3xl p-6 sm:p-9 relative overflow-hidden">
+      <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-7 items-center">
+        <div class="lg:col-span-8 space-y-3.5">
+          <div id="hero-meta-pill" class="inline-flex flex-wrap items-center gap-2 px-3 py-1 rounded-full bg-sage-100/90 border border-sage-200 text-sage-800 text-xs font-medium"></div>
+          <h1 id="hero-heading" class="font-serif text-3xl sm:text-4xl lg:text-[2.65rem] font-bold text-slatewarm-900 leading-[1.16]"></h1>
+          <p id="hero-intro" class="text-stone-600 text-sm sm:text-base leading-relaxed max-w-3xl"></p>
+        </div>
+
+        <div class="lg:col-span-4 grid grid-cols-2 gap-3">
+          <div onclick="switchTab('transcript')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-autumn-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-autumn-700" id="stat-duration">Full Dialogue Log</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Full Transcript</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Every turn tidied with inline vocab & timestamps</p>
+          </div>
+          <div onclick="switchTab('vocab')" class="cursor-pointer p-4 rounded-2xl bg-sage-50/95 border border-sage-200 hover:border-sage-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-sage-700" id="stat-vocab-count">52 Items</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Vocabulary & Idioms</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">B2–C2 words, UK audio & Spanish equivalents</p>
+          </div>
+          <div onclick="switchTab('fixes')" class="cursor-pointer p-4 rounded-2xl bg-autumn-50/95 border border-autumn-200 hover:border-autumn-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-autumn-700" id="stat-fixes-count">12 Fixes</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Note-Taker Fixes</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Sorted speech-to-text errors & 6 phrasing polishes</p>
+          </div>
+          <div onclick="switchTab('places')" class="cursor-pointer p-4 rounded-2xl bg-parchment-50/95 border border-parchment-300 hover:border-sage-400 transition shadow-sm">
+            <div class="text-[11px] font-mono font-semibold uppercase text-sage-700">Masterclass</div>
+            <div class="font-serif font-bold text-slatewarm-900 text-lg mt-0.5">Topics & Practice</div>
+            <p class="text-[11px] text-stone-600 mt-0.5">Stage breakdowns, flashcards & quiz</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-TAB NAVIGATION BAR -->
+    <nav class="sanctuary-card rounded-2xl p-2 flex flex-wrap items-center justify-between gap-2 no-print">
+      <div class="flex flex-wrap items-center gap-1.5 w-full sm:w-auto">
+        <button onclick="switchTab('transcript')" id="tab-btn-transcript" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm">
+          <i data-lucide="message-square-quote" class="w-4 h-4"></i>
+          <span>1. Lesson Transcript & Inline Vocab</span>
+        </button>
+        <button onclick="switchTab('vocab')" id="tab-btn-vocab" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="book-marked" class="w-4 h-4 text-autumn-600"></i>
+          <span>2. Vocabulary Dictionary</span>
+        </button>
+        <button onclick="switchTab('fixes')" id="tab-btn-fixes" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="sparkles" class="w-4 h-4 text-sage-600"></i>
+          <span>3. Note-Taker Fixes & Natural Strengths</span>
+        </button>
+        <button onclick="switchTab('places')" id="tab-btn-places" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="landmark" class="w-4 h-4 text-autumn-600"></i>
+          <span>4. Masterclass Topics & Strategy</span>
+        </button>
+        <button onclick="switchTab('practice')" id="tab-btn-practice" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="coffee" class="w-4 h-4 text-sage-600"></i>
+          <span>5. Peaceful Practice</span>
+        </button>
+        <button onclick="switchTab('grammar')" id="tab-btn-grammar" class="tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100">
+          <i data-lucide="book-open-check" class="w-4 h-4 text-autumn-600"></i>
+          <span>6. Present Perfect Grammar</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- TAB 1: FULL LESSON TRANSCRIPT -->
+    <section id="tab-panel-transcript" class="tab-panel space-y-6">
+      <div class="sanctuary-card rounded-3xl p-5 sm:p-6 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-4">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-sage-700 font-semibold">Interactive Conversation Transcript</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-0.5">
+              Our Speaking Workshop — With Vocabulary Explained Right In Context
+            </h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <input id="transcript-search" type="text" oninput="filterTranscript()" placeholder="Search transcript or time..." class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 focus:outline-none w-48" />
+            <select id="speaker-filter" onchange="filterTranscript()" class="px-3 py-1.5 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
+              <option value="all">Both Speakers</option>
+              <option value="Mattia" id="opt-student-speaker">Mattia's Turns Only</option>
+              <option value="Louie">Louie Only</option>
+            </select>
+            <button onclick="toggleVocabHighlights()" id="btn-toggle-highlights" class="px-3 py-1.5 rounded-xl bg-autumn-100 text-autumn-800 border border-autumn-300 text-xs font-semibold">
+              <span>Vocab Highlights: On</span>
+            </button>
+            <button onclick="toggleAsrBadges()" id="btn-toggle-asr" class="px-3 py-1.5 rounded-xl bg-sage-100 text-sage-800 border border-sage-300 text-xs font-semibold">
+              <span>Note-Taker Fixes: Visible</span>
+            </button>
+          </div>
+        </div>
+        <div id="chapter-pills-bar" class="flex flex-wrap items-center gap-1.5 pt-1"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+        <div class="lg:col-span-8 space-y-4" id="transcript-stream-container"></div>
+        <aside class="lg:col-span-4 lg:sticky lg:top-20 space-y-4">
+          <div class="sanctuary-card rounded-3xl p-5 sm:p-6 border-t-4 border-t-autumn-500 space-y-4 shadow-sm" id="vocab-inspector-card">
+            <div class="flex items-center justify-between gap-2 border-b border-[#e6decb] pb-3">
+              <span class="text-[11px] font-mono uppercase tracking-widest text-autumn-700 font-semibold flex items-center gap-1.5">
+                <i data-lucide="sparkle" class="w-3.5 h-3.5"></i>
+                Vocabulary Spotlight
+              </span>
+              <span id="insp-time" class="px-2.5 py-0.5 rounded-full bg-parchment-100 border border-parchment-300 font-mono text-xs text-stone-700">🕒 00:00</span>
+            </div>
+            <div>
+              <div class="flex items-center justify-between gap-2">
+                <h3 id="insp-word" class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Select a word</h3>
+                <button id="insp-audio-btn" onclick="speakWord('Welcome')" class="p-2.5 rounded-xl bg-sage-100 hover:bg-sage-200 text-sage-800 transition shrink-0">
+                  <i data-lucide="volume-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+              <div class="flex flex-wrap items-center gap-2 mt-1.5">
+                <span id="insp-ipa" class="text-xs font-mono text-stone-500"></span>
+                <span id="insp-pos" class="px-2 py-0.5 text-[11px] rounded-md bg-parchment-100 text-stone-700 font-medium"></span>
+                <span id="insp-level" class="px-2 py-0.5 text-[11px] rounded-md bg-autumn-100 text-autumn-800 font-mono font-semibold"></span>
+              </div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-parchment-50 border border-parchment-200 space-y-1">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-stone-500">Meaning & Nuance</div>
+              <p id="insp-def" class="text-xs sm:text-sm text-slatewarm-800 leading-relaxed"></p>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-sage-50/80 border border-sage-200 space-y-1">
+              <div class="text-[11px] font-mono uppercase tracking-wider text-sage-700">How It Was Used in Our Lesson</div>
+              <p id="insp-quote" class="text-xs italic text-stone-700 leading-relaxed"></p>
+            </div>
+            <div class="flex items-center justify-between pt-1 text-xs border-t border-[#e6decb]">
+              <span class="text-stone-500" id="insp-l1-label">🇪🇸 Conexión en español:</span>
+              <span id="insp-l1" class="font-semibold text-sage-800"></span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- TAB 2: VOCABULARY DICTIONARY -->
+    <section id="tab-panel-vocab" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-[#e6decb] pb-5">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Timestamped Lexicon</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">Vocabulary, Idioms & Expressions</h2>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <input id="vocab-search" type="text" oninput="renderVocabGrid()" placeholder="Search word, meaning, time..." class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs text-stone-800 w-52" />
+            <select id="vocab-level-filter" onchange="renderVocabGrid()" class="px-3 py-2 rounded-xl bg-white border border-[#dfd0b5] text-xs font-medium text-stone-700">
+              <option value="all">All Levels (B2–C2)</option>
+              <option value="C2">C2 Mastery</option>
+              <option value="C1">C1 Advanced</option>
+              <option value="B2">B2 Upper-Intermediate</option>
+            </select>
+          </div>
+        </div>
+        <div id="vocab-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2"></div>
+      </div>
+    </section>
+
+    <!-- TAB 3: NOTE-TAKER FIXES & GENTLE NOTES -->
+    <section id="tab-panel-fixes" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Your Natural Strengths & Gentle Phrasing Polishes</h2>
+        <div class="p-5 rounded-2xl bg-sage-50/90 border border-sage-200 space-y-3">
+          <div class="font-serif font-bold text-xl text-sage-800">Expressions You Used Naturally & Accurately Today</div>
+          <div id="student-strengths-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="gentle-polishes-grid"></div>
+      </div>
+
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">How We Sorted Out the Automated Note-Taker's Spelling Mistakes</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="asr-fixes-grid"></div>
+      </div>
+    </section>
+
+    <!-- TAB 4: MASTERCLASS TOPICS -->
+    <section id="tab-panel-places" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900">Masterclass Frameworks & Strategic Breakdowns</h2>
+        <div id="cultural-places-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- TAB 5: PEACEFUL PRACTICE -->
+    <section id="tab-panel-practice" class="tab-panel hidden space-y-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5 flex flex-col justify-between">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Gentle Vocabulary Flashcards</h3>
+            <span id="fc-counter" class="text-xs font-mono text-stone-500">Card 1</span>
+          </div>
+          <div onclick="flipFlashcard()" class="cursor-pointer sanctuary-subcard rounded-2xl p-7 min-h-[240px] flex flex-col items-center justify-center text-center space-y-3 border-2 border-[#dfd0b5] hover:border-autumn-400 transition select-none">
+            <span id="fc-badge" class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-mono"></span>
+            <h4 id="fc-front-title" class="font-serif text-3xl font-bold text-slatewarm-900"></h4>
+            <p id="fc-sub" class="text-xs sm:text-sm text-stone-600 max-w-md leading-relaxed"></p>
+            <div id="fc-back-details" class="hidden space-y-2 pt-2 border-t border-parchment-200 w-full">
+              <p id="fc-quote" class="text-xs italic text-sage-800"></p>
+              <p id="fc-l1" class="text-xs font-semibold text-autumn-700"></p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between gap-2 pt-2">
+            <button onclick="prevFlashcard()" class="px-4 py-2 rounded-xl bg-parchment-100 hover:bg-parchment-200 text-xs font-semibold text-stone-700 transition">← Previous</button>
+            <button onclick="speakCurrentFlashcard()" class="px-4 py-2 rounded-xl bg-sage-100 hover:bg-sage-200 text-xs font-semibold text-sage-800 transition">🔊 Listen (UK)</button>
+            <button onclick="nextFlashcard()" class="px-4 py-2 rounded-xl bg-sage-700 hover:bg-sage-800 text-xs font-semibold text-white transition">Next →</button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 sanctuary-card rounded-3xl p-6 sm:p-8 space-y-5">
+          <div class="flex items-center justify-between">
+            <h3 class="font-serif text-2xl font-bold text-slatewarm-900">Match the Concept to Our Lesson</h3>
+            <span id="quiz-score-badge" class="px-3 py-1 rounded-full bg-sage-100 text-sage-800 text-xs font-mono font-semibold">0 Completed</span>
+          </div>
+          <div id="quiz-container" class="space-y-4 max-h-[420px] overflow-y-auto pr-1"></div>
+        </div>
+      </div>
+
+      <!-- 3 Thoughtful Conversation Prompts -->
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-autumn-800 font-serif font-bold text-2xl">
+          <i data-lucide="coffee" class="w-5 h-5 text-autumn-600"></i>
+          <span>3 Thoughtful Conversation Prompts for Mattia (For Next Lesson)</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-sage-500">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">Prompt 01 • Paris Trip Report</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Parc Astérix Acceleration Testing</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Next lesson, tell me about your trip to Paris! Practice switching cleanly between Present Perfect (<em>"I have been to France four times"</em>) and Past Simple (<em>"I tested the ride on Tuesday"</em>).
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-autumn-500">
+            <span class="text-[11px] font-mono uppercase text-autumn-700 font-semibold">Prompt 02 • Engineering in English</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">From Monitor to Real-World Ride</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Describe a roller coaster project you have worked on recently—what structural calculations you did, what the inspection report covered, and what you have learned since 2024.
+            </p>
+          </div>
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-2 border-l-4 border-l-sage-500">
+            <span class="text-[11px] font-mono uppercase text-sage-700 font-semibold">Prompt 03 • Life Experiences</span>
+            <h4 class="font-serif font-bold text-lg text-slatewarm-900">Once, Twice, Three Times</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Prepare 5 sentences about places you have visited, foods you have tried, or sports you have played using <em>once</em>, <em>twice</em>, and <em>never</em>—remembering to drop <em>"for"</em>!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 6: PRESENT PERFECT GRAMMAR STRUCTURE & EXAMPLES -->
+    <section id="tab-panel-grammar" class="tab-panel hidden space-y-6">
+      <div class="sanctuary-card rounded-3xl p-6 sm:p-8 space-y-6">
+        <div class="border-b border-[#e6decb] pb-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-autumn-700 font-semibold">Trial Lesson Grammar Reference • Present Perfect</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slatewarm-900 mt-1">
+            Present Perfect: Structure, Rules &amp; Real Examples
+          </h2>
+          <p class="text-sm text-stone-600 mt-1">
+            Your complete template from today's lesson—covering positive, negative, and question forms, <em>been</em> vs. <em>gone</em>, <em>for</em> vs. <em>since</em>, and when to switch to Past Simple.
+          </p>
+        </div>
+
+        <!-- 3 Core Structure Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-3 border-t-4 border-t-sage-600">
+            <span class="px-2.5 py-0.5 rounded-full bg-sage-100 text-sage-800 text-[11px] font-mono font-semibold">1. POSITIVE (+)</span>
+            <h3 class="font-serif text-xl font-bold text-slatewarm-900">Subject + have / has + Past Participle</h3>
+            <p class="text-xs text-stone-600">Use <strong>have</strong> ('ve) with <em>I, you, we, they</em> and <strong>has</strong> ('s) with <em>he, she, it</em>.</p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slatewarm-800 pt-1">
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>I have visited</strong> Paris.</span>
+                <button onclick="speakText('I have visited Paris.')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>She has finished</strong> work.</span>
+                <button onclick="speakText('She has finished work.')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>He has already taken</strong> the test.</span>
+                <button onclick="speakText('He has already taken the test.')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-3 border-t-4 border-t-autumn-500">
+            <span class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-mono font-semibold">2. NEGATIVE (-)</span>
+            <h3 class="font-serif text-xl font-bold text-slatewarm-900">Subject + haven't / hasn't + Past Participle</h3>
+            <p class="text-xs text-stone-600">Never use <em>"I didn't go"</em> for general life experience—use <strong>haven't / hasn't</strong> + past participle.</p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slatewarm-800 pt-1">
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>I haven't been</strong> to Greece yet.</span>
+                <button onclick="speakText('I have not been to Greece yet.')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>He hasn't called</strong> yet.</span>
+                <button onclick="speakText('He has not called yet.')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>They haven't been</strong> to Disneyland before.</span>
+                <button onclick="speakText('They have not been to Disneyland before.')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-3 border-t-4 border-t-slatewarm-700">
+            <span class="px-2.5 py-0.5 rounded-full bg-stone-200 text-stone-800 text-[11px] font-mono font-semibold">3. QUESTION (?)</span>
+            <h3 class="font-serif text-xl font-bold text-slatewarm-900">Have / Has + Subject + (ever) + Past Participle?</h3>
+            <p class="text-xs text-stone-600">Use <strong>ever</strong> to ask about life experience; use <strong>yet</strong> at the end to ask if something expected has happened.</p>
+            <ul class="space-y-2 text-xs sm:text-sm text-slatewarm-800 pt-1">
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>Have you ever been</strong> to London?</span>
+                <button onclick="speakText('Have you ever been to London?')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>Has it stopped</strong> raining <strong>yet</strong>?</span>
+                <button onclick="speakText('Has it stopped raining yet?')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+              <li class="flex items-start justify-between gap-2">
+                <span>• <strong>Have they ever played</strong> in a championship?</span>
+                <button onclick="speakText('Have they ever played in a championship?')" class="text-sage-700 hover:text-sage-900 shrink-0" title="Listen">🔊</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Key Rules Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-3">
+            <h4 class="font-serif text-xl font-bold text-slatewarm-900">Present Perfect vs. Past Simple ("When?")</h4>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Use <strong>Present Perfect</strong> when the time is <em>not</em> stated or is still ongoing. The moment you add a finished past time (<em>last year, last summer, in 2016, ten years ago</em>), switch to <strong>Past Simple</strong>.
+            </p>
+            <div class="space-y-2 text-xs sm:text-sm bg-parchment-50 rounded-xl p-3 border border-[#e6decb]">
+              <p class="text-sage-800">✅ <strong>Present Perfect:</strong> "I <strong>have visited</strong> Paris." <em>(Life experience — no specific time)</em></p>
+              <p class="text-sage-800">✅ <strong>Past Simple:</strong> "I <strong>visited</strong> Paris <strong>last year</strong>." <em>(Specific finished time)</em></p>
+              <p class="text-autumn-800">❌ <strong>Avoid:</strong> "I <s>have visited</s> Paris last year."</p>
+            </div>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-3">
+            <h4 class="font-serif text-xl font-bold text-slatewarm-900"><em>Been</em> vs. <em>Gone</em></h4>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Both are past participles of <em>go</em>, but they tell the listener where the person is <strong>now</strong>.
+            </p>
+            <div class="space-y-2 text-xs sm:text-sm bg-parchment-50 rounded-xl p-3 border border-[#e6decb]">
+              <p class="text-sage-800">✅ <strong>has been to:</strong> "Amy <strong>has been to</strong> London. She loved it and she's home now." <em>(Visited and returned)</em></p>
+              <p class="text-sage-800">✅ <strong>has gone to:</strong> "James <strong>has gone to</strong> London." <em>(He is still there / hasn't returned yet)</em></p>
+              <p class="text-autumn-800">❌ <strong>Never say:</strong> "Amy <s>has went</s> to London."</p>
+            </div>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-3">
+            <h4 class="font-serif text-xl font-bold text-slatewarm-900">Time Markers: <em>For, Since, Already, Yet</em></h4>
+            <ul class="space-y-2 text-xs sm:text-sm text-stone-700">
+              <li>• <strong>for</strong> + duration (how long): <em>"She has driven <strong>for five hours</strong>." / "I have worked here <strong>for three years</strong>."</em></li>
+              <li>• <strong>since</strong> + starting point (when it started): <em>"She has been sick <strong>since last Monday</strong>." / "I have worked here <strong>since 2024</strong>."</em></li>
+              <li>• <strong>already</strong> (sooner than expected, positive): <em>"I have <strong>already</strong> visited Tower Bridge."</em></li>
+              <li>• <strong>yet</strong> (until now, questions &amp; negatives, at the end): <em>"Has it stopped raining <strong>yet</strong>?" / "I haven't visited America <strong>yet</strong>."</em></li>
+            </ul>
+          </div>
+
+          <div class="sanctuary-subcard rounded-2xl p-5 space-y-3">
+            <h4 class="font-serif text-xl font-bold text-slatewarm-900">Life Experience Frequency &amp; Irregular Participles</h4>
+            <p class="text-xs sm:text-sm text-stone-600">
+              State the number directly after the experience—do <strong>not</strong> add <em>"for"</em>:
+            </p>
+            <div class="space-y-1.5 text-xs sm:text-sm text-sage-900 bg-parchment-50 rounded-xl p-3 border border-[#e6decb]">
+              <p>• "I have eaten sushi <strong>once</strong>." <em>(1×)</em></p>
+              <p>• "I have been to London <strong>twice</strong>." <em>(2×)</em></p>
+              <p>• "I have been to Rome <strong>three times</strong>." / "I have been to France <strong>four times</strong>." <em>(3+×)</em></p>
+            </div>
+            <p class="text-xs font-mono text-stone-600 pt-1">
+              <strong>Irregulars from today:</strong> go → <em>gone/been</em> • drive → <em>driven</em> • run → <em>run</em> • make → <em>made</em> • take → <em>taken</em> • eat → <em>eaten</em> • see → <em>seen</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const LESSON_CONFIG = {
+      studentName: "Mattia",
+      lessonNumber: "Trial Lesson (Lesson 01)",
+      lessonDate: "November 15, 2026",
+      lessonSubtitle: "Present Perfect Grammar \u0026 Trial Onboarding • 54 Min • 24 Key Vocabulary Items",
+      l1FlagAndLabel: "🇮🇹 In italiano:",
+      heroHeadingHtml: `Welcome, Mattia — Your <span class="text-autumn-700 italic font-semibold">Peaceful Sanctuary</span> for English Reflection`,
+      heroIntroText: "Welcome to your personal English Sanctuary, Mattia! Here is your cleaned trial lesson transcript from November 15, 2026, complete with Italian vocabulary translations, gentle phrasing polishes, and a full Present Perfect grammar structure guide with examples.",
+      defaultSpotlightKey: "ongoing"
+    };
+
+    const VOCAB_DB = {
+    "ongoing":  {
+                    "word":  "ongoing",
+                    "ipa":  "/ˈɒnˌɡəʊ.ɪŋ/",
+                    "pos":  "adjective",
+                    "level":  "B2",
+                    "cat":  "abstract",
+                    "def":  "Continuing to exist or develop; still happening right now.",
+                    "quote":  "Mattia (01:50): \"Because the action started last Monday and now it is ongoing.\"",
+                    "es":  "in corso / continuo",
+                    "turnId":  "turn-31",
+                    "time":  "01:50"
+                },
+    "irregular":  {
+                      "word":  "irregular",
+                      "ipa":  "/ɪˈreɡ.jə.lər/",
+                      "pos":  "adjective",
+                      "level":  "B2",
+                      "cat":  "abstract",
+                      "def":  "Not following the standard \u0027-ed\u0027 pattern in the past tense or past participle.",
+                      "quote":  "Louie (02:41): \"Good, very good. Yeah, exactly, it\u0027s irregular, right?\"",
+                      "es":  "irregolare",
+                      "turnId":  "turn-36",
+                      "time":  "02:41"
+                  },
+    "host-family":  {
+                        "word":  "host family",
+                        "ipa":  "/həʊst ˈfæm.əl.i/",
+                        "pos":  "noun phrase",
+                        "level":  "B2",
+                        "cat":  "travel",
+                        "def":  "A local family that welcomes a visiting student or traveler to stay in their home.",
+                        "quote":  "Louie (04:25): \"So you stayed with a host family. And then you visited London as well.\"",
+                        "es":  "famiglia ospitante",
+                        "turnId":  "turn-44",
+                        "time":  "04:25"
+                    },
+    "get-around":  {
+                       "word":  "get around",
+                       "ipa":  "/ɡet əˈraʊnd/",
+                       "pos":  "phrasal verb",
+                       "level":  "B2",
+                       "cat":  "idioms",
+                       "def":  "To travel easily from place to place within a city or area.",
+                       "quote":  "Louie (05:25): \"We say it\u0027s easy to get around.\"",
+                       "es":  "spostarsi / muoversi (in città)",
+                       "turnId":  "turn-48",
+                       "time":  "05:25"
+                   },
+    "transcribe":  {
+                       "word":  "transcribe",
+                       "ipa":  "/trænˈskraɪb/",
+                       "pos":  "verb",
+                       "level":  "C1",
+                       "cat":  "abstract",
+                       "def":  "To turn spoken words into a written text record.",
+                       "quote":  "Louie (06:22): \"I transcribe. Okay, I transcribe, so it\u0027s transcribing now.\"",
+                       "es":  "trascrivere",
+                       "turnId":  "turn-54",
+                       "time":  "06:22"
+                   },
+    "remind":  {
+                   "word":  "remind",
+                   "ipa":  "/rɪˈmaɪnd/",
+                   "pos":  "verb",
+                   "level":  "B2",
+                   "cat":  "abstract",
+                   "def":  "To make someone remember something they need to do or already know.",
+                   "quote":  "Louie (10:25): \"He has already taken the test. You don\u0027t need to remind him.\"",
+                   "es":  "ricordare (a qualcuno)",
+                   "turnId":  "turn-80",
+                   "time":  "10:25"
+               },
+    "returned":  {
+                     "word":  "returned",
+                     "ipa":  "/rɪˈtɜːnd/",
+                     "pos":  "verb (past participle)",
+                     "level":  "B2",
+                     "cat":  "travel",
+                     "def":  "Came or went back to a place after being away.",
+                     "quote":  "Louie (11:59): \"So if it\u0027s \u0027been\u0027, okay, she has returned from London.\"",
+                     "es":  "tornato / rientrato",
+                     "turnId":  "turn-90",
+                     "time":  "11:59"
+                 },
+    "whereabouts":  {
+                        "word":  "whereabouts",
+                        "ipa":  "/ˈweər.ə.baʊts/",
+                        "pos":  "adverb",
+                        "level":  "C1",
+                        "cat":  "travel",
+                        "def":  "Used to ask roughly which part of a country, region, or city someone is from.",
+                        "quote":  "Louie (14:16): \"Yeah, whereabouts in Italy are you from?\"",
+                        "es":  "in che zona / dove esattamente",
+                        "turnId":  "turn-106",
+                        "time":  "14:16"
+                    },
+    "cycling":  {
+                    "word":  "cycling",
+                    "ipa":  "/ˈsaɪ.klɪŋ/",
+                    "pos":  "noun / activity",
+                    "level":  "B2",
+                    "cat":  "travel",
+                    "def":  "The sport or activity of riding a bicycle.",
+                    "quote":  "Louie (17:21): \"You go cycling. Okay... Very good, nice.\"",
+                    "es":  "andare in bicicletta / ciclismo",
+                    "turnId":  "turn-122",
+                    "time":  "17:21"
+                },
+    "sector":  {
+                   "word":  "sector",
+                   "ipa":  "/ˈsek.tər/",
+                   "pos":  "noun",
+                   "level":  "B2",
+                   "cat":  "abstract",
+                   "def":  "A distinct part or industry within an economy or area of business.",
+                   "quote":  "Louie (18:18): \"If you write in English, what sector do you work in?\"",
+                   "es":  "settore",
+                   "turnId":  "turn-124",
+                   "time":  "18:18"
+               },
+    "roller-coaster":  {
+                           "word":  "roller coaster",
+                           "ipa":  "/ˈrəʊ.lə ˌkəʊ.stər/",
+                           "pos":  "noun",
+                           "level":  "B2",
+                           "cat":  "travel",
+                           "def":  "A thrilling amusement park ride on a steep, twisting track.",
+                           "quote":  "Mattia (18:24): \"I work for an industry that designs and builds amusement rides like a roller coaster.\"",
+                           "es":  "montagne russe",
+                           "turnId":  "turn-125",
+                           "time":  "18:24"
+                       },
+    "structural":  {
+                       "word":  "structural",
+                       "ipa":  "/ˈstrʌk.tʃər.əl/",
+                       "pos":  "adjective",
+                       "level":  "C1",
+                       "cat":  "abstract",
+                       "def":  "Relating to the physical framework, strength, and load-bearing design of a building or ride.",
+                       "quote":  "Mattia (18:50): \"I work in a structural analysis department. I do the structural calculations for the ride.\"",
+                       "es":  "strutturale",
+                       "turnId":  "turn-127",
+                       "time":  "18:50"
+                   },
+    "inspection":  {
+                       "word":  "inspection",
+                       "ipa":  "/ɪnˈspek.ʃən/",
+                       "pos":  "noun",
+                       "level":  "B2",
+                       "cat":  "abstract",
+                       "def":  "A careful, official check to verify safety, quality, or compliance.",
+                       "quote":  "Mattia (19:12): \"After we finish our calculation, we write a report for the inspection.\"",
+                       "es":  "ispezione / collaudo",
+                       "turnId":  "turn-131",
+                       "time":  "19:12"
+                   },
+    "theme-parks":  {
+                        "word":  "theme parks",
+                        "ipa":  "/ˈθiːm pɑːks/",
+                        "pos":  "noun (plural)",
+                        "level":  "B2",
+                        "cat":  "travel",
+                        "def":  "Large entertainment parks where rides, shows, and areas follow specific themes.",
+                        "quote":  "Louie (20:57): \"Theme parks—amusement parks where the roller coasters are, like Disneyland.\"",
+                        "es":  "parchi tematici",
+                        "turnId":  "turn-138",
+                        "time":  "20:42"
+                    },
+    "condense":  {
+                     "word":  "condense",
+                     "ipa":  "/kənˈdens/",
+                     "pos":  "verb",
+                     "level":  "C1",
+                     "cat":  "abstract",
+                     "def":  "To make a sentence, explanation, or text shorter while keeping the core meaning.",
+                     "quote":  "Louie (30:43): \"Because we can condense it, we can shorten it down, okay?\"",
+                     "es":  "condensare / abbreviare",
+                     "turnId":  "turn-204",
+                     "time":  "30:43"
+                 },
+    "incomplete":  {
+                       "word":  "incomplete",
+                       "ipa":  "/ˌɪn.kəmˈpliːt/",
+                       "pos":  "adjective",
+                       "level":  "B2",
+                       "cat":  "abstract",
+                       "def":  "Missing a necessary piece of information (such as \u0027when\u0027 in a Past Simple sentence).",
+                       "quote":  "Louie (32:00): \"\u0027I visited Paris\u0027 is asking for more information. It\u0027s an incomplete sentence.\"",
+                       "es":  "incompleto",
+                       "turnId":  "turn-206",
+                       "time":  "30:53"
+                   },
+    "once":  {
+                 "word":  "once",
+                 "ipa":  "/wʌns/",
+                 "pos":  "adverb",
+                 "level":  "B2",
+                 "cat":  "rhythm",
+                 "def":  "One single time (used directly after a life-experience clause without \u0027for\u0027).",
+                 "quote":  "Louie (38:07): \"I\u0027ve been to Greece once.\"",
+                 "es":  "una volta",
+                 "turnId":  "turn-244",
+                 "time":  "38:07"
+             },
+    "twice":  {
+                  "word":  "twice",
+                  "ipa":  "/twaɪs/",
+                  "pos":  "adverb",
+                  "level":  "B2",
+                  "cat":  "rhythm",
+                  "def":  "Two times (used directly without saying \u0027two times\u0027 or \u0027for\u0027).",
+                  "quote":  "Louie (38:26): \"Twice and three times.\"",
+                  "es":  "due volte",
+                  "turnId":  "turn-246",
+                  "time":  "38:26"
+              },
+    "historic":  {
+                     "word":  "historic",
+                     "ipa":  "/hɪˈstɒr.ɪk/",
+                     "pos":  "adjective",
+                     "level":  "B2",
+                     "cat":  "travel",
+                     "def":  "Important in history or preserved from a past era.",
+                     "quote":  "Louie (43:50): \"My business was historic restoration. I rebuilt old historic buildings.\"",
+                     "es":  "storico",
+                     "turnId":  "turn-280",
+                     "time":  "43:50"
+                 },
+    "restoration":  {
+                        "word":  "restoration",
+                        "ipa":  "/ˌres.təˈreɪ.ʃən/",
+                        "pos":  "noun",
+                        "level":  "C1",
+                        "cat":  "abstract",
+                        "def":  "The process of repairing and returning an old building or object to its original condition.",
+                        "quote":  "Louie (43:50): \"I had my own company, and I do historic restoration.\"",
+                        "es":  "restauro",
+                        "turnId":  "turn-280",
+                        "time":  "43:50"
+                    },
+    "tariffs":  {
+                    "word":  "tariffs",
+                    "ipa":  "/ˈtær.ɪfs/",
+                    "pos":  "noun (plural)",
+                    "level":  "C1",
+                    "cat":  "abstract",
+                    "def":  "Taxes or duties charged by a government on imported or exported goods.",
+                    "quote":  "Louie (44:29): \"So I deal with the tariffs and stuff like that, the taxes.\"",
+                    "es":  "dazi doganali / tariffe",
+                    "turnId":  "turn-282",
+                    "time":  "44:29"
+                },
+    "international-trade":  {
+                                "word":  "international trade",
+                                "ipa":  "/ˌɪn.təˈnæʃ.ən.əl treɪd/",
+                                "pos":  "noun phrase",
+                                "level":  "B2",
+                                "cat":  "abstract",
+                                "def":  "The exchange of goods and services across national borders.",
+                                "quote":  "Louie (45:30): \"Yeah, to learn Vietnamese, to do trade, to do international trade.\"",
+                                "es":  "commercio internazionale",
+                                "turnId":  "turn-282",
+                                "time":  "44:29"
+                            },
+    "without-a-doubt":  {
+                            "word":  "without a doubt",
+                            "ipa":  "/wɪˈðaʊt ə daʊt/",
+                            "pos":  "idiom",
+                            "level":  "B2",
+                            "cat":  "idioms",
+                            "def":  "Certainly; with complete certainty.",
+                            "quote":  "Louie (46:15): \"Yes, for sure, Italian food is the best food, without a doubt.\"",
+                            "es":  "senza dubbio",
+                            "turnId":  "turn-284",
+                            "time":  "46:15"
+                        },
+    "fair-enough":  {
+                        "word":  "fair enough",
+                        "ipa":  "/feər ɪˈnʌf/",
+                        "pos":  "idiom",
+                        "level":  "B2",
+                        "cat":  "idioms",
+                        "def":  "A friendly way to say \u0027that makes sense\u0027 or \u0027I accept your answer\u0027.",
+                        "quote":  "Louie (48:07): \"No, okay, fair enough.\"",
+                        "es":  "giusto / ci sta / va bene",
+                        "turnId":  "turn-294",
+                        "time":  "48:07"
+                    }
+};
+    const TRANSCRIPT_TURNS = [
+    {
+        "id":  "turn-1",
+        "chapterId":  "chap-1",
+        "chapterTitle":  "Chapter I • Goals \u0026 Trial Lesson Intro (00:00)",
+        "speaker":  "Louie",
+        "time":  "00:00",
+        "html":  "Testing, can you hear me now? Okay, sorry, I just put a different microphone on. Thank you very much for meeting me today. Is it Mattia \u003cspan class=\"asr-fix-pill\" title=\"Corrected spelling of your name from the automated note-taker.\"\u003e✨ Fixed: \"Mattia\" (note-taker: \"Matthia\")\u003c/span\u003e? Is that correct? Am I saying your name correctly? I\u0027m Lois, and how are you today?"
+    },
+    {
+        "id":  "turn-2",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "00:18",
+        "html":  "I\u0027m fine. Thanks. You..."
+    },
+    {
+        "id":  "turn-3",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "00:20",
+        "html":  "Okay, very good. Yes, very good. Thank you very much. Thank you. I just would like to know... Mattia \u003cspan class=\"asr-fix-pill\" title=\"Corrected spelling of your name from the automated note-taker.\"\u003e✨ Fixed: \"Mattia\" (note-taker: \"Matthia\")\u003c/span\u003e, in your own words, why are we here today?"
+    },
+    {
+        "id":  "turn-4",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "00:33",
+        "html":  "Why I\u0027m here today for the... No, your lesson method and... For the speaker with you about what I want to learn in English with periodic lessons."
+    },
+    {
+        "id":  "turn-5",
+        "chapterId":  "chap-2",
+        "chapterTitle":  "Chapter II • Present Perfect Diagnostic \u0026 Exercises (00:40)",
+        "speaker":  "Louie",
+        "time":  "01:01",
+        "html":  "What are the goals? What are your goals?"
+    },
+    {
+        "id":  "turn-6",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "01:06",
+        "html":  "Sorry, can I and..."
+    },
+    {
+        "id":  "turn-7",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:09",
+        "html":  "What are your goals?"
+    },
+    {
+        "id":  "turn-8",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "01:12",
+        "html":  "What does the win go?"
+    },
+    {
+        "id":  "turn-9",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:15",
+        "html":  "What do you want from the lesson? What...?"
+    },
+    {
+        "id":  "turn-10",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "01:18",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-11",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:19",
+        "html":  "Do you want...?"
+    },
+    {
+        "id":  "turn-12",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "01:19",
+        "html":  "For the beginning of the lesson, we need for the first second third dimension. I want to have a re a grammar recap. The VE the different between present perfect present continuous the if closes the future a general recap of a grammar rules \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027grammar rules\u0027 as \u0027grandma Rosa\u0027!\"\u003e✨ Fixed: \"grammar rules\" (note-taker: \"grandma Rosa\")\u003c/span\u003e and after. I want to improve my confidence with the dialogue \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027dialogue\u0027.\"\u003e✨ Fixed: \"dialogue\" (note-taker: \"yaog\")\u003c/span\u003e and, I want to improve the new leger Jap. I want, to increase the vocabulary. E to vocabulary \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027vocabulary\u0027.\"\u003e✨ Fixed: \"vocabulary\" (note-taker: \"CBLEARY\")\u003c/span\u003e."
+    },
+    {
+        "id":  "turn-13",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "02:17",
+        "html":  "Okay, no problem at all. No problem at all. So you would like some structure and then construct, some conversation practice and then vocabulary."
+    },
+    {
+        "id":  "turn-14",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "02:28",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-15",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "02:29",
+        "html":  "Okay, thank"
+    },
+    {
+        "id":  "turn-16",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "02:30",
+        "html":  "With the..."
+    },
+    {
+        "id":  "turn-17",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "02:30",
+        "html":  "You very muchm."
+    },
+    {
+        "id":  "turn-18",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Matthia",
+        "time":  "02:30",
+        "html":  "Vocabulary, with, for the first time, I got with the Italian translation so I can, understand the water. The water. The vocabulary means."
+    },
+    {
+        "id":  "turn-19",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "02:45",
+        "html":  "Okay, well... First, no problem. So first of all, let\u0027s check your grammar. Okay, let\u0027s have a little look. So let me just bring up a file. Here we go. One second, what happens? Okay, here we go, professional tests. Okay, that\u0027s one file. Next one. Okay, two."
+    },
+    {
+        "id":  "turn-20",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "00:00",
+        "html":  "Here we I\u0027m just going to share my screen now let\u0027s pull you over here. So I just getting some files ready for today. Here we go. So just a little exercise here just to see present perfect. Okay. Present. Perfect. And can you choose the correct word, please? Can you choose the correct word?"
+    },
+    {
+        "id":  "turn-21",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "00:40",
+        "html":  "Yes, has it stopped raining yet?"
+    },
+    {
+        "id":  "turn-22",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "00:55",
+        "html":  "Is it yet? Why is it yet...?"
+    },
+    {
+        "id":  "turn-23",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "01:05",
+        "html":  "Because, yet, when, you use yet, it, in the f in the end of the sentence."
+    },
+    {
+        "id":  "turn-24",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:18",
+        "html":  "Yep, because it\u0027s a question..."
+    },
+    {
+        "id":  "turn-25",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "01:22",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-26",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:23",
+        "html":  "Yeah, because it\u0027s a question, yet it is used in questions, okay..."
+    },
+    {
+        "id":  "turn-27",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "01:28",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-28",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:29",
+        "html":  "Yet is used in questions very good. Okay, next. She has been sick."
+    },
+    {
+        "id":  "turn-29",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "01:35",
+        "html":  "He has been sick since last Monday."
+    },
+    {
+        "id":  "turn-30",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "01:44",
+        "html":  "Very good. And why is it sense?"
+    },
+    {
+        "id":  "turn-31",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "01:50",
+        "html":  "Because the action started last Monday and now it is \u003cspan class=\"vocab-mark\" data-vkey=\"ongoing\" onclick=\"inspectVocab(\u0027ongoing\u0027)\"\u003eongoing\u003c/span\u003e."
+    },
+    {
+        "id":  "turn-32",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "02:04",
+        "html":  "Very good. Yeah, since a specific time, very good. And next one, she has driven for five hours."
+    },
+    {
+        "id":  "turn-33",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "02:22",
+        "html":  "See, she has drive..."
+    },
+    {
+        "id":  "turn-34",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "02:27",
+        "html":  "Very good. She has driven for five hours. Why is it driven?"
+    },
+    {
+        "id":  "turn-35",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "02:36",
+        "html":  "Driven because it\u0027s the participle \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027past participle\u0027 as \u0027party ship\u0027.\"\u003e✨ Fixed: \"participle\" (note-taker: \"party ship\")\u003c/span\u003e."
+    },
+    {
+        "id":  "turn-36",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "02:41",
+        "html":  "Good, very good. Yeah, exactly, it\u0027s \u003cspan class=\"vocab-mark\" data-vkey=\"irregular\" onclick=\"inspectVocab(\u0027irregular\u0027)\"\u003eirregular\u003c/span\u003e, right? Very good. And what is the next one? Here is the answer..."
+    },
+    {
+        "id":  "turn-37",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "02:52",
+        "html":  "She made a beautiful cake for the party she has made."
+    },
+    {
+        "id":  "turn-38",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "03:04",
+        "html":  "Good. She has made a good cake, very good, nice, and the next one..."
+    },
+    {
+        "id":  "turn-39",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "03:10",
+        "html":  "Have you ever been to London?"
+    },
+    {
+        "id":  "turn-40",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "03:18",
+        "html":  "Good. Have you ever been to London?"
+    },
+    {
+        "id":  "turn-41",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "03:22",
+        "html":  "Yes, two time, two times..."
+    },
+    {
+        "id":  "turn-42",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "03:25",
+        "html":  "Nice. When did you last go to London?"
+    },
+    {
+        "id":  "turn-43",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "03:30",
+        "html":  "Many years ago, probably more than ten years ago. I went to London in a school trip for, one week. For one week we stay in, we stayed the in, Oxford in in Oxford for, e in a family and the host we hosted in the fa. We are lost. We losted in the family, and, during the day, we attended a college for, study English for one week, and, one day. One day we went to London for visiting the city. And."
+    },
+    {
+        "id":  "turn-44",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "04:25",
+        "html":  "So you stayed with as you stayed with a \u003cspan class=\"vocab-mark\" data-vkey=\"host-family\" onclick=\"inspectVocab(\u0027host-family\u0027)\"\u003ehost family\u003c/span\u003e. And then you visited London as well."
+    },
+    {
+        "id":  "turn-45",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "04:35",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-46",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "04:35",
+        "html":  "Where did you prefer? I can guess. But which city did you like more?"
+    },
+    {
+        "id":  "turn-47",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "04:45",
+        "html":  "Between Londoner and the Oxford man. And, London is very big city. It\u0027s a beautiful city, but, if, I have to decide, where, liver. I prefer Oxford because, it\u0027s, a little city and, you can, visit, you can go to the C without problem, without loss to yourself. Without loss to yourself in the city."
+    },
+    {
+        "id":  "turn-48",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:25",
+        "html":  "We say it\u0027s easy to \u003cspan class=\"vocab-mark\" data-vkey=\"get-around\" onclick=\"inspectVocab(\u0027get-around\u0027)\"\u003eget around\u003c/span\u003e."
+    },
+    {
+        "id":  "turn-49",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "05:29",
+        "html":  "Yeah, I guess..."
+    },
+    {
+        "id":  "turn-50",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:29",
+        "html":  "Easy to get around. I..."
+    },
+    {
+        "id":  "turn-51",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "05:32",
+        "html":  "Easy to get. Okay."
+    },
+    {
+        "id":  "turn-52",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "05:34",
+        "html":  "Should show you one thing. I normally start at the beginning, but just so you know how notes are done. Okay, so I\u0027m going to show you how notes are done, so one second, I\u0027ll grab a quick one. Last part, but that\u0027ll be very quick. Students. Okay, so just so we can concentrate on the lesson, we can work a lot. I do the notes for you. Obviously, you can do notes. So how do I do notes? I do not record the lesson, okay? I do not record the lesson. There\u0027s no audio file, there\u0027s no video, but..."
+    },
+    {
+        "id":  "turn-53",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "06:21",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-54",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:22",
+        "html":  "I \u003cspan class=\"vocab-mark\" data-vkey=\"transcribe\" onclick=\"inspectVocab(\u0027transcribe\u0027)\"\u003etranscribe\u003c/span\u003e. Okay, I \u003cspan class=\"vocab-mark\" data-vkey=\"transcribe\" onclick=\"inspectVocab(\u0027transcribe\u0027)\"\u003etranscribe\u003c/span\u003e, so it\u0027s transcribing now. Okay..."
+    },
+    {
+        "id":  "turn-55",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "06:28",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-56",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "06:29",
+        "html":  "So at not at the end of the lesson, but a few hours after at the end of the day. Because I do all the students. I will send you the transcript, but let me show you a demo transcript. Okay, let me show you one. So, interest, here we go, there we go, so you will get this. Okay, so we will go here, and this is the transcript of the lesson, okay? So you can see the time, okay? What was said by me and you. Okay, so..."
+    },
+    {
+        "id":  "turn-57",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "07:06",
+        "html":  "Okay. Okay..."
+    },
+    {
+        "id":  "turn-58",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:07",
+        "html":  "The tutor, Lois? Yeah. It has the on words. If you hover over certain words that we emphasize, it will have the definition, but I will change it in yours, it will be Italian..."
+    },
+    {
+        "id":  "turn-59",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "07:24",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-60",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:24",
+        "html":  "Okay? Yours will be Italian. Okay, and so not only does it give you the definition, it gives you the level, the time, and can you hear that? Can you hear the audio?"
+    },
+    {
+        "id":  "turn-61",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "07:40",
+        "html":  "Yeah. Yes."
+    },
+    {
+        "id":  "turn-62",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:41",
+        "html":  "Okay, it gives you the pronunciation. Okay. So you can go back and look at what is said during the lesson. Okay."
+    },
+    {
+        "id":  "turn-63",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "07:51",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-64",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "07:52",
+        "html":  "Two other things. If you don\u0027t want to look at the whole transcript, you have a bank, a database of the words you know, just without the transcript. If you click on them on the transcripts, here we go. For example, on \"quaint\". Okay, quaint means old-fashioned, right? It will come up here, but if there are any other exercises, they will appear here. Okay, and so this is your notes and your homework. Basically, anything extra gets stored here, and this is a URL, okay? A UA website. So you don\u0027t get lots of files. You get one web address. I give you one web address. It doesn\u0027t get lost, and it\u0027s updated at the end of the day, okay? So..."
+    },
+    {
+        "id":  "turn-65",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "08:54",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-66",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "08:54",
+        "html":  "When you\u0027re... It at the end of the day. So I have to check everything. Okay, so now you know that you can say things, and they\u0027re being transcribed for later, so you can check later. Okay? Every lesson. Okay, so let\u0027s go back to lesson. Which one are you? This one here... Perfect, here we go. Okay, so..."
+    },
+    {
+        "id":  "turn-67",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "09:34",
+        "html":  "But in the future, can we make a general recap of grammar rules?"
+    },
+    {
+        "id":  "turn-68",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "09:47",
+        "html":  "Yeah, absolutely."
+    },
+    {
+        "id":  "turn-69",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "09:49",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-70",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "09:49",
+        "html":  "I\u0027ve just seen your LA..."
+    },
+    {
+        "id":  "turn-71",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "09:50",
+        "html":  "This is only a test. This is only a test for the recap."
+    },
+    {
+        "id":  "turn-72",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "09:55",
+        "html":  "Yeah, exactly, I\u0027m just saying what your level is, but..."
+    },
+    {
+        "id":  "turn-73",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "09:58",
+        "html":  "Okay? Per..."
+    },
+    {
+        "id":  "turn-74",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "09:58",
+        "html":  "If that\u0027s okay, yeah, I need to know where you are. Right? Okay, so next..."
+    },
+    {
+        "id":  "turn-75",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "10:06",
+        "html":  "Perfect."
+    },
+    {
+        "id":  "turn-76",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "10:06",
+        "html":  "He has..."
+    },
+    {
+        "id":  "turn-77",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "10:06",
+        "html":  "I understand..."
+    },
+    {
+        "id":  "turn-78",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "10:08",
+        "html":  "Yeah..."
+    },
+    {
+        "id":  "turn-79",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "10:08",
+        "html":  "He has taken the TED test. You don\u0027t need to... He has a..."
+    },
+    {
+        "id":  "turn-80",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "10:25",
+        "html":  "He has already taken the test. You don\u0027t need to \u003cspan class=\"vocab-mark\" data-vkey=\"remind\" onclick=\"inspectVocab(\u0027remind\u0027)\"\u003eremind\u003c/span\u003e..."
+    },
+    {
+        "id":  "turn-81",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "10:28",
+        "html":  "Already then..."
+    },
+    {
+        "id":  "turn-82",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "10:28",
+        "html":  "Him. Very good. Yeah, very good. Why is it already...?"
+    },
+    {
+        "id":  "turn-83",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "10:37",
+        "html":  "Because it\u0027s an action that it\u0027s already done. Is it the action that started in the past and they finished in the past? We need... Already for this motivation..."
+    },
+    {
+        "id":  "turn-84",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "11:00",
+        "html":  "Okay, good. Yeah, it\u0027s already happened. Yeah, very good. Next one, Amy has something to London. She loved it and she\u0027s home now."
+    },
+    {
+        "id":  "turn-85",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "11:12",
+        "html":  "Has gone to London. The forgone."
+    },
+    {
+        "id":  "turn-86",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "11:21",
+        "html":  "I will say... Woman so I Amy has something to London. She loved it, and she\u0027s home now. Amy has been..."
+    },
+    {
+        "id":  "turn-87",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "11:38",
+        "html":  "She has been to LA."
+    },
+    {
+        "id":  "turn-88",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "11:40",
+        "html":  "Has been, yeah, because it\u0027s done. Okay? If she. If it was gone. If it was gone, she would already. She would still be there. She would still be there if it was going."
+    },
+    {
+        "id":  "turn-89",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "11:55",
+        "html":  "If I okay."
+    },
+    {
+        "id":  "turn-90",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "11:59",
+        "html":  "We go to canvas one second do. So if it\u0027s been okay, she has \u003cspan class=\"vocab-mark\" data-vkey=\"returned\" onclick=\"inspectVocab(\u0027returned\u0027)\"\u003ereturned\u003c/span\u003e. She has \u003cspan class=\"vocab-mark\" data-vkey=\"returned\" onclick=\"inspectVocab(\u0027returned\u0027)\"\u003ereturned\u003c/span\u003e. Okay... She has \u003cspan class=\"vocab-mark\" data-vkey=\"returned\" onclick=\"inspectVocab(\u0027returned\u0027)\"\u003ereturned\u003c/span\u003e from London, but if it\u0027s going..."
+    },
+    {
+        "id":  "turn-91",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "12:23",
+        "html":  "Okay, see, I... Okay..."
+    },
+    {
+        "id":  "turn-92",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "12:26",
+        "html":  "She has not been yet. She has to go. She hasn\u0027t... She hasn\u0027t left. Okay, she hasn\u0027t left to go. She hasn\u0027t gone to London yet. Okay..."
+    },
+    {
+        "id":  "turn-93",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "12:39",
+        "html":  "If I choose going... Organ means that she hasn\u0027t returned from London."
+    },
+    {
+        "id":  "turn-94",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "12:52",
+        "html":  "Gone is she has not returned. Okay, she has not..."
+    },
+    {
+        "id":  "turn-95",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "12:57",
+        "html":  "It\u0027s octo. Okay, yes."
+    },
+    {
+        "id":  "turn-96",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "12:59",
+        "html":  "Returned yeah, very good, yeah, and it has and Amy has went to London is bad grammar bad very... Bad grammar very bad. Okay, we do not say, ay has went to London so am so and we would say Amy is going to London, not has. Okay, Amy is going to London. She has not been yet she wants to go. She wants to go. Okay, good. Next, I have something visited Tower Bridge..."
+    },
+    {
+        "id":  "turn-97",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "13:38",
+        "html":  "Yeah. Well..."
+    },
+    {
+        "id":  "turn-98",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "13:40",
+        "html":  "It was amazing..."
+    },
+    {
+        "id":  "turn-99",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "13:43",
+        "html":  "Yes, I have already visited the Tower Bridge. It was amazing."
+    },
+    {
+        "id":  "turn-100",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "13:58",
+        "html":  "Yes, I\u0027ve already visited..."
+    },
+    {
+        "id":  "turn-101",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "14:01",
+        "html":  "Yes..."
+    },
+    {
+        "id":  "turn-102",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "14:01",
+        "html":  "Tower Bridge, it was amazing. Have you visited the Tower Bridge?"
+    },
+    {
+        "id":  "turn-103",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "14:06",
+        "html":  "Guess when I was in London, we saw this..."
+    },
+    {
+        "id":  "turn-104",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "14:13",
+        "html":  "It\u0027s pretty cool, right?"
+    },
+    {
+        "id":  "turn-105",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "14:14",
+        "html":  "BO yes..."
+    },
+    {
+        "id":  "turn-106",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "14:16",
+        "html":  "Yeah, where \u003cspan class=\"vocab-mark\" data-vkey=\"whereabouts\" onclick=\"inspectVocab(\u0027whereabouts\u0027)\"\u003ewhereabouts\u003c/span\u003e in Italy are you from?"
+    },
+    {
+        "id":  "turn-107",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "14:20",
+        "html":  "I\u0027m from Verona, north Italy. Do you...?"
+    },
+    {
+        "id":  "turn-108",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "14:25",
+        "html":  "Yes, I\u0027ve never been. I\u0027ve only been to Lucca, Pisa, obviously. Rome, yeah, exactly, and I can never say this last one, I\u0027m very sorry, I can never say Reggi near Sicily, opposite Sicily, Reggi... Regbara or something. I can\u0027t remember the name. Near Sicily, opposite Sicily. You know, the island opposite Sicily, but that\u0027s it. That\u0027s the only places I\u0027ve been. Yes. Okay, the next one, James has..."
+    },
+    {
+        "id":  "turn-109",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "15:08",
+        "html":  "Jane to London is his journal query. James has gone then to London."
+    },
+    {
+        "id":  "turn-110",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "15:24",
+        "html":  "Good, yeah, James has gone..."
+    },
+    {
+        "id":  "turn-111",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "15:25",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-112",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "15:25",
+        "html":  "To London. Good, very good. Next..."
+    },
+    {
+        "id":  "turn-113",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "15:28",
+        "html":  "Here to... Okay, the dog away from... Asa ran away to the... No."
+    },
+    {
+        "id":  "turn-114",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "15:45",
+        "html":  "The dog has run away. No, the dog has run... Run runs right? I don\u0027t know what to say that run so we use it for the past particular okay so we don\u0027t say run, yeah..."
+    },
+    {
+        "id":  "turn-115",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "16:07",
+        "html":  "Okay, yes..."
+    },
+    {
+        "id":  "turn-116",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "16:10",
+        "html":  "Next, he has studied English for three years. He has studied English. Good, very good. I would do one more if they had something played in a championship."
+    },
+    {
+        "id":  "turn-117",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "16:28",
+        "html":  "Have a day. Have a day. And have they ever played in championship..."
+    },
+    {
+        "id":  "turn-118",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "16:45",
+        "html":  "Have they ever played in a championship? Very good, and have you ever played in a... Do you play football? What kind of sports do you play? Do you play any sports?"
+    },
+    {
+        "id":  "turn-119",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "16:59",
+        "html":  "When I was younger, I played, football. And..."
+    },
+    {
+        "id":  "turn-120",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "17:04",
+        "html":  "Okay. Okay."
+    },
+    {
+        "id":  "turn-121",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "17:05",
+        "html":  "Now I go to the gym, and sometimes I go with the bike, but sometimes..."
+    },
+    {
+        "id":  "turn-122",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "17:21",
+        "html":  "You go \u003cspan class=\"vocab-mark\" data-vkey=\"cycling\" onclick=\"inspectVocab(\u0027cycling\u0027)\"\u003ecycling\u003c/span\u003e. Okay... Very good, nice. I like boxing, that\u0027s what I like to do, I like to box. Yes, many years now. Many too many years. I should stop, but it\u0027s okay, it\u0027s nice and how much English do you speak in your normal day? How much English do you speak in your normal daym?"
+    },
+    {
+        "id":  "turn-123",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "17:45",
+        "html":  "Very little because I work with the Italian man, and we speak Italian in the office. But in my work, I have to write some documents in English. So that the IIW I write in English, but I don\u0027t speak English all day."
+    },
+    {
+        "id":  "turn-124",
+        "chapterId":  "chap-3",
+        "chapterTitle":  "Chapter III • Roller Coaster Engineering \u0026 Theme Parks (18:18)",
+        "speaker":  "Louie",
+        "time":  "18:18",
+        "html":  "Okay. And may I ask, if you write in English, what \u003cspan class=\"vocab-mark\" data-vkey=\"sector\" onclick=\"inspectVocab(\u0027sector\u0027)\"\u003esector\u003c/span\u003e do you work in? What \u003cspan class=\"vocab-mark\" data-vkey=\"sector\" onclick=\"inspectVocab(\u0027sector\u0027)\"\u003esector\u003c/span\u003e?"
+    },
+    {
+        "id":  "turn-125",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "18:24",
+        "html":  "I, the sector. I work, for, an industry that, m project e that Designer and the realizer amusement writer like a \u003cspan class=\"vocab-mark\" data-vkey=\"roller-coaster\" onclick=\"inspectVocab(\u0027roller-coaster\u0027)\"\u003eroller coaster\u003c/span\u003e. Okay?"
+    },
+    {
+        "id":  "turn-126",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "18:44",
+        "html":  "Very nice."
+    },
+    {
+        "id":  "turn-127",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "18:50",
+        "html":  "Okay, I work in a \u003cspan class=\"vocab-mark\" data-vkey=\"structural\" onclick=\"inspectVocab(\u0027structural\u0027)\"\u003estructural\u003c/span\u003e analysis department. I make the \u003cspan class=\"vocab-mark\" data-vkey=\"structural\" onclick=\"inspectVocab(\u0027structural\u0027)\"\u003estructural\u003c/span\u003e calculation for the rider."
+    },
+    {
+        "id":  "turn-128",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "19:05",
+        "html":  "Wow. So if I\u0027m hearing you right, you calculate the loads and the stresses, is that right?"
+    },
+    {
+        "id":  "turn-129",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "19:12",
+        "html":  "Yes, the..."
+    },
+    {
+        "id":  "turn-130",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "19:12",
+        "html":  "Yeah."
+    },
+    {
+        "id":  "turn-131",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "19:12",
+        "html":  "Stretches the Lord. And after the load, the stretch of the rider, the steeler. After we finish our calculation, we write a report for the \u003cspan class=\"vocab-mark\" data-vkey=\"inspection\" onclick=\"inspectVocab(\u0027inspection\u0027)\"\u003einspection\u003c/span\u003e for the..."
+    },
+    {
+        "id":  "turn-132",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "19:35",
+        "html":  "So for the implementation, for... The construction. Okay, nice. And how long have you worked there? How long have you worked? At..."
+    },
+    {
+        "id":  "turn-133",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "19:45",
+        "html":  "I work in this. Industry e for since the 2024 un for three years."
+    },
+    {
+        "id":  "turn-134",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "20:04",
+        "html":  "Do you enjoy it?"
+    },
+    {
+        "id":  "turn-135",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "20:06",
+        "html":  "Yes, it\u0027s..."
+    },
+    {
+        "id":  "turn-136",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "20:07",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-137",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "20:07",
+        "html":  "I\u0027m imagining because it\u0027s... Yeah, you design the rider, and after, you can see the rider, out of our industry because we make the call, we test the rider, and so you can see the rider first in the monitor, and after really in testing..."
+    },
+    {
+        "id":  "turn-138",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "20:42",
+        "html":  "Okay, so have you been to many \u003cspan class=\"vocab-mark\" data-vkey=\"theme-parks\" onclick=\"inspectVocab(\u0027theme-parks\u0027)\"\u003etheme parks\u003c/span\u003e? Have you been to many..."
+    },
+    {
+        "id":  "turn-139",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "20:50",
+        "html":  "Part two."
+    },
+    {
+        "id":  "turn-140",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "20:50",
+        "html":  "Theme but yeah, have you been to many theme parks?"
+    },
+    {
+        "id":  "turn-141",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "20:54",
+        "html":  "No, I don\u0027t understand. The last word."
+    },
+    {
+        "id":  "turn-142",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "20:57",
+        "html":  "Theme parks. So theme parks. Have you been to many theme parks\u0027s? Amusement parks where the roller coasters are like Disneyland or."
+    },
+    {
+        "id":  "turn-143",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "21:11",
+        "html":  "Okay, I understand. I visit parks near my home in Gardaland \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027Gardaland\u0027 (near Lake Garda).\"\u003e✨ Fixed: \"Gardaland\" (note-taker: \"Catalonia\")\u003c/span\u003e. Do you know it?"
+    },
+    {
+        "id":  "turn-144",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:24",
+        "html":  "No..."
+    },
+    {
+        "id":  "turn-145",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "21:25",
+        "html":  "No..."
+    },
+    {
+        "id":  "turn-146",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:26",
+        "html":  "Do you say Catalan?"
+    },
+    {
+        "id":  "turn-147",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "21:28",
+        "html":  "Gardaland \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027Gardaland\u0027 again.\"\u003e✨ Fixed: \"Gardaland\" (note-taker: \"Garden on\")\u003c/span\u003e. Yes..."
+    },
+    {
+        "id":  "turn-148",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "21:30",
+        "html":  "No, I haven\u0027t. I don\u0027t know that one. Sorry."
+    },
+    {
+        "id":  "turn-149",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "21:32",
+        "html":  "It\u0027s the most famous park in Italy. The biggest park in Italy, and it\u0027s nearer Garda Lake for... Okay, but for a worker, I sometimes visit a park for working in the park. And, I went to France in July and in April for a test for acceleration. Test? In one rider. The next week I will go to Paris for auration testing. Another rider in one park. Not Disneyland \u003cspan class=\"asr-fix-pill\" title=\"Note-taker misheard \u0027Disneyland\u0027.\"\u003e✨ Fixed: \"Disneyland\" (note-taker: \"East Nelander\")\u003c/span\u003e, but another park in the Paris park. After issue..."
+    },
+    {
+        "id":  "turn-150",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "22:33",
+        "html":  "What? The name of the park, what\u0027s the name?"
+    },
+    {
+        "id":  "turn-151",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "22:35",
+        "html":  "Parc Astérix \u003cspan class=\"asr-fix-pill\" title=\"Corrected name of the theme park near Paris.\"\u003e✨ Fixed: \"Parc Astérix\" (note-taker: \"Park Asterisk\")\u003c/span\u003e."
+    },
+    {
+        "id":  "turn-152",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "22:38",
+        "html":  "Yes, I\u0027m aware of it. I\u0027ve never been I\u0027ve only been to theme parks in England, in Florida and in Japan, that\u0027s it. I\u0027ve already been to d. I\u0027ve been. Well, not only I\u0027ve been to Disney World in..."
+    },
+    {
+        "id":  "turn-153",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "22:58",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-154",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "22:58",
+        "html":  "Florida, Andney Land in Tokyo."
+    },
+    {
+        "id":  "turn-155",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "23:03",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-156",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:07",
+        "html":  "Because it\u0027s cheap..."
+    },
+    {
+        "id":  "turn-157",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "23:08",
+        "html":  "For Disneyland Florida..."
+    },
+    {
+        "id":  "turn-158",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:10",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-159",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "23:10",
+        "html":  "We design... We now... We are designing one ride one Big Rider for Disneyland and Florida..."
+    },
+    {
+        "id":  "turn-160",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:19",
+        "html":  "Cool, wow..."
+    },
+    {
+        "id":  "turn-161",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "23:20",
+        "html":  "There were for England and I don\u0027t know where, but there is a Universal park in England maybe Universal Park..."
+    },
+    {
+        "id":  "turn-162",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:42",
+        "html":  "New one, brand new. It\u0027s not even built. Yeah..."
+    },
+    {
+        "id":  "turn-163",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "23:46",
+        "html":  "We are designing an I design attraction for this park."
+    },
+    {
+        "id":  "turn-164",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:52",
+        "html":  "It\u0027s right next to Oxford, right next door. Yeah..."
+    },
+    {
+        "id":  "turn-165",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "23:56",
+        "html":  "Yeah. Near Oxford."
+    },
+    {
+        "id":  "turn-166",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "23:58",
+        "html":  "Yes, so very it\u0027s basically in Oxford, it\u0027s in, I think it\u0027s in Buck Buckingshire, but it\u0027s all the news, that\u0027s what everyone\u0027s talking about because it\u0027s huge. Wow. Wow. When? When? When do you think you will it will start being built? Or maybe it\u0027s being built now."
+    },
+    {
+        "id":  "turn-167",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "24:22",
+        "html":  "I built a AA for... We have to finish the design of this rider in March or April after the equing issue of the build. The starting of the build is maybe November 2020 06:27 change."
+    },
+    {
+        "id":  "turn-168",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "24:58",
+        "html":  "Well, that\u0027s pretty good. I wasn\u0027t too sure because I don\u0027t know obviously what\u0027s happening there, but very interesting. Yeah, I think my family will go there a lot. I think they will go there a lot. For sure. Okay. So I think it\u0027s a good time to move on to some structure for the present perfect, just to go over the rules. Okay, so we have the positive okay for when you have done something. Okay, so for example, the way it works is we do subjects have or has okay o troy oil and plus, the verb. Okay, plus the verb. So I have visited Paris, she has finished work so could..."
+    },
+    {
+        "id":  "turn-169",
+        "chapterId":  "chap-4",
+        "chapterTitle":  "Chapter IV • Present Perfect Structure, Rules \u0026 Examples (25:00)",
+        "speaker":  "Mattia",
+        "time":  "25:54",
+        "html":  "It is day past present perfect."
+    },
+    {
+        "id":  "turn-170",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "25:58",
+        "html":  "No one second. Present perfect, yeah, plus the particle as well. Present perfect this one. Okay..."
+    },
+    {
+        "id":  "turn-171",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "26:08",
+        "html":  "But it is inaction. That start in the past and the finish in the past."
+    },
+    {
+        "id":  "turn-172",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "26:17",
+        "html":  "This one is the present perfect. Yes. Yeah, so, for example, how do you structure it to say that you have been... Where have you been besides England? Where have you been which countries? England. What other countries have you been to?"
+    },
+    {
+        "id":  "turn-173",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "26:44",
+        "html":  "I stay in Oxford, London..."
+    },
+    {
+        "id":  "turn-174",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "26:51",
+        "html":  "Other countries. What other countries have you been to, Tom?"
+    },
+    {
+        "id":  "turn-175",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "26:54",
+        "html":  "I am currently in the world. Okay? I stay in Spain in Spanish, France for working, Greek for vacation. But stop..."
+    },
+    {
+        "id":  "turn-176",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:12",
+        "html":  "So how do you say that you\u0027ve traveled to Greece? How would you say in this structure, how would you say you\u0027ve traveled to Greece?"
+    },
+    {
+        "id":  "turn-177",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "27:23",
+        "html":  "Wand when..."
+    },
+    {
+        "id":  "turn-178",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:27",
+        "html":  "Nope."
+    },
+    {
+        "id":  "turn-179",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "27:27",
+        "html":  "I traveled to..."
+    },
+    {
+        "id":  "turn-180",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:28",
+        "html":  "So, for example, in the example here, can you see the canvas? Can you see the canvas?"
+    },
+    {
+        "id":  "turn-181",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "27:36",
+        "html":  "The. Yes..."
+    },
+    {
+        "id":  "turn-182",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:38",
+        "html":  "Okay, so we have an example here. I have visited Paris. She has finished work, so how can... How can you say that you have traveled...?"
+    },
+    {
+        "id":  "turn-183",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "27:48",
+        "html":  "I visited..."
+    },
+    {
+        "id":  "turn-184",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:49",
+        "html":  "To Greece?"
+    },
+    {
+        "id":  "turn-185",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "27:49",
+        "html":  "Ge. I traveled to Greek, last summer."
+    },
+    {
+        "id":  "turn-186",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "27:56",
+        "html":  "Okay, so you have visited Greece last summer."
+    },
+    {
+        "id":  "turn-187",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "28:01",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-188",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "28:02",
+        "html":  "Very nice. So I have visited Greece last summer and how do you say it in the negative? Okay, so how do you say that?"
+    },
+    {
+        "id":  "turn-189",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "28:15",
+        "html":  "I haven\u0027t..."
+    },
+    {
+        "id":  "turn-190",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "28:17",
+        "html":  "Yeah, how do you say \"I haven\u0027t\" in the negative? How do you think you say this?"
+    },
+    {
+        "id":  "turn-191",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "28:23",
+        "html":  "I haven\u0027t visited Greece last summer."
+    },
+    {
+        "id":  "turn-192",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "28:30",
+        "html":  "Sure I haven\u0027t, okay, I haven\u0027t, bosh, I have my fingers are very stupid. Sorry, I haven\u0027t visited Greece before. I haven\u0027t visited Greece yet. I haven\u0027t visited Greece yet. Okay. We can say. I haven\u0027t been to Greece. Okay? I haven\u0027t been to Greece. I haven\u0027t been..."
+    },
+    {
+        "id":  "turn-193",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "29:04",
+        "html":  "But I..."
+    },
+    {
+        "id":  "turn-194",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:04",
+        "html":  "To ge..."
+    },
+    {
+        "id":  "turn-195",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "29:07",
+        "html":  "Can write, try another way to explain this sentence. I didn\u0027t visit... What? Why..."
+    },
+    {
+        "id":  "turn-196",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:27",
+        "html":  "Never say to say how can I say, in English you could not say that you did not say. I didn\u0027t go somewhere. Would you say I haven\u0027t? Okay, I have."
+    },
+    {
+        "id":  "turn-197",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "29:50",
+        "html":  "When are you...?"
+    },
+    {
+        "id":  "turn-198",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "29:52",
+        "html":  "So, for example, I did. We never say I did go to London, I did go. We always use I have been okay, I have visited or I have been okay, I have..."
+    },
+    {
+        "id":  "turn-199",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "30:09",
+        "html":  "No..."
+    },
+    {
+        "id":  "turn-200",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:09",
+        "html":  "Been to England. But we never say, \"I did go,\" or \"I didn\u0027t.\""
+    },
+    {
+        "id":  "turn-201",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "30:15",
+        "html":  "EO okay I have the fs is for example I have visited Paris can IU ope okay can I use I visited the Paris last year..."
+    },
+    {
+        "id":  "turn-202",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:33",
+        "html":  "Yes, yeah..."
+    },
+    {
+        "id":  "turn-203",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "30:34",
+        "html":  "Without and what is the why e okay..."
+    },
+    {
+        "id":  "turn-204",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:43",
+        "html":  "Why? Because we can \u003cspan class=\"vocab-mark\" data-vkey=\"condense\" onclick=\"inspectVocab(\u0027condense\u0027)\"\u003econdense\u003c/span\u003e it, we can shorten it down, okay? Okay, I mean..."
+    },
+    {
+        "id":  "turn-205",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "30:49",
+        "html":  "But it\u0027s equal is equal it is..."
+    },
+    {
+        "id":  "turn-206",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "30:53",
+        "html":  "It\u0027s equal, yeah, because you had done exactly the same, so it\u0027s just that sometimes we condense it, okay? I visited Paris last year. I visited... Paris last year. I have been to Paris. Okay, but I visited Paris when we condense it, we add when okay, last year. Okay, let me put this separately, here we go. Let me just put this separately so it doesn\u0027t get confusing, so I\u0027ll put it here. Okay, so I visited. Okay, Paris. It gets the time last year. Last year last introy last November okay. We must put when okay. When we lose the have I have visited Paris I have visited in Paris, okay? We don\u0027t need to put when but when we removed the have I visited Paris last year. Okay, it sounds wrong when we when that\u0027s why we use have to just generally say it. But I visited Paris is asking for more information. It\u0027s an \u003cspan class=\"vocab-mark\" data-vkey=\"incomplete\" onclick=\"inspectVocab(\u0027incomplete\u0027)\"\u003eincomplete\u003c/span\u003e sentence. So you always..."
+    },
+    {
+        "id":  "turn-207",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "32:29",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-208",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "32:30",
+        "html":  "Visited Paris?\" We need to know when, okay? The person\u0027s going to say, \"When did you do it?\" But we never say \"did\" or \"didn\u0027t.\" Okay, \"did\" and \"didn\u0027t\" because it\u0027s with \"I did\" or \"I didn\u0027t have anything with \"have\" or \"haven\u0027t,\" right? We don\u0027t use \"did\" or \"didn\u0027t.\" Okay... Want to put \"when?\" So that\u0027s why we use \"have I visited Paris?\" We need to know when, okay? The person\u0027s going to say, \"When did you do it?\" But we never say \"did\" or \"didn\u0027t.\" Question structure so haven\u0027t always... Missing one more thing and hasn\u0027t... Okay, so I should give you the example of \"has\". So when you\u0027re doing... Hasn\u0027t happened yet. He hasn\u0027t called yet, but I haven\u0027t called yet. I haven\u0027t visited. Okay, so we use \"has\" for it. She, he, okay, and \"haven\u0027t\" for they. I haven\u0027t been to Disneyland before. They haven\u0027t been to Disneyland before. Okay, so that\u0027s how we use each one of these. Okay, depends on the pronoun. Okay, depends on the subject. Sorry, on the subject I may say pronoun more than usual because I don\u0027t know if you know I\u0027m in Vietnam. Here, pronouns are crazy in Vietnam. Yeah. So you might hear me say pronouns too much. Which is not the case. Which I mean is subject the subject... Okay, next is \"Have you ever been to Asia?\""
+    },
+    {
+        "id":  "turn-209",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "34:41",
+        "html":  "No..."
+    },
+    {
+        "id":  "turn-210",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "34:43",
+        "html":  "It\u0027s great, Asia..."
+    },
+    {
+        "id":  "turn-211",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "34:44",
+        "html":  "I am..."
+    },
+    {
+        "id":  "turn-212",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "34:44",
+        "html":  "It\u0027s great, it\u0027s really okay, so how do we ask this a question? Subject plus about 3k 2 do to do. Okay, so for example, how do we ask if someone\u0027s visited Paris? How do we ask if someone\u0027s visited Paris?"
+    },
+    {
+        "id":  "turn-213",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "35:11",
+        "html":  "You ever visited the Paris...?"
+    },
+    {
+        "id":  "turn-214",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:14",
+        "html":  "Good, \"Have you ever visited Paris?\" Good, and to do, very good, and \"Have you ever visited America?\" Have you ever...?"
+    },
+    {
+        "id":  "turn-215",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "35:31",
+        "html":  "No..."
+    },
+    {
+        "id":  "turn-216",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:31",
+        "html":  "Visited America? Okay..."
+    },
+    {
+        "id":  "turn-217",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "35:32",
+        "html":  "I haven\u0027t visited the American yet."
+    },
+    {
+        "id":  "turn-218",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:37",
+        "html":  "Good. Now, how do we ask if when do we use \"has\"? I should say, when do we use \"has\"?"
+    },
+    {
+        "id":  "turn-219",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "35:45",
+        "html":  "I use \"has\" with the other person."
+    },
+    {
+        "id":  "turn-220",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "35:49",
+        "html":  "Exactly? Yeah, yes, for example, how..."
+    },
+    {
+        "id":  "turn-221",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "35:52",
+        "html":  "He has visited the Paris last month."
+    },
+    {
+        "id":  "turn-222",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "36:01",
+        "html":  "Very good and where will you go? So you\u0027re going to Paris next week or this week? Are you going to Paris this week?"
+    },
+    {
+        "id":  "turn-223",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "36:09",
+        "html":  "I next week for opening, Tuesday..."
+    },
+    {
+        "id":  "turn-224",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "36:20",
+        "html":  "And how many times?"
+    },
+    {
+        "id":  "turn-225",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "36:23",
+        "html":  "I stay for three days."
+    },
+    {
+        "id":  "turn-226",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "36:27",
+        "html":  "Three days."
+    },
+    {
+        "id":  "turn-227",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "36:27",
+        "html":  "Three days?"
+    },
+    {
+        "id":  "turn-228",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "36:27",
+        "html":  "Nice. Do you like...?"
+    },
+    {
+        "id":  "turn-229",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "36:27",
+        "html":  "Yes, I like traveling for work. So..."
+    },
+    {
+        "id":  "turn-230",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "36:38",
+        "html":  "That\u0027s so..."
+    },
+    {
+        "id":  "turn-231",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "36:38",
+        "html":  "Every country is good for travel."
+    },
+    {
+        "id":  "turn-232",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "36:43",
+        "html":  "In a second, can I...? Should I say in a second, can I show you where I am? Can I show you? I\u0027ll show you in a minute. Let\u0027s just do this first, okay? Then I\u0027ll show you where I am. Okay? So, how many times have you been to Paris? How many times?"
+    },
+    {
+        "id":  "turn-233",
+        "chapterId":  "chap-5",
+        "chapterTitle":  "Chapter V • Life Experience, Italy \u0026 Vietnam Wrap-Up (37:00)",
+        "speaker":  "Mattia",
+        "time":  "37:04",
+        "html":  "I, for, it\u0027s the first time I go to Paris. It\u0027s..."
+    },
+    {
+        "id":  "turn-234",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "37:14",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-235",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "37:14",
+        "html":  "A v the first time."
+    },
+    {
+        "id":  "turn-236",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "37:16",
+        "html":  "So we, this is the first time. Okay, so this is the first..."
+    },
+    {
+        "id":  "turn-237",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "37:20",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-238",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "37:20",
+        "html":  "Time, but how many times have you been to France?"
+    },
+    {
+        "id":  "turn-239",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "37:25",
+        "html":  "For, four times with the Paris is four times now is three. And next week is four times..."
+    },
+    {
+        "id":  "turn-240",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "37:38",
+        "html":  "So we say I have been. Yeah, I have been to, France four times. Okay, so we can use."
+    },
+    {
+        "id":  "turn-241",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "37:49",
+        "html":  "I have been."
+    },
+    {
+        "id":  "turn-242",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "37:50",
+        "html":  "I have... For experience. So how many times have you been to Greece? How many times have you been to Greece?"
+    },
+    {
+        "id":  "turn-243",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "38:02",
+        "html":  "I have been to Greece for one time..."
+    },
+    {
+        "id":  "turn-244",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:07",
+        "html":  "I\u0027ve been to Greece, \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e, I have been to Greece \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e. Okay, so we have \u003cspan class=\"vocab-mark\" data-vkey=\"once\" onclick=\"inspectVocab(\u0027once\u0027)\"\u003eonce\u003c/span\u003e what\u0027s the cardinal? Yeah, what\u0027s the cardinal for two? Well, do you know the cardinal numbers?"
+    },
+    {
+        "id":  "turn-245",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "38:22",
+        "html":  "They double..."
+    },
+    {
+        "id":  "turn-246",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:26",
+        "html":  "No... \u003cspan class=\"vocab-mark\" data-vkey=\"twice\" onclick=\"inspectVocab(\u0027twice\u0027)\"\u003eTwice\u003c/span\u003e and three times..."
+    },
+    {
+        "id":  "turn-247",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "38:36",
+        "html":  "Three times is, two times."
+    },
+    {
+        "id":  "turn-248",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:42",
+        "html":  "Thrice. It\u0027s okay, we don\u0027t really use it, we don\u0027t use it\u0027s okay, once..."
+    },
+    {
+        "id":  "turn-249",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "38:46",
+        "html":  "Okay..."
+    },
+    {
+        "id":  "turn-250",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "38:46",
+        "html":  "Twice, it\u0027s fine. Okay, and how many times...? I don\u0027t know. Really, how many times have you been to Rome? How many times have you been to Rome...?"
+    },
+    {
+        "id":  "turn-251",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "39:03",
+        "html":  "I haven\u0027t been to Roma. I have been to RNDA to Roma three times."
+    },
+    {
+        "id":  "turn-252",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "39:15",
+        "html":  "S and how many times have you eaten sushi? How many times have you eaten sushi?"
+    },
+    {
+        "id":  "turn-253",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "39:24",
+        "html":  "I have eaten sushi for a, once."
+    },
+    {
+        "id":  "turn-254",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "39:33",
+        "html":  "I have eaten a sushi."
+    },
+    {
+        "id":  "turn-255",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "39:35",
+        "html":  "I have eaten sushi once."
+    },
+    {
+        "id":  "turn-256",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "39:37",
+        "html":  "Okay, good. Yeah, so when we\u0027re talking about life expectancy, the main part to remember, which you\u0027re slightly making a mistake on, is after the item. Okay, then we put just once. Okay, the number, so not four or two or anything connecting is absolutely fine. Do you have any brothers and sisters?"
+    },
+    {
+        "id":  "turn-257",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "40:03",
+        "html":  "I GA her one sister."
+    },
+    {
+        "id":  "turn-258",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:05",
+        "html":  "Okay, a and, how old is your sister? How old is your sister?"
+    },
+    {
+        "id":  "turn-259",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "40:10",
+        "html":  "My sister is 22 years old."
+    },
+    {
+        "id":  "turn-260",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:14",
+        "html":  "Okay, so how many times has she been to London in England? How many times has she been to..."
+    },
+    {
+        "id":  "turn-261",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "40:22",
+        "html":  "She has been to England once."
+    },
+    {
+        "id":  "turn-262",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:29",
+        "html":  "Okay, she\u0027s been to England once. Very good with you. Did she go with you..."
+    },
+    {
+        "id":  "turn-263",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "40:34",
+        "html":  "N with another school tripper..."
+    },
+    {
+        "id":  "turn-264",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:37",
+        "html":  "That a school..."
+    },
+    {
+        "id":  "turn-265",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "40:37",
+        "html":  "With his. With his schen."
+    },
+    {
+        "id":  "turn-266",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "40:41",
+        "html":  "Okay, alright, so to recap, today we\u0027re going over the present perfect, but we must remember that... Well, I think you cleared it up when to use \"have\" so we can\u0027t use \"I did go\" or \"I didn\u0027t go.\" We say \"I have been\" and \"I haven\u0027t been.\" Okay, I will send you a nicer template of this in the notes. I will send a nicer template. Okay? And..."
+    },
+    {
+        "id":  "turn-267",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "41:13",
+        "html":  "Thank you."
+    },
+    {
+        "id":  "turn-268",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "41:13",
+        "html":  "Life experience. I have been to France and then the amounts. Okay, no connecting words at all. Okay, very good. Let me show you where I am because I think you might like it. I think... So here we go, Google Maps... Is the closest down. Okay, so I\u0027m just here in Vietnam. So I\u0027m in Vietnam at the moment, but I\u0027ve just come back from China, so I\u0027m just here. But the Chinese border is just here about 10 minutes away. So I\u0027ve just come back riding my motorbike in China. Here we go. So his China crazy. So I live in Hanoi, but I drove to this area to go see my friend who lives over the border, which is crazy. It\u0027s my first time in China. First time in China. Which was really nice."
+    },
+    {
+        "id":  "turn-269",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "42:31",
+        "html":  "When you go to Chin to China."
+    },
+    {
+        "id":  "turn-270",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "42:34",
+        "html":  "I came yesterday, I came back yesterday, so into Vietnam, so I was there for about four, five days, about that, yeah..."
+    },
+    {
+        "id":  "turn-271",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "42:45",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-272",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "42:45",
+        "html":  "Just to see my friend."
+    },
+    {
+        "id":  "turn-273",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "42:46",
+        "html":  "For Vietnam, do you live in Vietnam?"
+    },
+    {
+        "id":  "turn-274",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "42:50",
+        "html":  "Yes, I live here in Hanoi. So this city here, which is the old capital. The capital, it\u0027s really beautiful..."
+    },
+    {
+        "id":  "turn-275",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "43:01",
+        "html":  "For Vietnamese this year for Vietnam we have design a lot of, ride thir 30 yes, 30 right?"
+    },
+    {
+        "id":  "turn-276",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "43:18",
+        "html":  "Wow, it\u0027s good to hear Vietnam is growing. Vietnam is growing, which is very good."
+    },
+    {
+        "id":  "turn-277",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "43:24",
+        "html":  "Yes."
+    },
+    {
+        "id":  "turn-278",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "43:25",
+        "html":  "Yeah, but I study in Hanoi. University here, which is pretty cool. Hanoi is a very interesting, very strange place. It\u0027s very nice, but I normally live in the Central. I normally live in Central."
+    },
+    {
+        "id":  "turn-279",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "43:44",
+        "html":  "But why do you go the to Vietnamese?"
+    },
+    {
+        "id":  "turn-280",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "43:50",
+        "html":  "The long question answer is in England before COVID, I had my own company, and I do \u003cspan class=\"vocab-mark\" data-vkey=\"historic\" onclick=\"inspectVocab(\u0027historic\u0027)\"\u003ehistoric\u003c/span\u003e \u003cspan class=\"vocab-mark\" data-vkey=\"restoration\" onclick=\"inspectVocab(\u0027restoration\u0027)\"\u003erestoration\u003c/span\u003e. So my business was historic \u003cspan class=\"vocab-mark\" data-vkey=\"restoration\" onclick=\"inspectVocab(\u0027restoration\u0027)\"\u003erestoration\u003c/span\u003e. I rebuilt old historic buildings in Oxford, London, and the south of England. But as you can imagine, COVID was crazy, absolutely crazy. So I moved to the Caribbean. So I actually live here. All. I live in"
+    },
+    {
+        "id":  "turn-281",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "44:27",
+        "html":  "He. All."
+    },
+    {
+        "id":  "turn-282",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "44:29",
+        "html":  "Backway here, got Port Elizabeth, which is great. It\u0027s beautiful, very nice. I don\u0027t build, I\u0027m part of a team, it\u0027s not my company. I\u0027m part of a team, and we get resorts in the Caribbean. So we hope to get resorts in this area here. But as you know, the work, you do all the work in the beginning. Okay? So I deal with the \u003cspan class=\"vocab-mark\" data-vkey=\"tariffs\" onclick=\"inspectVocab(\u0027tariffs\u0027)\"\u003etariffs\u003c/span\u003e and stuff like that, the taxes. How are we going to get... How the resort is going to pay the government? So I work with the government, and so I live here, and I decided, I\u0027m going to learn Vietnamese. So to do business from Vietnam to England. So I\u0027ve been studying Vietnamese. This is my third year, so two years in school and now one year at university in Hanoi. So that\u0027s why I\u0027ve moved from BI to Hanoi. Yeah, to learn Vietnamese, to do trade, to do \u003cspan class=\"vocab-mark\" data-vkey=\"international-trade\" onclick=\"inspectVocab(\u0027international-trade\u0027)\"\u003einternational trade\u003c/span\u003e. Yeah, it\u0027s on that, but... Yeah, it\u0027s really fun. It\u0027s really fun. The food is fantastic. Not as good as Italian food. Food is the best. I miss cheese so much, it\u0027s unbelievable. But the food here is very good, delicious. Yesterday I had a great dinner, and yeah, it was very..."
+    },
+    {
+        "id":  "turn-283",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "46:13",
+        "html":  "But Ital is better."
+    },
+    {
+        "id":  "turn-284",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:15",
+        "html":  "Yes, for sure, Italian food is the best food, \u003cspan class=\"vocab-mark\" data-vkey=\"without-a-doubt\" onclick=\"inspectVocab(\u0027without-a-doubt\u0027)\"\u003ewithout a doubt\u003c/span\u003e."
+    },
+    {
+        "id":  "turn-285",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "46:19",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-286",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:19",
+        "html":  "Doubt. Yeah. I used to have an Italian girlfriend."
+    },
+    {
+        "id":  "turn-287",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "46:25",
+        "html":  "No."
+    },
+    {
+        "id":  "turn-288",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "46:25",
+        "html":  "Yeah, and that that\u0027s why I used to go to Tuscany. Tuscany, right? All the time. Her family are from Tuscany and so we would t yeah, Toscana \u003cspan class=\"asr-fix-pill\" title=\"Italian region name.\"\u003e✨ Fixed: \"Toscana\" (note-taker: \"Tuscanna\")\u003c/span\u003e, sorry, Toscana \u003cspan class=\"asr-fix-pill\" title=\"Italian region name.\"\u003e✨ Fixed: \"Toscana\" (note-taker: \"Tuscanna\")\u003c/span\u003e. We would travel there all the time to see her parents, her family, who are crazy in a good way. Crazy. Very lovely. Now she\u0027s still in Oxford and best friends were my momoo. Yeah, very funny. But now, yeah, now I\u0027m in Vietnam, which is fantastic. Yeah, and have you ever lived outside of Italy? No."
+    },
+    {
+        "id":  "turn-289",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "47:13",
+        "html":  "I live in Italy. In Verona."
+    },
+    {
+        "id":  "turn-290",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "47:18",
+        "html":  "Nice, but what a place to live, what a place to live. Okay, yeah, so, things to think about. So we have the notes. I will get them sent over to you with today\u0027s structure. Now we know what your requirements are. We can. Now, if you like to go forward, we can now, go about grammar for the next four five lessons and make sure they\u0027re in do lots of practice and at the same time do conversation, but mostly structure and grammar. And we will. I will add vocabulary. Every lesson. Okay, just a few words every lesson because you see how the notes are, it\u0027s..."
+    },
+    {
+        "id":  "turn-291",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "47:55",
+        "html":  "Okay."
+    },
+    {
+        "id":  "turn-292",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "47:59",
+        "html":  "Easy to learn, go over the vocabulary. Okay, do you have any questions at all?"
+    },
+    {
+        "id":  "turn-293",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "48:06",
+        "html":  "No."
+    },
+    {
+        "id":  "turn-294",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:07",
+        "html":  "No, okay, \u003cspan class=\"vocab-mark\" data-vkey=\"fair-enough\" onclick=\"inspectVocab(\u0027fair-enough\u0027)\"\u003efair enough\u003c/span\u003e. So it\u0027s... What time is it in Italy? Six o\u0027clock at 12:00 or 1:00. What will you do in Italy next? What will you do today?"
+    },
+    {
+        "id":  "turn-295",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "48:22",
+        "html":  "I go, I eat now I eat. And, this afternoon, I don\u0027t know what, I will what will do. Probably I go out with a friend. Probably."
+    },
+    {
+        "id":  "turn-296",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "48:41",
+        "html":  "I think that\u0027s very nice. I think today just work for me and then, just working, but I will have some dinner. I think I will have duck... But the duck is grown. The duck is grown, but it\u0027s in the egg still, we call it a vịt lộn \u003cspan class=\"asr-fix-pill\" title=\"Vietnamese dish (fertilized duck egg) discussed at the end.\"\u003e✨ Fixed: \"vịt lộn\" (note-taker: \"vit loom\")\u003c/span\u003e. vịt lộn \u003cspan class=\"asr-fix-pill\" title=\"Vietnamese dish (fertilized duck egg) discussed at the end.\"\u003e✨ Fixed: \"vịt lộn\" (note-taker: \"vit loom\")\u003c/span\u003e, it\u0027s very nice. It\u0027s like a meaty egg, it\u0027s very good. Okay. Well, thank you very much for your time. I\u0027ll send the notes over. Take care. Thank you very much."
+    },
+    {
+        "id":  "turn-297",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Mattia",
+        "time":  "49:18",
+        "html":  "Thank you. Have a nice evening. To you."
+    },
+    {
+        "id":  "turn-298",
+        "chapterId":  "",
+        "chapterTitle":  "",
+        "speaker":  "Louie",
+        "time":  "49:23",
+        "html":  "Bye. You."
+    }
+];
+    const STUDENT_STRENGTHS = [
+    {
+        "time":  "🕒 01:50",
+        "phrase":  "Explaining Grammar Logic in English",
+        "desc":  "You clearly explained why \u0027since\u0027 is used in Present Perfect: \u0027Because the action started last Monday and now it is ongoing.\u0027",
+        "quote":  "Mattia (01:50): \"Because the action started last Monday and now it is ongoing.\""
+    },
+    {
+        "time":  "🕒 18:50",
+        "phrase":  "Technical \u0026 Engineering Vocabulary",
+        "desc":  "You described your job in structural analysis for roller coasters clearly, including loads, stresses, and inspection reports.",
+        "quote":  "Mattia (18:50): \"I work in a structural analysis department. I make the structural calculation for the ride.\""
+    },
+    {
+        "time":  "🕒 21:32",
+        "phrase":  "Natural Storytelling About Work Travel",
+        "desc":  "You smoothly connected your work trips to France, acceleration testing, and upcoming projects in Paris and the UK.",
+        "quote":  "Mattia (21:32): \"I went to France in July and in April for an acceleration test on one ride.\""
+    },
+    {
+        "time":  "🕒 39:35",
+        "phrase":  "Fast Self-Correction",
+        "desc":  "When prompted on \u0027I have eaten sushi once\u0027, you immediately dropped \u0027for a\u0027 and produced the natural phrasing.",
+        "quote":  "Mattia (39:35): \"I have eaten sushi once.\""
+    }
+];
+    const GENTLE_POLISHES = [
+    {
+        "topic":  "Present Perfect vs. Past Simple (Specific Time)",
+        "said":  "I have visited Greece last summer / He has visited Paris last month.",
+        "natural":  "I visited Greece last summer. (Past Simple) OR I have visited Greece. (Present Perfect — no \u0027when\u0027)",
+        "why":  "When you include a finished past time (\u0027last summer\u0027, \u0027last month\u0027, \u0027ten years ago\u0027), English switches to Past Simple. Use Present Perfect without a specific finished time."
+    },
+    {
+        "topic":  "\u0027Been\u0027 vs. \u0027Gone\u0027",
+        "said":  "Amy has gone to London. She loved it and she\u0027s home now.",
+        "natural":  "Amy has been to London. She loved it and she\u0027s home now.",
+        "why":  "Use \u0027has been to\u0027 when someone visited and returned. Use \u0027has gone to\u0027 only when they are still there (and never \u0027has went\u0027)."
+    },
+    {
+        "topic":  "Life Experience Frequency (\u0027once\u0027, \u0027twice\u0027, \u0027three times\u0027)",
+        "said":  "I have been to Greece for one time / I have eaten sushi for once.",
+        "natural":  "I have been to Greece once. / I have eaten sushi once.",
+        "why":  "Do not put \u0027for\u0027 before frequency words. Say \u0027once\u0027, \u0027twice\u0027, or \u0027three times\u0027 directly after the place or activity."
+    },
+    {
+        "topic":  "Duration with \u0027Since\u0027 and \u0027For\u0027",
+        "said":  "I work in this industry since 2024 for three years.",
+        "natural":  "I have worked in this industry since 2024. / I have worked in this industry for three years.",
+        "why":  "For an action that started in the past and continues now, use Present Perfect (\u0027have worked\u0027), and choose either \u0027since + starting point\u0027 (since 2024) or \u0027for + duration\u0027 (for three years)."
+    },
+    {
+        "topic":  "Getting Around a City",
+        "said":  "You can go to the city without loss to yourself.",
+        "natural":  "It\u0027s easy to get around without getting lost.",
+        "why":  "\u0027Easy to get around\u0027 is the natural British/international phrase for navigating a city smoothly."
+    },
+    {
+        "topic":  "Describing Your Engineering Work",
+        "said":  "I make the structural calculation for the rider.",
+        "natural":  "I do the structural calculations for the ride.",
+        "why":  "In English we \u0027do calculations\u0027 (plural) and refer to the roller coaster as \u0027the ride\u0027 (whereas \u0027rider\u0027 means the passenger)."
+    }
+];
+    const ASR_FIXES = [
+    {
+        "time":  "00:18",
+        "speaker":  "Note-taker",
+        "wrong":  "Matthia",
+        "right":  "Mattia",
+        "note":  "Corrected spelling of your name from the automated note-taker."
+    },
+    {
+        "time":  "01:19",
+        "speaker":  "Mattia",
+        "wrong":  "grandma Rosa",
+        "right":  "grammar rules",
+        "note":  "Note-taker misheard \u0027grammar rules\u0027 as \u0027grandma Rosa\u0027!"
+    },
+    {
+        "time":  "01:19",
+        "speaker":  "Mattia",
+        "wrong":  "yaog",
+        "right":  "dialogue",
+        "note":  "Note-taker misheard \u0027dialogue\u0027."
+    },
+    {
+        "time":  "01:19",
+        "speaker":  "Mattia",
+        "wrong":  "CBLEARY",
+        "right":  "vocabulary",
+        "note":  "Note-taker misheard \u0027vocabulary\u0027."
+    },
+    {
+        "time":  "02:36",
+        "speaker":  "Mattia",
+        "wrong":  "party ship",
+        "right":  "participle",
+        "note":  "Note-taker misheard \u0027past participle\u0027 as \u0027party ship\u0027."
+    },
+    {
+        "time":  "21:11",
+        "speaker":  "Mattia",
+        "wrong":  "Catalonia",
+        "right":  "Gardaland",
+        "note":  "Note-taker misheard \u0027Gardaland\u0027 (near Lake Garda)."
+    },
+    {
+        "time":  "21:28",
+        "speaker":  "Mattia",
+        "wrong":  "Garden on",
+        "right":  "Gardaland",
+        "note":  "Note-taker misheard \u0027Gardaland\u0027 again."
+    },
+    {
+        "time":  "22:35",
+        "speaker":  "Mattia",
+        "wrong":  "Park Asterisk",
+        "right":  "Parc Astérix",
+        "note":  "Corrected name of the theme park near Paris."
+    },
+    {
+        "time":  "22:20",
+        "speaker":  "Mattia",
+        "wrong":  "East Nelander",
+        "right":  "Disneyland",
+        "note":  "Note-taker misheard \u0027Disneyland\u0027."
+    },
+    {
+        "time":  "46:25",
+        "speaker":  "Louie",
+        "wrong":  "Tuscanna",
+        "right":  "Toscana",
+        "note":  "Italian region name."
+    },
+    {
+        "time":  "48:50",
+        "speaker":  "Louie",
+        "wrong":  "vit loom",
+        "right":  "vịt lộn",
+        "note":  "Vietnamese dish (fertilized duck egg) discussed at the end."
+    }
+];
+    const CULTURAL_PLACES = [
+    {
+        "meta":  "Grammar Focus • Trial Lesson",
+        "badge":  "Present Perfect",
+        "title":  "Present Perfect Structure \u0026 Rules",
+        "desc":  "Formula: Subject + have/has + past participle. Used for life experiences without a specific past time, recent actions (already/yet), and actions continuing from the past (for/since). See Tab 6 for the complete structure chart and examples!",
+        "quote":  "\"I have been to France four times.\" vs. \"I visited Paris last year.\"",
+        "tags":  [
+                     "present perfect",
+                     "grammar",
+                     "structure"
+                 ]
+    },
+    {
+        "meta":  "Verona \u0026 Lake Garda, Italy",
+        "badge":  "Theme Parks \u0026 Engineering",
+        "title":  "Gardaland, Parc Astérix \u0026 Universal UK",
+        "desc":  "Mattia works in structural analysis designing roller coasters and theme park rides—from Gardaland near Verona to acceleration testing at Parc Astérix in Paris and upcoming Universal UK projects near Oxford.",
+        "quote":  "\"You can see the ride first on the monitor, and after really in testing.\"",
+        "tags":  [
+                     "engineering",
+                     "roller coasters",
+                     "travel"
+                 ]
+    },
+    {
+        "meta":  "Oxford \u0026 London, UK",
+        "badge":  "Past Experience",
+        "title":  "Host Family \u0026 Getting Around",
+        "desc":  "Over ten years ago, Mattia spent a week with a host family in Oxford studying English and visited London for a day—preferring Oxford because it is compact and easy to get around.",
+        "quote":  "\"I prefer Oxford because it\u0027s a smaller city and it\u0027s easy to get around.\"",
+        "tags":  [
+                     "oxford",
+                     "london",
+                     "host family"
+                 ]
+    }
+];
+    const QUIZ_QUESTIONS = [
+    {
+        "q":  "1. Which sentence is grammatically correct when talking about a life experience with NO specific time?",
+        "options":  [
+                        "I have been to London twice.",
+                        "I did go to London twice.",
+                        "I have been to London for two times."
+                    ],
+        "correct":  0,
+        "explain":  "Use \u0027have/has + past participle\u0027 without \u0027for\u0027 before \u0027once\u0027, \u0027twice\u0027, or \u0027three times\u0027."
+    },
+    {
+        "q":  "2. Amy is back at home in Italy now. Which sentence is correct?",
+        "options":  [
+                        "Amy has been to London.",
+                        "Amy has gone to London.",
+                        "Amy has went to London."
+                    ],
+        "correct":  0,
+        "explain":  "\u0027Has been to\u0027 means she visited and returned. \u0027Has gone to\u0027 means she is still there."
+    },
+    {
+        "q":  "3. Which sentence correctly uses a specific finished past time (\u0027last summer\u0027)?",
+        "options":  [
+                        "I visited Greece last summer.",
+                        "I have visited Greece last summer.",
+                        "I has visited Greece last summer."
+                    ],
+        "correct":  0,
+        "explain":  "When you specify WHEN in the finished past (\u0027last summer\u0027, \u0027in 2024\u0027, \u0027yesterday\u0027), use Past Simple."
+    },
+    {
+        "q":  "4. Choose the correct word: \u0027Has it stopped raining _____?\u0027",
+        "options":  [
+                        "yet",
+                        "already",
+                        "since"
+                    ],
+        "correct":  0,
+        "explain":  "\u0027Yet\u0027 is used at the end of Present Perfect questions and negative sentences."
+    },
+    {
+        "q":  "5. Choose the correct word: \u0027She has been sick _____ last Monday.\u0027",
+        "options":  [
+                        "since",
+                        "for",
+                        "yet"
+                    ],
+        "correct":  0,
+        "explain":  "Use \u0027since\u0027 with a specific starting point in time (last Monday, 2024). Use \u0027for\u0027 with a duration (five hours, three years)."
+    },
+    {
+        "q":  "6. Which phrase means \u0027to travel easily from place to place within a city\u0027?",
+        "options":  [
+                        "easy to get around",
+                        "without loss to yourself",
+                        "incomplete sentence"
+                    ],
+        "correct":  0,
+        "explain":  "\u0027It\u0027s easy to get around\u0027 is the natural English expression for navigating a city easily."
+    }
+];
+    const FLASHCARD_KEYS = Object.keys(VOCAB_DB).slice(0, 12);
+
+    // CORE APPLICATION ENGINE
+    let currentCardIndex = 0;
+    let isCardFlipped = false;
+    let quizAnswered = new Set();
+    let speechRate = 1.0;
+
+    function initHeaderAndHero() {
+      document.getElementById('page-title').textContent = `${LESSON_CONFIG.studentName}'s Peaceful English Sanctuary | ${LESSON_CONFIG.lessonNumber}`;
+      document.getElementById('brand-initial').textContent = LESSON_CONFIG.studentName.charAt(0).toUpperCase();
+      document.getElementById('brand-title').textContent = `${LESSON_CONFIG.studentName}'s Peaceful English Sanctuary`;
+      document.getElementById('brand-badge').textContent = `${LESSON_CONFIG.lessonNumber} • ${LESSON_CONFIG.lessonSubtitle}`;
+      document.getElementById('hero-meta-pill').textContent = `${LESSON_CONFIG.lessonDate} • ${LESSON_CONFIG.lessonSubtitle}`;
+      document.getElementById('hero-heading').innerHTML = LESSON_CONFIG.heroHeadingHtml;
+      document.getElementById('hero-intro').textContent = LESSON_CONFIG.heroIntroText;
+      document.getElementById('opt-student-speaker').value = LESSON_CONFIG.studentName;
+      document.getElementById('opt-student-speaker').textContent = `${LESSON_CONFIG.studentName}'s Turns Only`;
+      document.getElementById('stat-vocab-count').textContent = `${Object.keys(VOCAB_DB).length} Items`;
+      document.getElementById('stat-fixes-count').textContent = `${ASR_FIXES.length} Fixes`;
+
+      const chapters = TRANSCRIPT_TURNS.filter(t => t.chapterId && t.chapterTitle);
+      document.getElementById('chapter-pills-bar').innerHTML = chapters.map(c => `
+        <button onclick="scrollToChapter('${c.chapterId}')" class="px-2.5 py-1 rounded-lg bg-parchment-100 hover:bg-autumn-100 text-stone-700 text-xs font-medium transition border border-parchment-200">
+          ${c.time} • ${c.chapterTitle.split('•')[1] || c.chapterTitle}
+        </button>
+      `).join('');
+    }
+
+    function renderTranscript() {
+      const container = document.getElementById('transcript-stream-container');
+      const searchVal = (document.getElementById('transcript-search')?.value || '').toLowerCase().trim();
+      const speakerFilter = document.getElementById('speaker-filter')?.value || 'all';
+
+      let html = '';
+      TRANSCRIPT_TURNS.forEach(turn => {
+        if (turn.chapterTitle && speakerFilter === 'all' && !searchVal) {
+          html += `
+            <div id="${turn.chapterId}" class="pt-3 pb-1">
+              <div class="px-4 py-2.5 rounded-2xl bg-gradient-to-r from-sage-100/90 via-parchment-100 to-autumn-50 border border-sage-200 flex items-center gap-2 text-xs sm:text-sm font-serif font-bold text-sage-800 shadow-sm">
+                <span>${turn.chapterTitle}</span>
+              </div>
+            </div>
+          `;
+        }
+        if (speakerFilter !== 'all' && turn.speaker !== speakerFilter) return;
+        const plainText = turn.html.replace(/<[^>]+>/g, '').toLowerCase();
+        if (searchVal && !plainText.includes(searchVal) && !turn.time.includes(searchVal)) return;
+
+        const isStudent = turn.speaker !== 'Louie';
+        const cardStyle = isStudent
+          ? 'bg-[#fffdf9] border-l-4 border-l-autumn-500 border border-[#e6decb]'
+          : 'bg-[#f8faf8] border-l-4 border-l-sage-600 border border-[#d8e4dc]';
+        const badgeStyle = isStudent
+          ? 'bg-autumn-100 text-autumn-800 border-autumn-200'
+          : 'bg-sage-100 text-sage-800 border-sage-200';
+
+        html += `
+          <article id="${turn.id}" class="rounded-2xl p-4 sm:p-5 ${cardStyle} shadow-sm transition-all duration-300 space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold border ${badgeStyle}">
+                  ${isStudent ? '🎙️ ' + turn.speaker : '🍂 Louie'}
+                </span>
+                <span class="font-mono text-xs text-stone-500">🕒 ${turn.time}</span>
+              </div>
+              <button onclick="speakPlainTurn('${turn.id}')" class="text-stone-400 hover:text-sage-700 transition p-1 rounded-lg">
+                <i data-lucide="volume-2" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+            <div class="text-sm sm:text-[15px] text-slatewarm-800 leading-relaxed">${turn.html}</div>
+          </article>
+        `;
+      });
+
+      container.innerHTML = html;
+      lucide.createIcons();
+      initVocabTooltips();
+    }
+
+    function initVocabTooltips() {
+      document.querySelectorAll('.vocab-mark').forEach(el => {
+        const key = el.getAttribute('data-vkey');
+        const item = VOCAB_DB[key];
+        if (!item) return;
+        if (el._tippy) el._tippy.destroy();
+        tippy(el, {
+          theme: 'autumn-sanctuary',
+          allowHTML: true,
+          interactive: true,
+          animation: 'shift-away',
+          maxWidth: 320,
+          content: `
+            <div class="p-2.5 space-y-2 text-left">
+              <div class="flex items-center justify-between gap-2 border-b border-parchment-200 pb-1.5">
+                <div>
+                  <span class="font-serif font-bold text-base text-slatewarm-900">${item.word}</span>
+                  <span class="block font-mono text-[10px] text-stone-500">${item.ipa} • ${item.pos}</span>
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="px-1.5 py-0.5 rounded bg-autumn-100 text-autumn-800 font-mono text-[10px] font-bold">${item.level}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-sage-100 text-sage-800 font-mono text-[10px]">🕒 ${item.time}</span>
+                </div>
+              </div>
+              <p class="text-xs text-stone-700 leading-snug">${item.def}</p>
+              <div class="flex items-center justify-between pt-1 text-[11px] border-t border-parchment-200">
+                <span class="text-sage-800 font-semibold">${item.l1 || ''}</span>
+                <button onclick="speakWord('${item.word.replace(/'/g, "\\'")}')" class="px-2 py-0.5 rounded bg-sage-700 text-white text-[10px] font-semibold">🔊 Listen</button>
+              </div>
+            </div>
+          `
+        });
+      });
+    }
+
+    function inspectVocab(key) {
+      const item = VOCAB_DB[key];
+      if (!item) return;
+      document.getElementById('insp-time').textContent = `🕒 ${item.time}`;
+      document.getElementById('insp-word').textContent = item.word;
+      document.getElementById('insp-ipa').textContent = item.ipa;
+      document.getElementById('insp-pos').textContent = item.pos;
+      document.getElementById('insp-level').textContent = item.level;
+      document.getElementById('insp-def').textContent = item.def;
+      document.getElementById('insp-quote').textContent = item.quote;
+      document.getElementById('insp-l1-label').textContent = LESSON_CONFIG.l1FlagAndLabel;
+      document.getElementById('insp-l1').textContent = item.l1 || '';
+      document.getElementById('insp-audio-btn').setAttribute('onclick', `speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')`);
+    }
+
+    function renderVocabGrid() {
+      const grid = document.getElementById('vocab-cards-grid');
+      const search = (document.getElementById('vocab-search')?.value || '').toLowerCase().trim();
+      const levelFilter = document.getElementById('vocab-level-filter')?.value || 'all';
+
+      const entries = Object.entries(VOCAB_DB).filter(([key, item]) => {
+        if (levelFilter !== 'all' && item.level !== levelFilter) return false;
+        if (search) {
+          const hay = `${item.word} ${item.def} ${item.l1 || ''} ${item.time}`.toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+        return true;
+      });
+
+      grid.innerHTML = entries.map(([key, item]) => `
+        <div class="sanctuary-subcard rounded-2xl p-5 flex flex-col justify-between space-y-3 hover:border-autumn-400">
+          <div class="space-y-2">
+            <div class="flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1.5">
+                <span class="px-2 py-0.5 rounded-md bg-autumn-100 text-autumn-800 font-mono text-[11px] font-bold">${item.level}</span>
+                <span class="px-2 py-0.5 rounded-md bg-parchment-100 text-stone-600 text-[11px]">${item.pos}</span>
+              </div>
+              <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="px-2.5 py-0.5 rounded-full bg-sage-100 hover:bg-sage-200 text-sage-800 font-mono text-[11px] font-semibold">
+                🕒 ${item.time} ↗
+              </button>
+            </div>
+            <div class="flex items-center justify-between gap-2 pt-1">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-slatewarm-900">${item.word}</h3>
+                <span class="text-xs font-mono text-stone-500">${item.ipa}</span>
+              </div>
+              <button onclick="speakWord('${item.word.replace(/\s*\(.*?\)/g, '').replace(/'/g, "\\'")}')" class="p-2 rounded-xl bg-parchment-100 hover:bg-sage-100 text-sage-800">
+                <i data-lucide="volume-2" class="w-4 h-4"></i>
+              </button>
+            </div>
+            <p class="text-xs sm:text-sm text-stone-700 leading-relaxed">${item.def}</p>
+            <p class="text-xs italic text-stone-500 bg-parchment-50 p-2.5 rounded-xl border border-parchment-200">${item.quote}</p>
+          </div>
+          <div class="pt-2 border-t border-parchment-200 flex items-center justify-between text-xs">
+            <span class="text-sage-800 font-medium">${item.l1 || ''}</span>
+            <button onclick="jumpToTranscriptTurn('${item.turnId}', '${key}')" class="text-autumn-700 hover:underline font-semibold text-[11px]">See in Transcript →</button>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+
+    function jumpToTranscriptTurn(turnId, vocabKey) {
+      switchTab('transcript');
+      setTimeout(() => {
+        if (vocabKey) inspectVocab(vocabKey);
+        const el = document.getElementById(turnId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          el.classList.remove('turn-highlight-flash');
+          void el.offsetWidth;
+          el.classList.add('turn-highlight-flash');
+        }
+      }, 100);
+    }
+
+    function renderFixesAndPlaces() {
+      // 1. Natural Strengths
+      const strengthsContainer = document.getElementById('student-strengths-grid');
+      if (strengthsContainer && Array.isArray(STUDENT_STRENGTHS)) {
+        strengthsContainer.innerHTML = STUDENT_STRENGTHS.map(s => {
+          const time = s.time || '⭐ Observed Today';
+          const phrase = s.phrase || s.title || '';
+          const note = s.note || s.desc || s.quote || '';
+          return `
+            <div class="p-4 rounded-2xl bg-white/95 border border-sage-200/90 shadow-sm space-y-1.5 transition hover:border-sage-400">
+              <div class="flex items-center justify-between">
+                <span class="font-mono text-[11px] text-sage-700 font-semibold">${time}</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-sage-100 text-sage-800 font-medium">Natural Reflex</span>
+              </div>
+              <div class="font-bold text-slatewarm-900 text-sm leading-snug">${phrase}</div>
+              <p class="text-stone-600 text-xs leading-relaxed">${note}</p>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 2. Gentle Phrasing Polishes
+      const polishesContainer = document.getElementById('gentle-polishes-grid');
+      if (polishesContainer && Array.isArray(GENTLE_POLISHES)) {
+        polishesContainer.innerHTML = GENTLE_POLISHES.map(p => {
+          const topic = p.topic || 'Phrasing Polish';
+          const time = p.time || '';
+          const said = p.said || p.spoken || '';
+          const natural = p.natural || p.polished || '';
+          const why = p.why || p.note || '';
+          const safeAudio = (natural || '').replace(/'/g, "\\'");
+          return `
+            <div class="sanctuary-subcard rounded-2xl p-5 space-y-3 border-l-4 border-l-sage-500 shadow-sm">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-semibold text-sage-800 font-serif text-sm">${topic}</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-parchment-100 font-mono text-[11px] text-stone-600 border border-parchment-200">🕒 ${time}</span>
+              </div>
+              <div class="p-3 rounded-xl bg-autumn-50/70 border border-autumn-200/80 text-xs text-stone-600 space-y-1">
+                <div class="font-semibold text-autumn-800 uppercase text-[10px] tracking-wider">In the moment:</div>
+                <div class="italic text-stone-700 font-medium">"${said}"</div>
+              </div>
+              <div class="p-3 rounded-xl bg-sage-50 border border-sage-200 text-xs text-slatewarm-900 flex items-center justify-between gap-2">
+                <div>
+                  <div class="font-semibold text-sage-800 uppercase text-[10px] tracking-wider">Natural Polish:</div>
+                  <strong class="text-slatewarm-900 text-sm font-serif">"${natural}"</strong>
+                </div>
+                ${natural ? `<button onclick="speakWord('${safeAudio}')" class="p-2 rounded-xl bg-white text-sage-700 hover:bg-sage-100 border border-sage-200 transition shadow-xs" title="Listen">🔊</button>` : ''}
+              </div>
+              <p class="text-xs text-stone-600 leading-relaxed pt-0.5">${why}</p>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 3. ASR Speech-to-Text Corrections
+      const fixesContainer = document.getElementById('asr-fixes-grid');
+      if (fixesContainer && Array.isArray(ASR_FIXES)) {
+        fixesContainer.innerHTML = ASR_FIXES.map(f => `
+          <div class="sanctuary-subcard rounded-2xl p-4 sm:p-5 space-y-2.5 border-t-4 border-t-autumn-400 shadow-sm hover:border-autumn-500 transition">
+            <div class="flex items-center justify-between text-[11px] font-mono">
+              <span class="font-semibold text-autumn-700 px-2 py-0.5 rounded-md bg-autumn-50 border border-autumn-200">${f.speaker}</span>
+              <span class="text-stone-500">🕒 ${f.time}</span>
+            </div>
+            <div class="p-2 rounded-lg bg-parchment-50 border border-parchment-200 text-xs text-stone-500 line-through">
+              Note-taker wrote: "${f.wrong}"
+            </div>
+            <div class="text-sm font-serif font-bold text-sage-800 flex items-center gap-1.5">
+              <span>✨ Said: "${f.right}"</span>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed">${f.note}</p>
+          </div>
+        `).join('');
+      }
+
+      // 4. Masterclass Topics & Strategy
+      const placesContainer = document.getElementById('cultural-places-grid');
+      if (placesContainer && Array.isArray(CULTURAL_PLACES)) {
+        placesContainer.innerHTML = CULTURAL_PLACES.map(c => `
+          <div class="sanctuary-subcard rounded-2xl p-6 sm:p-7 space-y-4 border-l-4 border-l-autumn-500 shadow-sm hover:border-autumn-600 transition">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs font-mono text-autumn-700 font-semibold px-2.5 py-0.5 rounded-full bg-autumn-50 border border-autumn-200">${c.meta}</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-autumn-100 text-autumn-800 text-[11px] font-medium border border-autumn-200">${c.badge}</span>
+            </div>
+            <h3 class="font-serif text-2xl sm:text-[1.65rem] font-bold text-slatewarm-900 leading-snug">${c.title}</h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">${c.desc}</p>
+            <div class="p-4 rounded-xl bg-parchment-50 border border-parchment-200 text-xs sm:text-sm italic text-stone-700 leading-relaxed border-l-2 border-l-autumn-400">
+              ${c.quote}
+            </div>
+            ${c.tags && c.tags.length ? `
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                ${c.tags.map(t => `<span class="px-2 py-0.5 rounded-md bg-sage-50 text-sage-700 text-[10px] font-mono border border-sage-200">#${t}</span>`).join('')}
+              </div>
+            ` : ''}
+          </div>
+        `).join('');
+      }
+    }
+
+    function renderFlashcard() {
+      const key = FLASHCARD_KEYS[currentCardIndex];
+      const item = VOCAB_DB[key];
+      if (!item) return;
+      document.getElementById('fc-counter').textContent = `Card ${currentCardIndex + 1} of ${FLASHCARD_KEYS.length}`;
+      document.getElementById('fc-badge').textContent = `${item.time} • ${item.pos} (${item.level})`;
+      document.getElementById('fc-front-title').textContent = item.word;
+      const subEl = document.getElementById('fc-sub');
+      const backEl = document.getElementById('fc-back-details');
+      if (!isCardFlipped) {
+        subEl.textContent = `${item.ipa} — Click card to reveal meaning & lesson context`;
+        backEl.classList.add('hidden');
+      } else {
+        subEl.textContent = item.def;
+        document.getElementById('fc-quote').textContent = item.quote;
+        document.getElementById('fc-l1').textContent = item.l1 || '';
+        backEl.classList.remove('hidden');
+      }
+    }
+    function flipFlashcard() { isCardFlipped = !isCardFlipped; renderFlashcard(); }
+    function nextFlashcard() { isCardFlipped = false; currentCardIndex = (currentCardIndex + 1) % FLASHCARD_KEYS.length; renderFlashcard(); }
+    function prevFlashcard() { isCardFlipped = false; currentCardIndex = (currentCardIndex - 1 + FLASHCARD_KEYS.length) % FLASHCARD_KEYS.length; renderFlashcard(); }
+    function speakCurrentFlashcard() { const item = VOCAB_DB[FLASHCARD_KEYS[currentCardIndex]]; if (item) speakWord(item.word); }
+
+    function renderQuiz() {
+      document.getElementById('quiz-container').innerHTML = QUIZ_QUESTIONS.map((q, qIdx) => `
+        <div class="sanctuary-subcard rounded-2xl p-4 space-y-2.5">
+          <p class="text-xs sm:text-sm font-medium text-slatewarm-900">${q.q}</p>
+          <div class="flex flex-wrap gap-2">
+            ${q.options.map((opt, oIdx) => `
+              <button id="qbtn-${qIdx}-${oIdx}" onclick="answerQuiz(${qIdx}, ${oIdx})" class="px-3 py-1.5 rounded-xl border border-[#dfd0b5] bg-parchment-50 hover:bg-autumn-100 text-xs font-medium text-stone-700 transition">${opt}</button>
+            `).join('')}
+          </div>
+          <p id="qexp-${qIdx}" class="hidden text-xs text-sage-800 bg-sage-50 p-2.5 rounded-xl border border-sage-200"></p>
+        </div>
+      `).join('');
+    }
+
+    function answerQuiz(qIdx, oIdx) {
+      const q = QUIZ_QUESTIONS[qIdx];
+      const expEl = document.getElementById(`qexp-${qIdx}`);
+      q.options.forEach((_, idx) => {
+        const btn = document.getElementById(`qbtn-${qIdx}-${idx}`);
+        if (idx === q.correct) btn.className = 'px-3 py-1.5 rounded-xl border border-sage-500 bg-sage-600 text-white text-xs font-semibold';
+        else if (idx === oIdx) btn.className = 'px-3 py-1.5 rounded-xl border border-autumn-300 bg-autumn-100 text-autumn-900 text-xs';
+      });
+      expEl.textContent = `✨ ${q.explain || q.exp || ''}`;
+      expEl.classList.remove('hidden');
+      if (oIdx === q.correct && !quizAnswered.has(qIdx)) {
+        quizAnswered.add(qIdx);
+        document.getElementById('quiz-score-badge').textContent = `${quizAnswered.size} / ${QUIZ_QUESTIONS.length} Completed`;
+        if (quizAnswered.size === QUIZ_QUESTIONS.length && typeof confetti === 'function') {
+          confetti({ particleCount: 55, spread: 60, origin: { y: 0.7 } });
+        }
+      }
+    }
+
+    function switchTab(tabName) {
+      ['transcript', 'vocab', 'fixes', 'places', 'practice', 'grammar'].forEach(t => {
+        const panel = document.getElementById(`tab-panel-${t}`);
+        const btn = document.getElementById(`tab-btn-${t}`);
+        if (t === tabName) {
+          panel.classList.remove('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 bg-sage-700 text-white shadow-sm';
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'tab-btn flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center justify-center gap-2 text-stone-700 hover:bg-parchment-100';
+        }
+      });
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function filterTranscript() { renderTranscript(); }
+    function scrollToChapter(chapId) {
+      document.getElementById('speaker-filter').value = 'all';
+      document.getElementById('transcript-search').value = '';
+      renderTranscript();
+      const el = document.getElementById(chapId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    let highlightsOn = true;
+    function toggleVocabHighlights() {
+      highlightsOn = !highlightsOn;
+      document.body.classList.toggle('hide-vocab-highlights', !highlightsOn);
+      document.getElementById('btn-toggle-highlights').querySelector('span').textContent = `Vocab Highlights: ${highlightsOn ? 'On' : 'Off'}`;
+    }
+
+    let asrBadgesOn = true;
+    function toggleAsrBadges() {
+      asrBadgesOn = !asrBadgesOn;
+      document.body.classList.toggle('hide-asr-fixes', !asrBadgesOn);
+      document.getElementById('btn-toggle-asr').querySelector('span').textContent = `Note-Taker Fixes: ${asrBadgesOn ? 'Visible' : 'Hidden'}`;
+    }
+
+    function setThemeMood(mood) { document.body.setAttribute('data-theme', mood); }
+    function setVoiceRate(rate) { speechRate = rate; }
+
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-GB';
+      utter.rate = speechRate;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function speakPlainTurn(turnId) {
+      const turn = TRANSCRIPT_TURNS.find(t => t.id === turnId);
+      if (!turn) return;
+      const temp = document.createElement('div');
+      temp.innerHTML = turn.html;
+      temp.querySelectorAll('.asr-fix-pill').forEach(el => el.remove());
+      speakWord(temp.textContent || '');
+    }
+
+    // Web Audio API Soundscape Engine
+    let audioCtx = null, soundscapePlaying = false, masterGain = null, lfoTimer = null, currentFilter = null;
+    function buildNoiseBuffer(ctx) {
+      const bufferSize = ctx.sampleRate * 4;
+      const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const output = buffer.getChannelData(0);
+      let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        b0 = 0.99886 * b0 + white * 0.0555179;
+        b1 = 0.99332 * b1 + white * 0.0750759;
+        b2 = 0.96900 * b2 + white * 0.1538520;
+        b3 = 0.86650 * b3 + white * 0.3104856;
+        b4 = 0.55000 * b4 + white * 0.5329522;
+        b5 = -0.7616 * b5 - white * 0.0168980;
+        output[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362) * 0.04;
+        b6 = white * 0.115926;
+      }
+      return buffer;
+    }
+
+    function toggleSoundscape() {
+      const label = document.getElementById('soundscape-label');
+      if (!soundscapePlaying) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!audioCtx) audioCtx = new AudioContext();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const noiseSource = audioCtx.createBufferSource();
+        noiseSource.buffer = buildNoiseBuffer(audioCtx);
+        noiseSource.loop = true;
+        currentFilter = audioCtx.createBiquadFilter();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.value = parseFloat(document.getElementById('soundscape-volume').value || '0.22');
+        noiseSource.connect(currentFilter);
+        currentFilter.connect(masterGain);
+        masterGain.connect(audioCtx.destination);
+        noiseSource.start();
+        audioCtx._activeSource = noiseSource;
+        soundscapePlaying = true;
+        changeSoundscapePreset(document.getElementById('soundscape-preset').value);
+        label.textContent = 'London Breeze: Playing';
+      } else {
+        if (lfoTimer) clearInterval(lfoTimer);
+        if (audioCtx && audioCtx._activeSource) { try { audioCtx._activeSource.stop(); } catch (e) {} }
+        soundscapePlaying = false;
+        label.textContent = 'London Breeze Audio: Off';
+      }
+    }
+
+    function changeSoundscapePreset(preset) {
+      if (!currentFilter || !audioCtx) return;
+      if (lfoTimer) clearInterval(lfoTimer);
+      if (preset === 'breeze') {
+        currentFilter.type = 'bandpass';
+        currentFilter.frequency.value = 340;
+      } else if (preset === 'rain') {
+        currentFilter.type = 'lowpass';
+        currentFilter.frequency.value = 880;
+      } else {
+        currentFilter.type = 'lowpass';
+        currentFilter.frequency.value = 240;
+      }
+    }
+    function updateSoundscapeVolume(val) { if (masterGain && audioCtx) masterGain.gain.value = parseFloat(val); }
+
+    // Canvas Autumn Leaves Engine
+    const canvas = document.getElementById('autumn-breeze-canvas');
+    const ctx = canvas.getContext('2d');
+    let leaves = [], leafMode = 1, breezeTime = 0;
+    const LEAF_COLORS = ['rgba(190,111,56,0.42)', 'rgba(211,140,87,0.40)', 'rgba(165,191,177,0.42)', 'rgba(203,179,142,0.45)'];
+    function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    function rebuildLeaves() {
+      const count = leafMode === 1 ? 15 : leafMode === 2 ? 30 : 0;
+      leaves = Array.from({ length: count }, () => ({
+        x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+        size: 6 + Math.random() * 8, speedY: 0.35 + Math.random() * 0.55, speedX: 0.25 + Math.random() * 0.45,
+        angle: Math.random() * Math.PI * 2, spin: (Math.random() - 0.5) * 0.014, swayOffset: Math.random() * 100,
+        color: LEAF_COLORS[Math.floor(Math.random() * LEAF_COLORS.length)]
+      }));
+    }
+    function cycleLeafBreeze() {
+      leafMode = (leafMode + 1) % 3;
+      document.getElementById('leaves-label').textContent = leafMode === 1 ? 'Leaves: Gentle' : leafMode === 2 ? 'Leaves: Breeze' : 'Leaves: Still';
+      rebuildLeaves();
+    }
+    function animateLeaves() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (leafMode !== 0) {
+        breezeTime += 0.01;
+        leaves.forEach(l => {
+          l.y += l.speedY; l.x += l.speedX + Math.sin(breezeTime + l.swayOffset) * 0.45; l.angle += l.spin;
+          if (l.y > canvas.height + 20) { l.y = -20; l.x = Math.random() * canvas.width; }
+          if (l.x > canvas.width + 20) l.x = -20;
+          ctx.save(); ctx.translate(l.x, l.y); ctx.rotate(l.angle); ctx.fillStyle = l.color;
+          ctx.beginPath(); ctx.ellipse(0, 0, l.size, l.size * 0.52, 0, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+        });
+      }
+      requestAnimationFrame(animateLeaves);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      initHeaderAndHero();
+      renderTranscript();
+      renderVocabGrid();
+      renderFixesAndPlaces();
+      renderFlashcard();
+      renderQuiz();
+      if (LESSON_CONFIG.defaultSpotlightKey) inspectVocab(LESSON_CONFIG.defaultSpotlightKey);
+      rebuildLeaves();
+      animateLeaves();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
